@@ -24,10 +24,13 @@ sum(as.numeric(sapply(data,function(x){gbd%in%as.numeric(x)}))*
 
 #Confusion matrix for a list of categories
 conf_matrix <- function(algo,data,lab_list){
-do.call('rbind',lapply(lab_list,function(l){c(TP(algo,data,l),
+cm <- do.call('rbind',lapply(lab_list,function(l){c(TP(algo,data,l),
                                               FP(algo,data,l),
                                               TN(algo,data,l),
                                               FN(algo,data,l))}))
+colnames(cm) <- c("TP","FP","TN","FN")
+    rownames(cm) <- lab_list
+    return(cm)
 }
 
 #Functions for deriving sensitivities and specificities based on confusion matrix
