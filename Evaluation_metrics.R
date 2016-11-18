@@ -34,29 +34,40 @@ colnames(cm) <- c("TP","FP","TN","FN")
 }
 
 #Functions for deriving sensitivities and specificities based on confusion matrix
-#And 95% confidence intervals for estimation
+#And 95% confidence intervals of a proportion
 
 interv_prop <- function(r,n,alpha){
 
-if(r!=0 & r!=n){
-    A <- 2*r + qnorm(1-(alpha/2))^2
-    B <- sqrt(qnorm(1-(alpha/2))^2 + 4*r*(1-r/n))
-    C <- 2*((n)+qnorm(1-(alpha/2))^2)
-    lower.int <- (A-B)/C
-    upper.int <- (A+B)/C
-}
+    if(r==0 & n==0) return(c(0,1))
+    if(r!=0 & r!=n){
+        A <- 2*r + qnorm(1-(alpha/2))^2
+        B <- sqrt(qnorm(1-(alpha/2))^2 + 4*r*(1-r/n))
+        C <- 2*((n)+qnorm(1-(alpha/2))^2)
+        lower.int <- (A-B)/C
+        upper.int <- (A+B)/C
+    }
 
-if(r==0){
-    lower.int <- 0
-    upper.int <- (qnorm(1-(alpha/2))^2)/(n+qnorm(1-(alpha/2))^2)
-}
+    if(r==0){
+        lower.int <- 0
+        upper.int <- (qnorm(1-(alpha/2))^2)/(n+qnorm(1-(alpha/2))^2)
+    }
 
-if(r==n){
-    lower.int <- n/(n+qnorm(1-(alpha/2))^2)
-    upper.int <- 1
-}
+    if(r==n){
+        lower.int <- n/(n+qnorm(1-(alpha/2))^2)
+        upper.int <- 1
+    }
 
-return(c(lower.int,upper.int))
+    #this method may lead to confidence intervals not including the proportion
+    #in particular for rare events
+    #or to confidence intervals lower than 0 or higher than 1
+    #for these cases we estimate the confidence interval using R function binom.test
+    
+    if(lower.int<0 | upper.int>1 | r/n>upper.int | r/n<lower.int){
+        lower.int <- binom.test(r,n,0.5)$conf.int[1]
+        upper.int <- binom.test(r,n,0.5)$conf.int[2]
+        }
+
+    return(c(lower.int,upper.int))
 }
 
 metr.ci <- function( m, alpha=0.05 ) {

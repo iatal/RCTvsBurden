@@ -7,10 +7,46 @@
 
 #output are Af, Bf and Cf: limits and mode of triangular distribution
 
-triang_distrib <- function(mn=mn,low=low,up=up,q1=0.025,N=10000){
+triang_distrib_limits <- function(mn=mn,low=low,up=up,q1=0.025,N=10000){
+        
     M <- mn
     Q1 <- low
     Q3 <- up
+
+    #If mn = low or = up, the output is a truncated triangular distribution
+    #with a probability mass of 2.5% at the truncated size
+    if(M==Q1){
+        Af <- M
+        Cf <- M
+        K <- Q3 - Q1
+        #solution found by solving polyn 2d degree
+        a <- (2*q1 - 1)/(1-q1)
+        b <- 2*q1*K/(1-q1)
+        c <- q1*(K^2)/(1-q1)
+        delta <- b^2 - 4*a*c
+        if(delta < 0){print('no solution')
+                      return(NA)}
+        x <- (-b - sqrt(delta))/(2*a)
+        Bf <- Q3 + x
+        return(c(Af,Cf,Bf))
+    }
+    
+    if(M==Q3){
+        Bf <- M
+        Cf <- M
+        K <- Q3 - Q1
+        #solution found by solving polyn 2d degree
+        a <- (2*q1 - 1)/(1-q1)
+        b <- 2*q1*K/(1-q1)
+        c <- q1*(K^2)/(1-q1)
+        delta <- b^2 - 4*a*c
+        if(delta < 0){print('no solution')
+                      return(NA)}
+        x <- (-b - sqrt(delta))/(2*a)
+        Af <- Q1 - x
+        return(c(Af,Cf,Bf))
+    }
+    
     theta <- atan(-2/(1+q1))/2
     K <- Q3-Q1
     #Ax^2 + Cy^2 + 2Dx + 2Ey + F = 0
@@ -104,8 +140,15 @@ triang_distrib <- function(mn=mn,low=low,up=up,q1=0.025,N=10000){
         }
     }
 
+    if(nrow(DF)==0){
+        print('No solution')
+        return(NA)
+        }
     names(DF) <- c("step","sqr","ellipse","mean","Q1","Q3")
-
+    
+    #When possible, Q1 percentile lower than actual Q1
+    if(sum(DF$Q1>=0)>0) DF <- DF[DF$Q1>=0,]
+        
     j <- DF$step[abs(DF$Q1)+abs(DF$Q3)==min(abs(DF$Q1)+abs(DF$Q3))]
     s_q <- DF$sqr[abs(DF$Q1)+abs(DF$Q3)==min(abs(DF$Q1)+abs(DF$Q3))]
 
@@ -134,3 +177,6 @@ triang_distrib <- function(mn=mn,low=low,up=up,q1=0.025,N=10000){
             
 }
 
+#Triangular distrib: depending if it is truncated or not
+            
+            
