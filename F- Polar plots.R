@@ -176,7 +176,10 @@ p <- p+ scale_y_continuous(minor_breaks = tcks$breaks, breaks=tcks$breaks,
 #                     labels=tcks$labels,limits=c(min(DPLOT$ymax)-d_reg/2,max(DPLOT$ymax)+d_reg/2))
                       labels=rep("",nrow(tcks)),limits=c(min(DPLOT$ymax)-d_reg/2,max(DPLOT$ymax)+d_reg/2))
 #p <- p + theme(axis.text.x = element_text(size=7,colour=tcks$col))
-
+#p <- p + theme(panel.grid.minor=element_line(color="grey"))
+#p <- p + theme(panel.grid.major=element_line(color="black"))
+p <- p + theme(panel.grid.minor=element_line(color="#D3D3D3",size=0.1))    
+    
 p <- p+geom_text(
        aes(x=length(tt_gbd)+IC+1.5,
         y=breaks,
@@ -339,6 +342,7 @@ p <- p+ scale_y_continuous(minor_breaks = tcks$breaks, breaks=tcks$breaks,
 #                     labels=tcks$labels,limits=c(min(DPLOT$ymax)-d_reg/2,max(DPLOT$ymax)+d_reg/2))
                       labels=rep("",nrow(tcks)),limits=c(min(DPLOT$ymax)-d_reg/2,max(DPLOT$ymax)+d_reg/2))
 #p <- p + theme(axis.text.x = element_text(size=7,colour=tcks$col))
+p <- p + theme(panel.grid.minor=element_line(color="#D3D3D3",size=0.1))    
 
 p <- p+geom_text(
        aes(x=length(tt_gbd)+IC+1.5,
