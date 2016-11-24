@@ -2,41 +2,55 @@
 library(ggplot2)
 library(gdata)
 
-setwd('/media/igna/Elements/HotelDieu/Cochrane')
+RCTs <- read.table("/media/igna/Elements/HotelDieu/Cochrane/Mapping_Cancer/Tables/RCTs_data_per_region_and_27_diseases_2005_2015.txt")
 
-D <- read.table("Mapping_Cancer/Tables/data_GBD_RCTs_regions_28diseases_noInj.txt")
-D$Dis_lab <- D$Dis
-levels(D$Dis_lab)[grep("Diarrhea",levels(D$Dis_lab))] <- "Diarrhea"
+GBD <- read.table("/media/igna/Elements/HotelDieu/Cochrane/Mapping_Cancer/Tables/GBD_data_per_region_and_27_diseases_2005.txt")
 
-#Ordre maladies: croissant
-tt_gbd <- sort(tapply(D$GBD,D$Dis_lab,sum))
+D <- data.frame(Region = rep(colnames(GBD)[1:7],each=27),
+                Disease = rep(rownames(GBD),times=7),
+                GBD = unlist(GBD[,1:7]))
+rownames(D) <- NULL
+D$GBD <- D$GBD/1e6
 
-#Ordre régions: décroissant
-tt_rcts <- sort(tapply(D$RCTs,D$Region,sum),decreasing=TRUE)
+#Number of RCTs per region
+tt_rcts <- RCTs[rownames(RCTs)=="Tot",-ncol(RCTs)]
+RCTs <- RCTs[rownames(RCTs)!="Tot",]
+RCTs <- RCTs[order(rownames(RCTs)),]
+
+D$RCTs <- unlist(RCTs[,1:7])
+
+#Order diseases: increasing burden
+tt_gbd <- sort(tapply(D$GBD,D$Dis,sum))
+
+#Order regions: decreasing nb trials
+tt_rcts <- sort(tt_rcts,decreasing=TRUE)
+
 regs <- names(tt_rcts)
+#Region labels
 reg_labs <- c("High-income countries","Southeast Asia,\nEast Asia and Oceania",
 "North Africa and\nMiddle East", "Central Europe, Eastern\nEurope and Central Asia",
 "South Asia", "Latin America\nand Caribbean", "Sub-Saharian\nAfrica")
 
 dpl <- D
-#On normalize entre régions, on met max RCts = max GBD
+#Normalizing regions: max RCts = max GBD
 dpl$gpl <- (dpl$GBD/max(dpl$GBD))*max(dpl$RCT)
 
-#Taille barres = wdt*2
+#Bar size = wdt*2
 wdt <- 0.45
-#Distance entre régions
+#Distance between regions
 d_reg <- 400
 esp_dis_nb <- 200
 
-#Rectangles pour une maladie et région donnée
+#Rectangles for a given region and disease
 displt <- 
 function(dis,Rg,rg){
-data.frame(dis=dis,	xmin = rep(which(dis==names(tt_gbd))-wdt,2),
-			xmax = rep(which(dis==names(tt_gbd))+wdt,2),
-			ymin = c(Rg+esp_dis_nb,Rg-esp_dis_nb),
-			ymax = c(Rg+esp_dis_nb+dpl$RCT[dpl$Dis_lab==dis & dpl$Region==rg],Rg-esp_dis_nb-dpl$gpl[dpl$Dis_lab==dis & dpl$Region==rg]),
-			metr = c("RCT","GBD"),
-			reg = rg, ycent = Rg, dis_nb = which(dis==names(tt_gbd)))
+data.frame(dis=dis,
+           xmin = rep(which(dis==names(tt_gbd))-wdt,2),
+           xmax = rep(which(dis==names(tt_gbd))+wdt,2),
+           ymin = c(Rg+esp_dis_nb,Rg-esp_dis_nb),
+           ymax = c(Rg+esp_dis_nb+dpl$RCT[dpl$Dis==dis & dpl$Region==rg],Rg-esp_dis_nb-dpl$gpl[dpl$Dis==dis & dpl$Region==rg]),
+           metr = c("RCT","GBD"),
+           reg = rg, ycent = Rg, dis_nb = which(dis==names(tt_gbd)))
 }
 
 #Rectangles pour toutes les maladies, une région donnée
@@ -102,17 +116,20 @@ RCTtcks[RCTtcks$labels==12000,c(1,2)] <- RCTtcks[RCTtcks$labels==12000,c(1,2)] -
 RCTtcks$labels <- as.character(RCTtcks$label)
 
 #Pour GBD
-gbdtks <- c(0,1e7,2e7,3e7,5e7,7.5e7,1e8,1.5e8,2e8)
+#gbdtks <- c(0,1e7,2e7,3e7,5e7,7.5e7,1e8,1.5e8,2e8)
+gbdtks <- c(0,1e7,2e7,3e7,5e7,7.5e7,1e8,1.5e8,2e8)/1e6
 
 maj_gbd <- function(nb){
 x <- nb
-k <- 0
-while(x>=100){
-x <- x%/%10
-k <- k+1
-}
-res <- (x+1)*10^k
-res
+if(trunc(x)==x) return(x)
+else return(trunc(x) + 1)
+#k <- 0
+#while(x>=100){
+#x <- x%/%10
+#k <- k+1
+#}
+#res <- (x+1)*10^k
+#res
 }
 
 GBDtcks <- do.call('rbind',lapply(regs,function(x){
@@ -123,14 +140,14 @@ labels=c(gbdtks[2:findInterval(max(D$GBD[D$Region==x]),gbdtks)],maj_gbd(max(D$GB
 }))
 GBDtcks$col <- "GBD"
 #Changing 1.3e8 par 1.25e8 pour SSA
-GBDtcks[GBDtcks$labels==1.3e8,1] <- GBDtcks[GBDtcks$labels==1.3e8,1] + (0.05e8)*max(D$RCT)/max(D$GBD)
-GBDtcks[GBDtcks$labels==1.3e8,2] <- GBDtcks[GBDtcks$labels==1.3e8,2] - (0.05e8)
+#GBDtcks[GBDtcks$labels==1.3e8,1] <- GBDtcks[GBDtcks$labels==1.3e8,1] + (0.05e8)*max(D$RCT)/max(D$GBD)
+#GBDtcks[GBDtcks$labels==1.3e8,2] <- GBDtcks[GBDtcks$labels==1.3e8,2] - (0.05e8)
 
 #Changing 1.4e8 par 1.3e8 pour SA
-GBDtcks[GBDtcks$labels==1.4e8,1] <- GBDtcks[GBDtcks$labels==1.4e8,1] + (0.1e8)*max(D$RCT)/max(D$GBD)
-GBDtcks[GBDtcks$labels==1.4e8,2] <- GBDtcks[GBDtcks$labels==1.4e8,2] - (0.1e8)
+#GBDtcks[GBDtcks$labels==1.4e8,1] <- GBDtcks[GBDtcks$labels==1.4e8,1] + (0.1e8)*max(D$RCT)/max(D$GBD)
+#GBDtcks[GBDtcks$labels==1.4e8,2] <- GBDtcks[GBDtcks$labels==1.4e8,2] - (0.1e8)
 GBDtcks$labels <- as.character(GBDtcks$label)
-GBDtcks$labels <- gsub("0","",GBDtcks$label)
+#GBDtcks$labels <- gsub("0","",GBDtcks$label)
 
 tcks <- rbind(RCTtcks,GBDtcks)
 tcks$col <- as.factor(tcks$col)
@@ -141,7 +158,7 @@ p <- ggplot(DPLOT) + geom_rect(aes(xmin=xmin,xmax=xmax,ymin=ymin,ymax=ymax,fill=
  geom_text(aes(x=xcent,
         y=ycent,
         label=dis_nb,
-	hjust=0.5),
+        hjust=0.5),
 size=DPLOT$size_dis_lab,col="#42442E")
 
 
@@ -159,7 +176,10 @@ p <- p+ scale_y_continuous(minor_breaks = tcks$breaks, breaks=tcks$breaks,
 #                     labels=tcks$labels,limits=c(min(DPLOT$ymax)-d_reg/2,max(DPLOT$ymax)+d_reg/2))
                       labels=rep("",nrow(tcks)),limits=c(min(DPLOT$ymax)-d_reg/2,max(DPLOT$ymax)+d_reg/2))
 #p <- p + theme(axis.text.x = element_text(size=7,colour=tcks$col))
-
+#p <- p + theme(panel.grid.minor=element_line(color="grey"))
+#p <- p + theme(panel.grid.major=element_line(color="black"))
+p <- p + theme(panel.grid.minor=element_line(color="#D3D3D3",size=0.1))    
+    
 p <- p+geom_text(
        aes(x=length(tt_gbd)+IC+1.5,
         y=breaks,
@@ -189,11 +209,9 @@ p <- p + theme(legend.position = "none")
 #POLAR COORDINATES
 p <- p + coord_polar(theta="y",start=alphaStart,direction=-1)
 
-dev.off()
 x11(width=12,height=12)
 
-ggsave(filename = "Mapping_Cancer/Figures/polar_absolute.pdf")
-ggsave(filename = "Mapping_Cancer/Figures/polar_absolute.png")
+ggsave(filename = "Figures/polar_absolute_numbers.pdf")
 dev.off()
 
 
@@ -201,33 +219,13 @@ dev.off()
 ####################################################################################################
 #PROPORTIONS PLOT
 ########################
-library(ggplot2)
-library(gdata)
-#library(plotly)
-library(grid)
-library(gridExtra)
-
-setwd('/media/igna/Elements/HotelDieu/Cochrane')
-
-D <- read.table("Mapping_Cancer/Tables/data_GBD_RCTs_regions_28diseases_noInj.txt")
-D$Dis_lab <- D$Dis
-#levels(D$Dis_lab)[grep("Diarrhea",levels(D$Dis_lab))] <- "Diarrhea"
-
-#Ordre maladies: croissant
-tt_gbd <- sort(tapply(D$GBD,D$Dis_lab,sum))
-
-#Ordre régions: décroissant
-tt_rcts <- sort(tapply(D$RCTs,D$Region,sum),decreasing=TRUE)
-regs <- names(tt_rcts)
-reg_labs <- c("High-income countries","Southeast Asia,\nEast Asia and Oceania",
-"North Africa and\nMiddle East", "Central Europe, Eastern\nEurope and Central Asia",
-"South Asia", "Latin America\nand Caribbean", "Sub-Saharian\nAfrica")
 
 dpl <- D
 #Pas besoin de normaliser RCTs et GBD
-dpl$Pr_RCTs <- 100*dpl$Pr_RCTs
-dpl$Pr_GBD <- 100*dpl$Pr_GBD
 
+dpl$Pr_RCTs <- 100*dpl$RCTs/unlist(rep(tt_rcts[order(names(tt_rcts))],each=27))
+dpl$Pr_GBD <- 100*dpl$GBD/unlist(rep(apply(GBD[1:7],2,sum)/1e6,each=27))
+    
 #Taille barres = wdt*2
 wdt <- 0.45
 #Distance entre régions
@@ -240,7 +238,7 @@ function(dis,Rg,rg){
 data.frame(dis=dis,	xmin = rep(which(dis==names(tt_gbd))-wdt,2),
 			xmax = rep(which(dis==names(tt_gbd))+wdt,2),
 			ymin = c(Rg+esp_dis_nb,Rg-esp_dis_nb),
-			ymax = c(Rg+esp_dis_nb+dpl$Pr_RCT[dpl$Dis_lab==dis & dpl$Region==rg],Rg-esp_dis_nb-dpl$Pr_GBD[dpl$Dis_lab==dis & dpl$Region==rg]),
+			ymax = c(Rg+esp_dis_nb+dpl$Pr_RCT[dpl$Dis==dis & dpl$Region==rg],Rg-esp_dis_nb-dpl$Pr_GBD[dpl$Dis==dis & dpl$Region==rg]),
 			metr = c("RCT","GBD"),
 			reg = rg, ycent = Rg, dis_nb = which(dis==names(tt_gbd)))
 }
@@ -292,10 +290,10 @@ rcttks[1+1:findInterval(max(dpl$Pr_RCT[dpl$Region==x]),rcttks)],
 labels=rcttks[1+1:findInterval(max(dpl$Pr_RCT[dpl$Region==x]),rcttks)],reg=x)
 }))
 RCTtcks$col <- "1RCT"
-RCTtcks <- RCTtcks[!(RCTtcks$reg=="SSA" & RCTtcks$label==20),]
-RCTtcks <- RCTtcks[!(RCTtcks$reg=="LATAM" & RCTtcks$label==20),]
-RCTtcks <- RCTtcks[!(RCTtcks$reg=="CEE" & RCTtcks$label==25),]
-RCTtcks <- RCTtcks[!(RCTtcks$reg=="HI" & RCTtcks$label==20),]
+RCTtcks <- RCTtcks[!(RCTtcks$reg=="Sub.Saharian.Africa" & RCTtcks$label==20),]
+RCTtcks <- RCTtcks[!(RCTtcks$reg=="Latin.America.and.Caribbean" & RCTtcks$label==20),]
+RCTtcks <- RCTtcks[!(RCTtcks$reg=="Central.Europe..Eastern.Europe..and.Central.Asia" & RCTtcks$label==25),]
+RCTtcks <- RCTtcks[!(RCTtcks$reg=="High.income" & RCTtcks$label==20),]
 RCTtcks$labels <- as.character(RCTtcks$label)
 
 #Pour GBD
@@ -307,11 +305,10 @@ gbdtks[1+1:findInterval(max(dpl$Pr_GBD[dpl$Region==x]),gbdtks)],
 labels=gbdtks[1+1:findInterval(max(dpl$Pr_GBD[dpl$Region==x]),gbdtks)],reg=x)
 }))
 GBDtcks$col <- "GBD"
-GBDtcks[GBDtcks$reg=="SEAO" & GBDtcks$label==20,c(1,2)] <- GBDtcks[GBDtcks$reg=="SEAO" & GBDtcks$label==20,c(1,2)] - c(-2,2)
-GBDtcks[GBDtcks$reg=="SA" & GBDtcks$label==25,c(1,2)] <- GBDtcks[GBDtcks$reg=="SA" & GBDtcks$label==25,c(1,2)] - c(-3,3)
-GBDtcks[GBDtcks$reg=="SA" & GBDtcks$label==25,c(1,2)] <- GBDtcks[GBDtcks$reg=="SA" & GBDtcks$label==25,c(1,2)] - c(-3,3)
-GBDtcks[GBDtcks$reg=="LATAM" & GBDtcks$label==15,c(1,2)] <- GBDtcks[GBDtcks$reg=="LATAM" & GBDtcks$label==15,c(1,2)] - c(-2,2)
-GBDtcks[GBDtcks$reg=="SSA" & GBDtcks$label==25,c(1,2)] <- GBDtcks[GBDtcks$reg=="SSA" & GBDtcks$label==25,c(1,2)] - c(-2,2)
+GBDtcks[GBDtcks$reg=="Southeast.Asia..East.Asia.and.Oceania" & GBDtcks$label==20,c(1,2)] <- GBDtcks[GBDtcks$reg=="Southeast.Asia..East.Asia.and.Oceania" & GBDtcks$label==20,c(1,2)] - c(-2,2)
+GBDtcks[GBDtcks$reg=="South.Asia" & GBDtcks$label==25,c(1,2)] <- GBDtcks[GBDtcks$reg=="South.Asia" & GBDtcks$label==25,c(1,2)] - c(-3,3)
+GBDtcks[GBDtcks$reg=="Latin.America.and.Caribbean" & GBDtcks$label==15,c(1,2)] <- GBDtcks[GBDtcks$reg=="Latin.America.and.Caribbean" & GBDtcks$label==15,c(1,2)] - c(-2,2)
+GBDtcks[GBDtcks$reg=="Sub.Saharian.Africa" & GBDtcks$label==25,c(1,2)] <- GBDtcks[GBDtcks$reg=="Sub.Saharian.Africa" & GBDtcks$label==25,c(1,2)] - c(-2,2)
 GBDtcks$labels <- as.character(GBDtcks$label)
 
 tcks <- rbind(RCTtcks,GBDtcks)
@@ -345,6 +342,7 @@ p <- p+ scale_y_continuous(minor_breaks = tcks$breaks, breaks=tcks$breaks,
 #                     labels=tcks$labels,limits=c(min(DPLOT$ymax)-d_reg/2,max(DPLOT$ymax)+d_reg/2))
                       labels=rep("",nrow(tcks)),limits=c(min(DPLOT$ymax)-d_reg/2,max(DPLOT$ymax)+d_reg/2))
 #p <- p + theme(axis.text.x = element_text(size=7,colour=tcks$col))
+p <- p + theme(panel.grid.minor=element_line(color="#D3D3D3",size=0.1))    
 
 p <- p+geom_text(
        aes(x=length(tt_gbd)+IC+1.5,
@@ -375,11 +373,9 @@ p <- p + coord_polar(theta="y",start=alphaStart,direction=-1)
 
 p <- p + theme(legend.position = "none")
 
-dev.off()
 x11(width=12,height=12)
 
-ggsave(filename = "Mapping_Cancer/Figures/polar_proportional.pdf")
-ggsave(filename = "Mapping_Cancer/Figures/polar_proportional.png")
+ggsave(filename = "Figures/polar_proportion.pdf")
 
 dev.off()
 
