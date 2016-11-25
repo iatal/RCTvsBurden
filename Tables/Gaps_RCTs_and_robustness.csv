@@ -1,0 +1,22 @@
+"","Region","Disease","Pr_RCT","Sim_RCTs","Pr_GBD","Robust"
+"1","Central Europe, Eastern Europe, and Central Asia","Cardiovascular and circulatory diseases",11.27,13.77,35.09,TRUE
+"3","Central Europe, Eastern Europe, and Central Asia","Tuberculosis",0.3,0.44,1.83,TRUE
+"5","Latin America and Caribbean","Congenital anomalies",1.15,0.62,3.13,TRUE
+"6","Latin America and Caribbean","Neonatal disorders",0.86,3.47,8.72,TRUE
+"8","North Africa and Middle East","Congenital anomalies",1.69,0.82,4.98,TRUE
+"9","North Africa and Middle East","Diarrhea, lower respiratory infections, meningitis, and other common infectious diseases",2.91,4.06,10.55,TRUE
+"10","North Africa and Middle East","Neonatal disorders",2.08,4.56,10.06,TRUE
+"12","South Asia","Diarrhea, lower respiratory infections, meningitis, and other common infectious diseases",7.36,8.06,21.43,TRUE
+"13","South Asia","Neonatal disorders",1.77,4.35,16.52,TRUE
+"14","South Asia","Tuberculosis",1.11,1.22,3.87,TRUE
+"17","Southeast Asia, East Asia and Oceania","Tuberculosis",0.73,0.84,2.84,TRUE
+"18","Sub-Saharian Africa","Congenital anomalies",0.62,0.43,1.33,TRUE
+"19","Sub-Saharian Africa","Diarrhea, lower respiratory infections, meningitis, and other common infectious diseases",5.8,6.74,22.93,TRUE
+"20","Sub-Saharian Africa","Neonatal disorders",1.55,3.91,11.58,TRUE
+"2","Central Europe, Eastern Europe, and Central Asia","Neonatal disorders",0.54,3.06,2.56,FALSE
+"4","High-income","Neonatal disorders",0.82,3.59,1.65,FALSE
+"7","Latin America and Caribbean","Nutritional deficiencies",1.64,2.31,3.76,FALSE
+"11","North Africa and Middle East","Nutritional deficiencies",1.54,2.26,4.12,FALSE
+"15","Southeast Asia, East Asia and Oceania","Neglected tropical diseases excluding malaria",0.67,1.1,1.55,FALSE
+"16","Southeast Asia, East Asia and Oceania","Neonatal disorders",0.49,3.2,6.06,FALSE
+"21","Sub-Saharian Africa","Sexually transmitted diseases excluding HIV",0.35,5.67,1.27,FALSE
