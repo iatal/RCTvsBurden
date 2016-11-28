@@ -2,7 +2,7 @@
 library(ggplot2)
 library(gdata)
 
-RCTs <- read.table("/media/igna/Elements/HotelDieu/Cochrane/Mapping_Cancer/Tables/RCTs_data_per_region_and_27_diseases_2005_2015.txt")
+RCTs <- read.table("/media/igna/Elements/HotelDieu/Cochrane/Mapping_Cancer/Tables/Patients_data_per_region_and_27_diseases_2005_2015.txt")
 
 GBD <- read.table("/media/igna/Elements/HotelDieu/Cochrane/Mapping_Cancer/Tables/GBD_data_per_region_and_27_diseases_2005.txt")
 
@@ -17,7 +17,7 @@ tt_rcts <- RCTs[rownames(RCTs)=="Tot",-ncol(RCTs)]
 RCTs <- RCTs[rownames(RCTs)!="Tot",]
 RCTs <- RCTs[order(rownames(RCTs)),]
 
-D$RCTs <- unlist(RCTs[,1:7])
+D$RCTs <- unlist(RCTs[,1:7])/1e3
 
 #Order diseases: increasing burden
 tt_gbd <- sort(tapply(D$GBD,D$Dis,sum))
@@ -28,8 +28,10 @@ tt_rcts <- sort(tt_rcts,decreasing=TRUE)
 regs <- names(tt_rcts)
 #Region labels
 reg_labs <- c("High-income countries","Southeast Asia,\nEast Asia and Oceania",
-"North Africa and\nMiddle East", "Central Europe, Eastern\nEurope and Central Asia",
-"South Asia", "Latin America\nand Caribbean", "Sub-Saharian\nAfrica")
+              "Sub-Saharian\nAfrica","South Asia",
+              "Central Europe, Eastern\nEurope and Central Asia",
+               "Latin America\nand Caribbean",
+              "North Africa and\nMiddle East")
 
 dpl <- D
 #Normalizing regions: max RCts = max GBD
@@ -38,8 +40,8 @@ dpl$gpl <- (dpl$GBD/max(dpl$GBD))*max(dpl$RCT)
 #Bar size = wdt*2
 wdt <- 0.45
 #Distance between regions
-d_reg <- 400
-esp_dis_nb <- 200
+d_reg <- 300
+esp_dis_nb <- 150
 
 #Rectangles for a given region and disease
 displt <- 
@@ -90,7 +92,7 @@ DPLOT$size_dis_lab = 2.3*(40+DPLOT$dis_nb)/(40+max(DPLOT$dis_nb))
 #Tick marks
 ####################
 #Pour RCTs
-rcttks <- c(0,100,500,1000,2000,3000,5000,7500,10000,12000)
+rcttks <- c(0,100,500,1000,2000,3000,5000,5500)
 
 maj_rcts <- function(nb){
 x <- nb
@@ -112,7 +114,7 @@ labels=c(rcttks[2:findInterval(max(D$RCTs[D$Region==x]),rcttks)],maj_rcts(max(D$
 }))
 RCTtcks$col <- "1RCT"
 #Adding 11200 and suppressing 12000
-RCTtcks[RCTtcks$labels==12000,c(1,2)] <- RCTtcks[RCTtcks$labels==12000,c(1,2)] - 800
+#RCTtcks[RCTtcks$labels==12000,c(1,2)] <- RCTtcks[RCTtcks$labels==12000,c(1,2)] - 800
 RCTtcks$labels <- as.character(RCTtcks$label)
 
 #Pour GBD
@@ -211,7 +213,7 @@ p <- p + coord_polar(theta="y",start=alphaStart,direction=-1)
 
 x11(width=12,height=12)
 
-ggsave(filename = "Figures/polar_absolute_numbers.pdf")
+ggsave(filename = "Figures/polar_absolute_numbers_patients.pdf")
 dev.off()
 
 
@@ -223,7 +225,7 @@ dev.off()
 dpl <- D
 #Pas besoin de normaliser RCTs et GBD
 
-dpl$Pr_RCTs <- 100*dpl$RCTs/unlist(rep(tt_rcts[order(names(tt_rcts))],each=27))
+dpl$Pr_RCTs <- 100*dpl$RCTs/unlist(rep(tt_rcts[order(names(tt_rcts))]/1e3,each=27))
 dpl$Pr_GBD <- 100*dpl$GBD/unlist(rep(apply(GBD[1:7],2,sum)/1e6,each=27))
     
 #Taille barres = wdt*2
@@ -290,10 +292,10 @@ rcttks[1+1:findInterval(max(dpl$Pr_RCT[dpl$Region==x]),rcttks)],
 labels=rcttks[1+1:findInterval(max(dpl$Pr_RCT[dpl$Region==x]),rcttks)],reg=x)
 }))
 RCTtcks$col <- "1RCT"
-RCTtcks <- RCTtcks[!(RCTtcks$reg=="Sub.Saharian.Africa" & RCTtcks$label==20),]
-RCTtcks <- RCTtcks[!(RCTtcks$reg=="Latin.America.and.Caribbean" & RCTtcks$label==20),]
-RCTtcks <- RCTtcks[!(RCTtcks$reg=="Central.Europe..Eastern.Europe..and.Central.Asia" & RCTtcks$label==25),]
-RCTtcks <- RCTtcks[!(RCTtcks$reg=="High.income" & RCTtcks$label==20),]
+#RCTtcks <- RCTtcks[!(RCTtcks$reg=="Sub.Saharian.Africa" & RCTtcks$label==20),]
+#RCTtcks <- RCTtcks[!(RCTtcks$reg=="Latin.America.and.Caribbean" & RCTtcks$label==20),]
+#RCTtcks <- RCTtcks[!(RCTtcks$reg=="Central.Europe..Eastern.Europe..and.Central.Asia" & RCTtcks$label==25),]
+#RCTtcks <- RCTtcks[!(RCTtcks$reg=="High.income" & RCTtcks$label==20),]
 RCTtcks$labels <- as.character(RCTtcks$label)
 
 #Pour GBD
@@ -375,7 +377,7 @@ p <- p + theme(legend.position = "none")
 
 x11(width=12,height=12)
 
-ggsave(filename = "Figures/polar_proportion.pdf")
+ggsave(filename = "Figures/polar_proportion_patients.pdf")
 
 dev.off()
 
