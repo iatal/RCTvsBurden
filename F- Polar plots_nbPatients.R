@@ -113,8 +113,10 @@ c(rcttks[2:findInterval(max(D$RCTs[D$Region==x]),rcttks)],maj_rcts(max(D$RCTs[D$
 labels=c(rcttks[2:findInterval(max(D$RCTs[D$Region==x]),rcttks)],maj_rcts(max(D$RCTs[D$Region==x]))))
 }))
 RCTtcks$col <- "1RCT"
-#Adding 11200 and suppressing 12000
-#RCTtcks[RCTtcks$labels==12000,c(1,2)] <- RCTtcks[RCTtcks$labels==12000,c(1,2)] - 800
+#Changing 140 to 150 in LATAM
+RCTtcks[RCTtcks$labels==140,c(1,2)] <- RCTtcks[RCTtcks$labels==140,c(1,2)] + 10
+#Changing 190 to 200 in MENA
+RCTtcks[RCTtcks$labels==190,c(1,2)] <- RCTtcks[RCTtcks$labels==190,c(1,2)] + 10
 RCTtcks$labels <- as.character(RCTtcks$label)
 
 #Pour GBD
@@ -292,10 +294,9 @@ rcttks[1+1:findInterval(max(dpl$Pr_RCT[dpl$Region==x]),rcttks)],
 labels=rcttks[1+1:findInterval(max(dpl$Pr_RCT[dpl$Region==x]),rcttks)],reg=x)
 }))
 RCTtcks$col <- "1RCT"
-#RCTtcks <- RCTtcks[!(RCTtcks$reg=="Sub.Saharian.Africa" & RCTtcks$label==20),]
-#RCTtcks <- RCTtcks[!(RCTtcks$reg=="Latin.America.and.Caribbean" & RCTtcks$label==20),]
-#RCTtcks <- RCTtcks[!(RCTtcks$reg=="Central.Europe..Eastern.Europe..and.Central.Asia" & RCTtcks$label==25),]
-#RCTtcks <- RCTtcks[!(RCTtcks$reg=="High.income" & RCTtcks$label==20),]
+RCTtcks <- RCTtcks[!(RCTtcks$reg=="Southeast.Asia..East.Asia.and.Oceania" & RCTtcks$label==25),]
+RCTtcks[(RCTtcks$reg=="Central.Europe..Eastern.Europe..and.Central.Asia" & RCTtcks$label==25),c(1,2)] <- RCTtcks[(RCTtcks$reg=="Central.Europe..Eastern.Europe..and.Central.Asia" & RCTtcks$label==25),c(1,2)] - 2
+RCTtcks <- RCTtcks[!(RCTtcks$reg=="North.Africa.and.Middle.East" & RCTtcks$label==25),]
 RCTtcks$labels <- as.character(RCTtcks$label)
 
 #Pour GBD
