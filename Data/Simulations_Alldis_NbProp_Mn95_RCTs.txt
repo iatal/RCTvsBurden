@@ -1,0 +1,190 @@
+"Region" "Disease" "SimMn_NbRCTs" "Sim95_NbRCTs" "SimMn_PrRCTs" "Sim95_PrRCTs"
+"1" "Central.Europe..Eastern.Europe..and.Central.Asia" "Tuberculosis" 17.1814141414141 27 0.00279325839629094 0.00432699252976538
+"2" "Central.Europe..Eastern.Europe..and.Central.Asia" "HIV/AIDS" 71.832 86 0.0115180923230619 0.013826477721783
+"3" "Central.Europe..Eastern.Europe..and.Central.Asia" "Diarrhea, lower respiratory infections, meningitis, and other common infectious diseases" 263.8308 309 0.043541387233691 0.0511057070920352
+"4" "Central.Europe..Eastern.Europe..and.Central.Asia" "Malaria" 1.8368 7 0.000298897269888172 0.001116872891531
+"5" "Central.Europe..Eastern.Europe..and.Central.Asia" "Neglected tropical diseases excluding malaria" 12.8746 28 0.00210262870588201 0.00464449587766357
+"6" "Central.Europe..Eastern.Europe..and.Central.Asia" "Maternal disorders" 100.4772 163 0.0164495382510556 0.0266480300801046
+"7" "Central.Europe..Eastern.Europe..and.Central.Asia" "Neonatal disorders" 90.2920584116823 186 0.014784664659105 0.0304202175078293
+"8" "Central.Europe..Eastern.Europe..and.Central.Asia" "Nutritional deficiencies" 76.9342 117 0.0125763404017402 0.0191064217968153
+"9" "Central.Europe..Eastern.Europe..and.Central.Asia" "Sexually transmitted diseases excluding HIV" 103.921070234114 334.8 0.0160356252983717 0.0532773021121816
+"10" "Central.Europe..Eastern.Europe..and.Central.Asia" "Hepatitis" 112.608921784357 140 0.0184720382528013 0.0229505150410038
+"11" "Central.Europe..Eastern.Europe..and.Central.Asia" "Leprosy" 6.41673881673882 14 0.0010463942465661 0.00228624200294506
+"12" "Central.Europe..Eastern.Europe..and.Central.Asia" "Neoplasms" 1229.1622 1297 0.185386161917219 0.194606116332378
+"13" "Central.Europe..Eastern.Europe..and.Central.Asia" "Cardiovascular and circulatory diseases" 768.4058 842 0.125493339352289 0.137295380326626
+"14" "Central.Europe..Eastern.Europe..and.Central.Asia" "Chronic respiratory diseases" 569.9118 611 0.0939338274871208 0.101139325763835
+"15" "Central.Europe..Eastern.Europe..and.Central.Asia" "Cirrhosis of the liver" 67.1896379275855 96 0.0110547987560592 0.0157296233928011
+"16" "Central.Europe..Eastern.Europe..and.Central.Asia" "Digestive diseases (except cirrhosis)" 425.9244 524 0.0718229839516616 0.0881935071998632
+"17" "Central.Europe..Eastern.Europe..and.Central.Asia" "Neurological disorders" 471.132 526 0.0784278017208082 0.0874336862359133
+"18" "Central.Europe..Eastern.Europe..and.Central.Asia" "Mental and behavioral disorders" 401.059 437 0.0663364766718727 0.0724638877325946
+"19" "Central.Europe..Eastern.Europe..and.Central.Asia" "Diabetes, urinary diseases and male infertility" 925.886 1001 0.151018108839272 0.162760578585572
+"20" "Central.Europe..Eastern.Europe..and.Central.Asia" "Gynecological diseases" 106.4862 172 0.017684886836463 0.0284350812432228
+"21" "Central.Europe..Eastern.Europe..and.Central.Asia" "Hemoglobinopathies and hemolytic anemias" 4.96062992125984 13 0.000803998990681284 0.00212561090047655
+"22" "Central.Europe..Eastern.Europe..and.Central.Asia" "Musculoskeletal disorders" 604.749 661 0.0984929701541932 0.107528994913748
+"23" "Central.Europe..Eastern.Europe..and.Central.Asia" "Congenital anomalies" 15.6842834064159 32 0.00253765523772897 0.005252770153296
+"24" "Central.Europe..Eastern.Europe..and.Central.Asia" "Skin and subcutaneous diseases" 341.9354 415 0.0571378908397291 0.0694744192717431
+"25" "Central.Europe..Eastern.Europe..and.Central.Asia" "Sense organ diseases" 299.694 341 0.0494524790743505 0.0562829657031695
+"26" "Central.Europe..Eastern.Europe..and.Central.Asia" "Oral disorders" 141.4802 315.1 0.0232037742297228 0.0512365547020914
+"27" "Central.Europe..Eastern.Europe..and.Central.Asia" "Sudden infant death syndrome" 40.4058355437666 3 0.00539016027260028 0.000485328546232138
+"28" "High.income" "Tuberculosis" 98.7539393939394 169 0.0015851290280404 0.00271524622902946
+"29" "High.income" "HIV/AIDS" 984.651 1144 0.0156262377817961 0.0181768969145263
+"30" "High.income" "Diarrhea, lower respiratory infections, meningitis, and other common infectious diseases" 2444.4774 2907.05 0.0400033887171074 0.04734743140284
+"31" "High.income" "Malaria" 79.5128 128 0.00127841655275077 0.00205641568787691
+"32" "High.income" "Neglected tropical diseases excluding malaria" 217.5218 381.05 0.00350950434060312 0.00615245298445919
+"33" "High.income" "Maternal disorders" 1428.8202 2142.05 0.0231808206101865 0.0347875488616814
+"34" "High.income" "Neonatal disorders" 1109.49229845969 2195.4 0.0179333965729696 0.035460207147559
+"35" "High.income" "Nutritional deficiencies" 854.8186 1309.05 0.013818530737981 0.020996759757158
+"36" "High.income" "Sexually transmitted diseases excluding HIV" 1267.57948717949 3939.8 0.0187601256230254 0.0630323903698424
+"37" "High.income" "Hepatitis" 635.870774154831 842 0.0102972965869562 0.0136961169860495
+"38" "High.income" "Leprosy" 46.2354978354978 107.8 0.000744503468071561 0.00174195268457621
+"39" "High.income" "Neoplasms" 9478.5748 9989 0.140619407790866 0.147781853287634
+"40" "High.income" "Cardiovascular and circulatory diseases" 7974.7624 8726.05 0.12972480313376 0.141822635645104
+"41" "High.income" "Chronic respiratory diseases" 3782.1822 4101.05 0.0619622349286499 0.0673124761078703
+"42" "High.income" "Cirrhosis of the liver" 706.215843168634 997 0.011477710890067 0.0162533591870071
+"43" "High.income" "Digestive diseases (except cirrhosis)" 4616.2308 5693.05 0.077265008645913 0.0952265830868975
+"44" "High.income" "Neurological disorders" 5033.2914 5587 0.0830834118447258 0.0921580865743375
+"45" "High.income" "Mental and behavioral disorders" 7346.9316 7780.05 0.121046300662375 0.128423797394312
+"46" "High.income" "Diabetes, urinary diseases and male infertility" 8751.674 9474.2 0.141826114912757 0.153058391961751
+"47" "High.income" "Gynecological diseases" 1615.8522 2344.05 0.0265321477443493 0.0383017696802741
+"48" "High.income" "Hemoglobinopathies and hemolytic anemias" 92.6786795881284 202 0.0014850067959068 0.00324848701269654
+"49" "High.income" "Musculoskeletal disorders" 5225.4146 5716.1 0.0847078360563748 0.092855181514242
+"50" "High.income" "Congenital anomalies" 305.269789983845 603.799999999999 0.0048824285070911 0.00959602711337683
+"51" "High.income" "Skin and subcutaneous diseases" 3269.4994 4060 0.0541951034805581 0.0672599719156672
+"52" "High.income" "Sense organ diseases" 4215.4868 4692.1 0.0691524669863244 0.0768383761355743
+"53" "High.income" "Oral disorders" 1782.23 3782.05 0.0287970961488777 0.0607393412818154
+"54" "High.income" "Sudden infant death syndrome" 465.559681697613 29.2 0.0054302527112578 0.000466330148058772
+"55" "Latin.America.and.Caribbean" "Tuberculosis" 28.2668686868687 41 0.00659422041584914 0.0094764861869097
+"56" "Latin.America.and.Caribbean" "HIV/AIDS" 91.6744 107 0.0211148406546999 0.0247291568535092
+"57" "Latin.America.and.Caribbean" "Diarrhea, lower respiratory infections, meningitis, and other common infectious diseases" 221.0444 258 0.052426234474844 0.0609325038296227
+"58" "Latin.America.and.Caribbean" "Malaria" 12.0768 17 0.00281945461161222 0.00390249502954272
+"59" "Latin.America.and.Caribbean" "Neglected tropical diseases excluding malaria" 76.5812 92 0.0179237767118276 0.0215910978556327
+"60" "Latin.America.and.Caribbean" "Maternal disorders" 104.1982 154 0.0245152639843556 0.0361826927992638
+"61" "Latin.America.and.Caribbean" "Neonatal disorders" 75.1616323264653 147 0.0176572222892447 0.0346868564009997
+"62" "Latin.America.and.Caribbean" "Nutritional deficiencies" 66.136 99 0.0155320971682859 0.0230792312336904
+"63" "Latin.America.and.Caribbean" "Sexually transmitted diseases excluding HIV" 86.1835005574136 262.6 0.0188735766800644 0.0610901052467994
+"64" "Latin.America.and.Caribbean" "Hepatitis" 56.0790158031606 73 0.0131880324809705 0.0172223261625497
+"65" "Latin.America.and.Caribbean" "Leprosy" 4.06291486291486 9 0.000950591963512971 0.00217276088527646
+"66" "Latin.America.and.Caribbean" "Neoplasms" 592.1962 627 0.127469746172399 0.134715025906736
+"67" "Latin.America.and.Caribbean" "Cardiovascular and circulatory diseases" 509.6112 563 0.119701958922682 0.132126729372401
+"68" "Latin.America.and.Caribbean" "Chronic respiratory diseases" 293.7666 319 0.069716129187483 0.0759247638994392
+"69" "Latin.America.and.Caribbean" "Cirrhosis of the liver" 41.4796959391878 61 0.00978781153084024 0.0144444726647909
+"70" "Latin.America.and.Caribbean" "Digestive diseases (except cirrhosis)" 308.7962 382 0.074859768612851 0.0922113308141261
+"71" "Latin.America.and.Caribbean" "Neurological disorders" 272.1992 310 0.0650806171825222 0.074170558113559
+"72" "Latin.America.and.Caribbean" "Mental and behavioral disorders" 302.6042 329 0.0721945231716972 0.078820578271276
+"73" "Latin.America.and.Caribbean" "Diabetes, urinary diseases and male infertility" 702.9812 760.05 0.164896143869776 0.177861873226112
+"74" "Latin.America.and.Caribbean" "Gynecological diseases" 117.6916 167 0.0280393511178615 0.0395764379893627
+"75" "Latin.America.and.Caribbean" "Hemoglobinopathies and hemolytic anemias" 8.34312537855845 19 0.00194191702374525 0.00445212004028802
+"76" "Latin.America.and.Caribbean" "Musculoskeletal disorders" 492.4032 538 0.11561452820125 0.126144284602995
+"77" "Latin.America.and.Caribbean" "Congenital anomalies" 12.6768982229402 27 0.00294062939057356 0.00625001682712178
+"78" "Latin.America.and.Caribbean" "Skin and subcutaneous diseases" 207.057 261 0.0497293142074901 0.0626199847262749
+"79" "Latin.America.and.Caribbean" "Sense organ diseases" 246.0646 279 0.0584410840483633 0.0662525296030123
+"80" "Latin.America.and.Caribbean" "Oral disorders" 163.0366 292 0.0383410785655533 0.0685685870690437
+"81" "Latin.America.and.Caribbean" "Sudden infant death syndrome" 30.0742705570292 2 0.0053931033194805 0.00046533281372072
+"82" "North.Africa.and.Middle.East" "Tuberculosis" 17.5606060606061 29 0.00218937973588356 0.00361846416307332
+"83" "North.Africa.and.Middle.East" "HIV/AIDS" 45.2436 60 0.00557573207467485 0.00738240786611459
+"84" "North.Africa.and.Middle.East" "Diarrhea, lower respiratory infections, meningitis, and other common infectious diseases" 262.7934 321 0.0333864532105543 0.0409405779052182
+"85" "North.Africa.and.Middle.East" "Malaria" 2.6956 10 0.000336626065868561 0.0012084679319035
+"86" "North.Africa.and.Middle.East" "Neglected tropical diseases excluding malaria" 44.765 67 0.00560819473417138 0.00846867885380958
+"87" "North.Africa.and.Middle.East" "Maternal disorders" 433.677 549 0.0546998461013051 0.069217418439734
+"88" "North.Africa.and.Middle.East" "Neonatal disorders" 212.776955391078 366 0.0267679785794016 0.0457290926043362
+"89" "North.Africa.and.Middle.East" "Nutritional deficiencies" 119.4408 181 0.0150068678234201 0.02277359412918
+"90" "North.Africa.and.Middle.East" "Sexually transmitted diseases excluding HIV" 173.730211817168 506.8 0.0200165936142173 0.0632658350022453
+"91" "North.Africa.and.Middle.East" "Hepatitis" 69.7107421484297 97 0.00876757440450243 0.0122048897437263
+"92" "North.Africa.and.Middle.East" "Leprosy" 5.69379509379509 14 0.000711948200198316 0.00174746758350048
+"93" "North.Africa.and.Middle.East" "Neoplasms" 618.804 658 0.0708589026413567 0.0752990028150781
+"94" "North.Africa.and.Middle.East" "Cardiovascular and circulatory diseases" 909.6606 1008 0.115014216522057 0.127199213632918
+"95" "North.Africa.and.Middle.East" "Chronic respiratory diseases" 318.7814 356 0.0406127492389278 0.0455016174181331
+"96" "North.Africa.and.Middle.East" "Cirrhosis of the liver" 98.3686737347469 139 0.0124114918717205 0.017563368728749
+"97" "North.Africa.and.Middle.East" "Digestive diseases (except cirrhosis)" 857.3474 1006 0.11139652581204 0.130578099119553
+"98" "North.Africa.and.Middle.East" "Neurological disorders" 594.0222 668 0.0762449780963899 0.0857479594450498
+"99" "North.Africa.and.Middle.East" "Mental and behavioral disorders" 988.3556 1049 0.12657403549568 0.134605652737129
+"100" "North.Africa.and.Middle.East" "Diabetes, urinary diseases and male infertility" 1184.15 1285 0.149225683121404 0.161557475078306
+"101" "North.Africa.and.Middle.East" "Gynecological diseases" 675.357 782 0.0858492507168304 0.0989111671980217
+"102" "North.Africa.and.Middle.East" "Hemoglobinopathies and hemolytic anemias" 22.4854633555421 48 0.00280157875109248 0.00597978087035478
+"103" "North.Africa.and.Middle.East" "Musculoskeletal disorders" 611.3774 676 0.0770425803412948 0.0852019335767926
+"104" "North.Africa.and.Middle.East" "Congenital anomalies" 32.0692360950842 65 0.00398096058757676 0.00808971137530344
+"105" "North.Africa.and.Middle.East" "Skin and subcutaneous diseases" 424.454 530 0.0546631721306379 0.0678695877053774
+"106" "North.Africa.and.Middle.East" "Sense organ diseases" 314.8118 368 0.0400439401516559 0.0466643496481146
+"107" "North.Africa.and.Middle.East" "Oral disorders" 350.3174 613 0.0439917444974961 0.076271186440678
+"108" "North.Africa.and.Middle.East" "Sudden infant death syndrome" 60.2148541114058 5 0.00540329534275188 0.000614167621992846
+"109" "South.Asia" "Tuberculosis" 38.4282828282828 54 0.00859031406888132 0.012132732115563
+"110" "South.Asia" "HIV/AIDS" 60.366 73 0.0133356500501984 0.0161003930148855
+"111" "South.Asia" "Diarrhea, lower respiratory infections, meningitis, and other common infectious diseases" 309.0318 354 0.070403071839818 0.080547077696207
+"112" "South.Asia" "Malaria" 41.0956 50 0.00919400989811081 0.0112011570326147
+"113" "South.Asia" "Neglected tropical diseases excluding malaria" 52.0192 67 0.0116737169376142 0.0149920408748858
+"114" "South.Asia" "Maternal disorders" 135.7932 191 0.0306638596944722 0.0431267831528507
+"115" "South.Asia" "Neonatal disorders" 109.143828765753 192 0.0245866021353662 0.0430872732501018
+"116" "South.Asia" "Nutritional deficiencies" 123.29 171 0.0278626651499907 0.0385752569565254
+"117" "South.Asia" "Sexually transmitted diseases excluding HIV" 89.5955406911929 281 0.0183774115619608 0.0620798491217725
+"118" "South.Asia" "Hepatitis" 61.8379675935187 80 0.013931175867187 0.0181337365929134
+"119" "South.Asia" "Leprosy" 7.54747474747475 15 0.00169153329235069 0.00341911514010899
+"120" "South.Asia" "Neoplasms" 589.1606 624 0.121433778400827 0.12823752133083
+"121" "South.Asia" "Cardiovascular and circulatory diseases" 449.4838 504 0.101548409548862 0.113494293280894
+"122" "South.Asia" "Chronic respiratory diseases" 232.5176 256 0.053058649249443 0.0586522014730713
+"123" "South.Asia" "Cirrhosis of the liver" 80.3872774554911 111 0.0182091897472884 0.0252381431073225
+"124" "South.Asia" "Digestive diseases (except cirrhosis)" 391.1474 473 0.0910473499094033 0.109641507690991
+"125" "South.Asia" "Neurological disorders" 245.0718 283.05 0.0562948356571987 0.0651007701478112
+"126" "South.Asia" "Mental and behavioral disorders" 306.69 336.05 0.0705187259503448 0.0775265453535823
+"127" "South.Asia" "Diabetes, urinary diseases and male infertility" 675.6522 734 0.152694398271765 0.165330923892213
+"128" "South.Asia" "Gynecological diseases" 137.7002 192 0.0314706631882106 0.0436972699805712
+"129" "South.Asia" "Hemoglobinopathies and hemolytic anemias" 6.65445184736523 16 0.00148407243018811 0.00356808362790417
+"130" "South.Asia" "Musculoskeletal disorders" 354.6286 395 0.0800905518558915 0.0891854324026405
+"131" "South.Asia" "Congenital anomalies" 12.5541195476575 26.3999999999996 0.0027855342585148 0.00586395636516473
+"132" "South.Asia" "Skin and subcutaneous diseases" 316.575 379 0.0730453089984723 0.0873208298768652
+"133" "South.Asia" "Sense organ diseases" 247.3936 281 0.0564496542118258 0.0642745982318175
+"134" "South.Asia" "Oral disorders" 199.5344 347.1 0.0448993410270258 0.07768118512213
+"135" "South.Asia" "Sudden infant death syndrome" 33.6339522546419 3 0.00541998344259122 0.000658093693664637
+"136" "Southeast.Asia..East.Asia.and.Oceania" "Tuberculosis" 51.4361616161616 73 0.00589588118285531 0.0084328480376439
+"137" "Southeast.Asia..East.Asia.and.Oceania" "HIV/AIDS" 132.642 156 0.0150154434061155 0.0176818310630564
+"138" "Southeast.Asia..East.Asia.and.Oceania" "Diarrhea, lower respiratory infections, meningitis, and other common infectious diseases" 400.6744 469 0.0467336675104461 0.0545757749551557
+"139" "Southeast.Asia..East.Asia.and.Oceania" "Malaria" 58.9338 72 0.0067619553401682 0.00829399620720728
+"140" "Southeast.Asia..East.Asia.and.Oceania" "Neglected tropical diseases excluding malaria" 72.293 97 0.00832134731348981 0.0112269199797759
+"141" "Southeast.Asia..East.Asia.and.Oceania" "Maternal disorders" 204.3788 301.05 0.0236383814091004 0.0350146700802989
+"142" "Southeast.Asia..East.Asia.and.Oceania" "Neonatal disorders" 131.48049609922 278.099999999999 0.0151716393461325 0.0319691742170373
+"143" "Southeast.Asia..East.Asia.and.Oceania" "Nutritional deficiencies" 108.5904 170 0.0125300811796643 0.0194715354152236
+"144" "Southeast.Asia..East.Asia.and.Oceania" "Sexually transmitted diseases excluding HIV" 170.647937569677 537.6 0.0182308671616955 0.0610827853317969
+"145" "Southeast.Asia..East.Asia.and.Oceania" "Hepatitis" 188.961392278456 232 0.0218291804785944 0.0269040489782097
+"146" "Southeast.Asia..East.Asia.and.Oceania" "Leprosy" 7.1997113997114 17 0.000827604600593453 0.00193697761728875
+"147" "Southeast.Asia..East.Asia.and.Oceania" "Neoplasms" 1999.1268 2107 0.213195228690769 0.223497225604884
+"148" "Southeast.Asia..East.Asia.and.Oceania" "Cardiovascular and circulatory diseases" 1199.3628 1311 0.13900706425559 0.151540558103331
+"149" "Southeast.Asia..East.Asia.and.Oceania" "Chronic respiratory diseases" 429.1466 471 0.0501208441363952 0.0551625395789438
+"150" "Southeast.Asia..East.Asia.and.Oceania" "Cirrhosis of the liver" 165.24224844969 226 0.0191765723657185 0.0262254735137844
+"151" "Southeast.Asia..East.Asia.and.Oceania" "Digestive diseases (except cirrhosis)" 729.6858 881 0.0869337603995733 0.104715715044951
+"152" "Southeast.Asia..East.Asia.and.Oceania" "Neurological disorders" 475.9076 545 0.0559518031289079 0.0640556504789659
+"153" "Southeast.Asia..East.Asia.and.Oceania" "Mental and behavioral disorders" 576.7976 628.05 0.0677313546205852 0.0738787909608277
+"154" "Southeast.Asia..East.Asia.and.Oceania" "Diabetes, urinary diseases and male infertility" 1199.3388 1303 0.138334452620548 0.14979032333107
+"155" "Southeast.Asia..East.Asia.and.Oceania" "Gynecological diseases" 291.8194 393 0.0341601359528961 0.0455466085929377
+"156" "Southeast.Asia..East.Asia.and.Oceania" "Hemoglobinopathies and hemolytic anemias" 11.9024833434282 28 0.00136085009901127 0.00314760355747856
+"157" "Southeast.Asia..East.Asia.and.Oceania" "Musculoskeletal disorders" 645.5272 714 0.0744133971038775 0.0823298322567417
+"158" "Southeast.Asia..East.Asia.and.Oceania" "Congenital anomalies" 31.5162704823448 64 0.00359574963076765 0.00723896923401447
+"159" "Southeast.Asia..East.Asia.and.Oceania" "Skin and subcutaneous diseases" 366.7618 473 0.0433005620290404 0.0558756916641432
+"160" "Southeast.Asia..East.Asia.and.Oceania" "Sense organ diseases" 409.6094 466 0.0478056408528787 0.0546390002095448
+"161" "Southeast.Asia..East.Asia.and.Oceania" "Oral disorders" 255.7332 524.1 0.0295242784849286 0.0602100362213219
+"162" "Southeast.Asia..East.Asia.and.Oceania" "Sudden infant death syndrome" 62.2466843501326 3 0.00539827408492303 0.000353232387329621
+"163" "Sub.Saharian.Africa" "Tuberculosis" 101.040202020202 140 0.0443029505978293 0.0607470926237675
+"164" "Sub.Saharian.Africa" "HIV/AIDS" 316.3226 361 0.136817111012899 0.1545814008613
+"165" "Sub.Saharian.Africa" "Diarrhea, lower respiratory infections, meningitis, and other common infectious diseases" 130.7288 152 0.057987518705863 0.0676158897491311
+"166" "Sub.Saharian.Africa" "Malaria" 265.7076 313 0.115789987600864 0.135172332670079
+"167" "Sub.Saharian.Africa" "Neglected tropical diseases excluding malaria" 69.0132 80 0.0302192355609017 0.0350178988239519
+"168" "Sub.Saharian.Africa" "Maternal disorders" 67.3208 94 0.0296380102587383 0.0413917423296039
+"169" "Sub.Saharian.Africa" "Neonatal disorders" 50.3390678135627 90 0.0221746576453054 0.0395445157017281
+"170" "Sub.Saharian.Africa" "Nutritional deficiencies" 92.2864 125 0.0408574804333875 0.0548268002084858
+"171" "Sub.Saharian.Africa" "Sexually transmitted diseases excluding HIV" 43.2818283166109 135.8 0.0179473217071538 0.0583884802181261
+"172" "Sub.Saharian.Africa" "Hepatitis" 11.1424284856971 19 0.00491129276059971 0.00823973299870375
+"173" "Sub.Saharian.Africa" "Leprosy" 4.46926406926407 9 0.00195931392401295 0.00398900819200784
+"174" "Sub.Saharian.Africa" "Neoplasms" 201.1604 216 0.080774912191375 0.0865384615384615
+"175" "Sub.Saharian.Africa" "Cardiovascular and circulatory diseases" 166.3884 193 0.0728695092931731 0.0845442536327609
+"176" "Sub.Saharian.Africa" "Chronic respiratory diseases" 131.6538 145 0.0584504011948535 0.0644742990654206
+"177" "Sub.Saharian.Africa" "Cirrhosis of the liver" 10.6551310262052 19 0.00470648335433902 0.00855120157011424
+"178" "Sub.Saharian.Africa" "Digestive diseases (except cirrhosis)" 136.3582 175 0.0618267811682087 0.0790318604757185
+"179" "Sub.Saharian.Africa" "Neurological disorders" 99.462 119 0.0444884792469319 0.0531870469955576
+"180" "Sub.Saharian.Africa" "Mental and behavioral disorders" 134.7524 150 0.0599945142030875 0.0667574931880109
+"181" "Sub.Saharian.Africa" "Diabetes, urinary diseases and male infertility" 261.1482 290 0.114476397375837 0.126818845008774
+"182" "Sub.Saharian.Africa" "Gynecological diseases" 35.9256 61 0.0160395047924802 0.0270754191223624
+"183" "Sub.Saharian.Africa" "Hemoglobinopathies and hemolytic anemias" 6.08752271350697 14 0.00265475710859842 0.0060189165950129
+"184" "Sub.Saharian.Africa" "Musculoskeletal disorders" 126.5868 145 0.0553644912724335 0.0633897009300541
+"185" "Sub.Saharian.Africa" "Congenital anomalies" 4.10870066928225 10 0.00178424318231975 0.00426330168667077
+"186" "Sub.Saharian.Africa" "Skin and subcutaneous diseases" 100.1904 129 0.0449447801958127 0.0574063085767962
+"187" "Sub.Saharian.Africa" "Sense organ diseases" 91.0728 107 0.0403955677671524 0.0475352496575616
+"188" "Sub.Saharian.Africa" "Oral disorders" 51.7074 120 0.0227747172060166 0.0524530802210147
+"189" "Sub.Saharian.Africa" "Sudden infant death syndrome" 15.3846153846154 1 0.00540280823492963 0.000447109282260647
