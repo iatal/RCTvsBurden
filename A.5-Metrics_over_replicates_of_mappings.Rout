@@ -1,0 +1,105 @@
+igna@igna-compu:~$ Rscript HotelDieu/MappingRCTs/Programs/Metrics_over_replicates_of_mappings.R 
+Loading required package: iterators
+Loading required package: parallel
+[1] "starting disease  1 :  Tuberculosis"
+[1] "disease 1: Tuberculosis finished after (min):"
+      user     system    elapsed 
+ 0.1082667  0.0098000 11.5091167 
+[1] "starting disease  2 :  HIV/AIDS"
+[1] "disease 2: HIV/AIDS finished after (min):"
+      user     system    elapsed 
+ 0.1141333  0.0114000 12.1497667 
+[1] "starting disease  3 :  Diarrhea, lower respiratory infections, meningitis, and other common infectious diseases"
+[1] "disease 3: Diarrhea, lower respiratory infections, meningitis, and other common infectious diseases finished after (min):"
+      user     system    elapsed 
+ 0.1013333  0.0102000 12.0700000 
+[1] "starting disease  4 :  Malaria"
+[1] "disease 4: Malaria finished after (min):"
+       user      system     elapsed 
+ 0.10493333  0.01153333 12.02488333 
+[1] "starting disease  5 :  Neglected tropical diseases excluding malaria"
+[1] "disease 5: Neglected tropical diseases excluding malaria finished after (min):"
+       user      system     elapsed 
+ 0.11040000  0.01106667 12.09363333 
+[1] "starting disease  6 :  Maternal disorders"
+[1] "disease 6: Maternal disorders finished after (min):"
+        user       system      elapsed 
+ 0.107466667  0.009266667 11.762033333 
+[1] "starting disease  7 :  Neonatal disorders"
+[1] "disease 7: Neonatal disorders finished after (min):"
+        user       system      elapsed 
+ 0.099733333  0.008333333 11.766733333 
+[1] "starting disease  8 :  Nutritional deficiencies"
+[1] "disease 8: Nutritional deficiencies finished after (min):"
+        user       system      elapsed 
+ 0.098600000  0.007933333 11.499350000 
+[1] "starting disease  9 :  Sexually transmitted diseases excluding HIV"
+[1] "disease 9: Sexually transmitted diseases excluding HIV has only 8943 replicates: we pass to next one"
+[1] "starting disease  10 :  Hepatitis"
+[1] "disease 10: Hepatitis finished after (min):"
+        user       system      elapsed 
+ 0.102266667  0.007466667 11.545733333 
+[1] "starting disease  11 :  Leprosy"
+[1] "disease 11: Leprosy has only 6834 replicates: we pass to next one"
+[1] "starting disease  12 :  Neoplasms"
+[1] "disease 12: Neoplasms finished after (min):"
+        user       system      elapsed 
+ 0.108333333  0.008133333 11.792716667 
+[1] "starting disease  13 :  Cardiovascular and circulatory diseases"
+[1] "disease 13: Cardiovascular and circulatory diseases finished after (min):"
+       user      system     elapsed 
+ 0.10773333  0.01026667 12.11106667 
+[1] "starting disease  14 :  Chronic respiratory diseases"
+[1] "disease 14: Chronic respiratory diseases finished after (min):"
+        user       system      elapsed 
+ 0.095200000  0.009133333 11.539083333 
+[1] "starting disease  15 :  Cirrhosis of the liver"
+[1] "disease 15: Cirrhosis of the liver finished after (min):"
+        user       system      elapsed 
+ 0.097600000  0.009933333 11.690400000 
+[1] "starting disease  16 :  Digestive diseases (except cirrhosis)"
+[1] "disease 16: Digestive diseases (except cirrhosis) finished after (min):"
+        user       system      elapsed 
+ 0.107733333  0.009666667 11.609483333 
+[1] "starting disease  17 :  Neurological disorders"
+[1] "disease 17: Neurological disorders finished after (min):"
+    user   system  elapsed 
+ 0.11060  0.01040 12.03617 
+[1] "starting disease  18 :  Mental and behavioral disorders"
+[1] "disease 18: Mental and behavioral disorders finished after (min):"
+        user       system      elapsed 
+ 0.095600000  0.009133333 11.720650000 
+[1] "starting disease  19 :  Diabetes, urinary diseases and male infertility"
+[1] "disease 19: Diabetes, urinary diseases and male infertility finished after (min):"
+        user       system      elapsed 
+ 0.101400000  0.009266667 11.926316667 
+[1] "starting disease  20 :  Gynecological diseases"
+[1] "disease 20: Gynecological diseases finished after (min):"
+      user     system    elapsed 
+ 0.1032667  0.0094000 11.6658833 
+[1] "starting disease  21 :  Hemoglobinopathies and hemolytic anemias"
+[1] "disease 21: Hemoglobinopathies and hemolytic anemias has only 6680 replicates: we pass to next one"
+[1] "starting disease  22 :  Musculoskeletal disorders"
+[1] "disease 22: Musculoskeletal disorders finished after (min):"
+        user       system      elapsed 
+ 0.107600000  0.008933333 11.690766667 
+[1] "starting disease  23 :  Congenital anomalies"
+[1] "disease 23: Congenital anomalies has only 8650 replicates: we pass to next one"
+[1] "starting disease  24 :  Skin and subcutaneous diseases"
+[1] "disease 24: Skin and subcutaneous diseases finished after (min):"
+    user   system  elapsed 
+ 0.09260  0.00840 11.63727 
+[1] "starting disease  25 :  Sense organ diseases"
+[1] "disease 25: Sense organ diseases finished after (min):"
+       user      system     elapsed 
+ 0.09666667  0.00780000 11.77751667 
+[1] "starting disease  26 :  Oral disorders"
+[1] "disease 26: Oral disorders finished after (min):"
+       user      system     elapsed 
+ 0.09993333  0.01000000 11.89060000 
+[1] "starting disease  27 :  Sudden infant death syndrome"
+[1] "disease 27: Sudden infant death syndrome has only 755 replicates: we pass to next one"
+[1] "total time (hrs):"
+       user      system     elapsed 
+0.037973333 0.003463333 4.327357778 
+
