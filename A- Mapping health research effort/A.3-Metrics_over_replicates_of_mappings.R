@@ -4,14 +4,10 @@ library(doParallel)
 options(warn = 2)
 
 #Upload database
-data <- read.table("HotelDieu/MappingRCTs/Data/database_all_diseases_final_ok.txt")
+data <- read.table("/media/igna/Elements/HotelDieu/Cochrane/MappingRCTs_vs_Burden/database_RCTs_regions_27diseases.txt")
 
 #Upload traduction names/label categories
-Mgbd <- read.table("HotelDieu/MappingRCTs/Data/GBD_ICD.txt")
-#And supress injuries from the causes of burden
-injs <- as.character(grep("Injur",Mgbd$cause_name))
-GBD27 <- sapply(strsplit(as.character(data$GBD28),"&"),function(x){paste(x[x!=as.character(injs)],collapse="&")})
-data$GBD27 <- GBD27
+Mgbd <- read.table("../Data/27_gbd_groups.txt")
 
 #Regions per trial
 regs <- sort(unique(unlist(strsplit(as.character(data$Regions),"&"))))
@@ -40,12 +36,12 @@ t0 <- proc.time()
 for(d in dis){
 
 tp0 <- proc.time()
-print(paste("starting disease ",d,": ",as.character(Mgbd$cause_name[d])),collapse="") 
+print(paste("starting disease ",d,": ",as.character(Mgbd$x[d])),collapse="") 
 
-SMs <- list.files(paste("HotelDieu/MappingRCTs/Replicates/",as.character(d),sep=""))
+SMs <- list.files(paste("/media/igna/Elements/HotelDieu/Cochrane/MappingRCTs_vs_Burden/Replicates/",as.character(d),sep=""))
 SMs <- SMs[grep("Reclassif",SMs)]
 if(length(SMs)<9000) {
-print(paste(c("disease ",d,": ",as.character(Mgbd$cause_name[d])," has only ",length(SMs)," replicates: we pass to next one"),collapse=""))
+print(paste(c("disease ",d,": ",as.character(Mgbd$x[d])," has only ",length(SMs)," replicates: we pass to next one"),collapse=""))
 next
 }
 
@@ -91,11 +87,11 @@ A <- foreach(k = SMs, .packages="data.table") %dopar% {
 
 stopCluster(cl)
 
-fwrite(rbindlist(A),paste(c("HotelDieu/MappingRCTs/Replicates/Metrics_over_repl/Metrics_over_replicates_",as.character(d),".txt"),collapse=""))
+fwrite(rbindlist(A),paste(c("/media/igna/Elements/HotelDieu/Cochrane/MappingRCTs_vs_Burden/Replicates/Metrics_over_repl/Metrics_over_replicates_",as.character(d),".txt"),collapse=""))
 rm(A)
 
 tp1 <- proc.time()
-print(paste(c("disease ",d,": ",as.character(Mgbd$cause_name[d])," finished after (min):"),collapse=""))
+print(paste(c("disease ",d,": ",as.character(Mgbd$x[d])," finished after (min):"),collapse=""))
 print((tp1-tp0)/60)
 }
 
