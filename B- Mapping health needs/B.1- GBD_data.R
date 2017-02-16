@@ -1,4 +1,4 @@
-#On va comparer, pour chaque région, les share across 28 maladies du burden et des essais
+#On va mettre dans une base de données, pour chaque région, les share across 28 maladies du burden et des essais
 
 #1- On fait matrice burden par catégorie
 #################################################################################
@@ -6,6 +6,7 @@ library(foreach)
 library(doParallel)
 
 #GBD 2005
+#Data as downloaded from GBD 2010 study, not included in the repository
 gbds <- list.files('/media/igna/Elements/HotelDieu/Cochrane/GBD 2010/GBD_2005_2010_by_cause_country_level_GBD2010/2005')
 gbds <- gbds[grep('csv',gbds,ignore.case=TRUE)]
 
@@ -26,12 +27,12 @@ DT <- do.call('rbind',A)
 (proc.time()-t0)/60
 #1.5min
 
-#Taxonomie à 28 catégories
-Mgbd <- read.table("HotelDieu/MappingRCTs/Data/GBD_ICD.txt")
+#Taxonomie à 27 catégories
+Mgbd <- read.table("./Data/27_gbd_groups.txt")
 
 DT$causelevel5[is.na(DT$causelevel5)] <- ""
 
-#On rajoute les maladies évaluées au niveau 28
+#On rajoute les maladies évaluées au niveau 27
 dt <- DT[(DT$causelevel3%in%as.character(Mgbd$cause_name) & DT$causelevel4=="" & DT$causelevel5=="") |(DT$causelevel4%in%as.character(Mgbd$cause_name) & DT$causelevel5=="") | (DT$causelevel5%in%as.character(Mgbd$cause_name)),]
 
 #Liste des maladies ajoutées
@@ -299,9 +300,6 @@ levels(dt$Sup_region) <- c(
 "Latin America and Caribbean", "High-income",
 "Sub-Saharian Africa")
 
-#Country level data
-write.table(dt,"HotelDieu/MappingRCTs/Data/DALY_YLL_deaths_per_country_and_28_diseases_2005.txt")
-
 #Region level
 GBD <- dt
 meas <- levels(GBD$mes)
@@ -316,5 +314,5 @@ M <- data.frame(do.call('rbind',L))
 names(M) <- c("metr","Region","Disease")
 M$burden <- as.numeric(S)
 
-write.table(M,"HotelDieu/MappingRCTs/Data/DALY_YLL_deaths_per_region_and_28_diseases_2005.txt")
+write.table(M,"./Data/DALY_YLL_deaths_per_region_and_27_diseases_2005.txt")
 

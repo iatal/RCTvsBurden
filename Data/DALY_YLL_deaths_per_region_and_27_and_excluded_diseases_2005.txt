@@ -1,0 +1,785 @@
+"metr" "Region" "Disease" "burden" "cats27"
+"1" "daly" "Central Europe, Eastern Europe, and Central Asia" "Cardiovascular and circulatory diseases" 53161406.515 TRUE
+"2" "daly" "Central Europe, Eastern Europe, and Central Asia" "Chronic respiratory diseases" 5644608.1271 TRUE
+"3" "daly" "Central Europe, Eastern Europe, and Central Asia" "Cirrhosis of the liver" 4090337.297 TRUE
+"4" "daly" "Central Europe, Eastern Europe, and Central Asia" "Congenital anomalies" 2079422.787 TRUE
+"5" "daly" "Central Europe, Eastern Europe, and Central Asia" "Diabetes, urinary diseases and male infertility" 5049824.6483 TRUE
+"6" "daly" "Central Europe, Eastern Europe, and Central Asia" "Diarrhea, lower respiratory infections, meningitis, and other common infectious diseases" 7281615.92163 TRUE
+"7" "daly" "Central Europe, Eastern Europe, and Central Asia" "Digestive diseases (except cirrhosis)" 2541910.009 TRUE
+"8" "daly" "Central Europe, Eastern Europe, and Central Asia" "Excluded residual categories" 569414.1 FALSE
+"9" "daly" "Central Europe, Eastern Europe, and Central Asia" "Gynecological diseases" 626648.327 TRUE
+"10" "daly" "Central Europe, Eastern Europe, and Central Asia" "Hemoglobinopathies and hemolytic anemias" 424799.994 TRUE
+"11" "daly" "Central Europe, Eastern Europe, and Central Asia" "Hepatitis" 128260.273 TRUE
+"12" "daly" "Central Europe, Eastern Europe, and Central Asia" "HIV/AIDS" 2651978.6447 TRUE
+"13" "daly" "Central Europe, Eastern Europe, and Central Asia" "Injuries" 25044774.0826 FALSE
+"14" "daly" "Central Europe, Eastern Europe, and Central Asia" "Leprosy" 23.8790711 TRUE
+"15" "daly" "Central Europe, Eastern Europe, and Central Asia" "Malaria" 3436.79369 TRUE
+"16" "daly" "Central Europe, Eastern Europe, and Central Asia" "Maternal disorders" 114587.90742 TRUE
+"17" "daly" "Central Europe, Eastern Europe, and Central Asia" "Mental and behavioral disorders" 15116189.858 TRUE
+"18" "daly" "Central Europe, Eastern Europe, and Central Asia" "Musculoskeletal disorders" 13068426.87277 TRUE
+"19" "daly" "Central Europe, Eastern Europe, and Central Asia" "Neglected tropical diseases excluding malaria" 209587.57035 TRUE
+"20" "daly" "Central Europe, Eastern Europe, and Central Asia" "Neonatal disorders" 3883909.788 TRUE
+"21" "daly" "Central Europe, Eastern Europe, and Central Asia" "Neoplasms" 19507980.928 TRUE
+"22" "daly" "Central Europe, Eastern Europe, and Central Asia" "Neurological disorders" 4724339.958 TRUE
+"23" "daly" "Central Europe, Eastern Europe, and Central Asia" "Nutritional deficiencies" 2159456.573726 TRUE
+"24" "daly" "Central Europe, Eastern Europe, and Central Asia" "Oral disorders" 1366150.01 TRUE
+"25" "daly" "Central Europe, Eastern Europe, and Central Asia" "Sense organ diseases" 2761841.29 TRUE
+"26" "daly" "Central Europe, Eastern Europe, and Central Asia" "Sexually transmitted diseases excluding HIV" 143605.385 TRUE
+"27" "daly" "Central Europe, Eastern Europe, and Central Asia" "Skin and subcutaneous diseases" 1896227.58 TRUE
+"28" "daly" "Central Europe, Eastern Europe, and Central Asia" "Sudden infant death syndrome" 112081.129 TRUE
+"29" "daly" "Central Europe, Eastern Europe, and Central Asia" "Tuberculosis" 2769215.04 TRUE
+"30" "daly" "High-income" "Cardiovascular and circulatory diseases" 43545778.64408 TRUE
+"31" "daly" "High-income" "Chronic respiratory diseases" 13641979.5885 TRUE
+"32" "daly" "High-income" "Cirrhosis of the liver" 3995635.7883 TRUE
+"33" "daly" "High-income" "Congenital anomalies" 2296894.018 TRUE
+"34" "daly" "High-income" "Diabetes, urinary diseases and male infertility" 12338425.328766 TRUE
+"35" "daly" "High-income" "Diarrhea, lower respiratory infections, meningitis, and other common infectious diseases" 6847691.3255826 TRUE
+"36" "daly" "High-income" "Digestive diseases (except cirrhosis)" 3918442.2197 TRUE
+"37" "daly" "High-income" "Excluded residual categories" 2042889.6903 FALSE
+"38" "daly" "High-income" "Gynecological diseases" 1217526.0856 TRUE
+"39" "daly" "High-income" "Hemoglobinopathies and hemolytic anemias" 1612603.743 TRUE
+"40" "daly" "High-income" "Hepatitis" 203741.72301 TRUE
+"41" "daly" "High-income" "HIV/AIDS" 1213423.792 TRUE
+"42" "daly" "High-income" "Injuries" 25821573.15986 FALSE
+"43" "daly" "High-income" "Leprosy" 23.88100136 TRUE
+"44" "daly" "High-income" "Malaria" 1411.248952 TRUE
+"45" "daly" "High-income" "Maternal disorders" 129526.789675 TRUE
+"46" "daly" "High-income" "Mental and behavioral disorders" 31267536.20355 TRUE
+"47" "daly" "High-income" "Musculoskeletal disorders" 35571692.16788 TRUE
+"48" "daly" "High-income" "Neglected tropical diseases excluding malaria" 255449.1186996 TRUE
+"49" "daly" "High-income" "Neonatal disorders" 3811551.90397 TRUE
+"50" "daly" "High-income" "Neoplasms" 43298283.69423 TRUE
+"51" "daly" "High-income" "Neurological disorders" 12468641.0149 TRUE
+"52" "daly" "High-income" "Nutritional deficiencies" 1196024.917116 TRUE
+"53" "daly" "High-income" "Oral disorders" 2345971.817 TRUE
+"54" "daly" "High-income" "Sense organ diseases" 4132123.676 TRUE
+"55" "daly" "High-income" "Sexually transmitted diseases excluding HIV" 175744.4737 TRUE
+"56" "daly" "High-income" "Skin and subcutaneous diseases" 5312451.773 TRUE
+"57" "daly" "High-income" "Sudden infant death syndrome" 316814.359 TRUE
+"58" "daly" "High-income" "Tuberculosis" 435872.1561 TRUE
+"59" "daly" "Latin America and Caribbean" "Cardiovascular and circulatory diseases" 15012901.6301 TRUE
+"60" "daly" "Latin America and Caribbean" "Chronic respiratory diseases" 5500905.38569 TRUE
+"61" "daly" "Latin America and Caribbean" "Cirrhosis of the liver" 2376422.022 TRUE
+"62" "daly" "Latin America and Caribbean" "Congenital anomalies" 3617507.872 TRUE
+"63" "daly" "Latin America and Caribbean" "Diabetes, urinary diseases and male infertility" 6866403.96959 TRUE
+"64" "daly" "Latin America and Caribbean" "Diarrhea, lower respiratory infections, meningitis, and other common infectious diseases" 10635119.856545 TRUE
+"65" "daly" "Latin America and Caribbean" "Digestive diseases (except cirrhosis)" 1959385.39465 TRUE
+"66" "daly" "Latin America and Caribbean" "Excluded residual categories" 1259416.3528 FALSE
+"67" "daly" "Latin America and Caribbean" "Gynecological diseases" 670272.907 TRUE
+"68" "daly" "Latin America and Caribbean" "Hemoglobinopathies and hemolytic anemias" 885653.271 TRUE
+"69" "daly" "Latin America and Caribbean" "Hepatitis" 143681.4962 TRUE
+"70" "daly" "Latin America and Caribbean" "HIV/AIDS" 3589802.363 TRUE
+"71" "daly" "Latin America and Caribbean" "Injuries" 19194553.26196 FALSE
+"72" "daly" "Latin America and Caribbean" "Leprosy" 1060.8730239 TRUE
+"73" "daly" "Latin America and Caribbean" "Malaria" 109804.4774365 TRUE
+"74" "daly" "Latin America and Caribbean" "Maternal disorders" 467646.12561 TRUE
+"75" "daly" "Latin America and Caribbean" "Mental and behavioral disorders" 14829920.94981 TRUE
+"76" "daly" "Latin America and Caribbean" "Musculoskeletal disorders" 10681796.603174 TRUE
+"77" "daly" "Latin America and Caribbean" "Neglected tropical diseases excluding malaria" 1609007.98820843 TRUE
+"78" "daly" "Latin America and Caribbean" "Neonatal disorders" 10069066.126 TRUE
+"79" "daly" "Latin America and Caribbean" "Neoplasms" 9697365.05098 TRUE
+"80" "daly" "Latin America and Caribbean" "Neurological disorders" 4513854.8373 TRUE
+"81" "daly" "Latin America and Caribbean" "Nutritional deficiencies" 4348378.57679833 TRUE
+"82" "daly" "Latin America and Caribbean" "Oral disorders" 1248381.99 TRUE
+"83" "daly" "Latin America and Caribbean" "Sense organ diseases" 2238808.436 TRUE
+"84" "daly" "Latin America and Caribbean" "Sexually transmitted diseases excluding HIV" 498469.0568 TRUE
+"85" "daly" "Latin America and Caribbean" "Skin and subcutaneous diseases" 2817093.322 TRUE
+"86" "daly" "Latin America and Caribbean" "Sudden infant death syndrome" 72350.122 TRUE
+"87" "daly" "Latin America and Caribbean" "Tuberculosis" 1046326.2487 TRUE
+"88" "daly" "North Africa and Middle East" "Cardiovascular and circulatory diseases" 19214032.7554 TRUE
+"89" "daly" "North Africa and Middle East" "Chronic respiratory diseases" 4781864.9938 TRUE
+"90" "daly" "North Africa and Middle East" "Cirrhosis of the liver" 1471644.888 TRUE
+"91" "daly" "North Africa and Middle East" "Congenital anomalies" 5091067.5 TRUE
+"92" "daly" "North Africa and Middle East" "Diabetes, urinary diseases and male infertility" 4671199.8228 TRUE
+"93" "daly" "North Africa and Middle East" "Diarrhea, lower respiratory infections, meningitis, and other common infectious diseases" 10785476.172 TRUE
+"94" "daly" "North Africa and Middle East" "Digestive diseases (except cirrhosis)" 1084173.6688 TRUE
+"95" "daly" "North Africa and Middle East" "Excluded residual categories" 1355109.755 FALSE
+"96" "daly" "North Africa and Middle East" "Gynecological diseases" 657363.689 TRUE
+"97" "daly" "North Africa and Middle East" "Hemoglobinopathies and hemolytic anemias" 1066843.92 TRUE
+"98" "daly" "North Africa and Middle East" "Hepatitis" 338626.564 TRUE
+"99" "daly" "North Africa and Middle East" "HIV/AIDS" 285264.7037 TRUE
+"100" "daly" "North Africa and Middle East" "Injuries" 12303964.8749 FALSE
+"101" "daly" "North Africa and Middle East" "Leprosy" 34.2475894 TRUE
+"102" "daly" "North Africa and Middle East" "Malaria" 497422.076543 TRUE
+"103" "daly" "North Africa and Middle East" "Maternal disorders" 426291.40221 TRUE
+"104" "daly" "North Africa and Middle East" "Mental and behavioral disorders" 12446998.4689 TRUE
+"105" "daly" "North Africa and Middle East" "Musculoskeletal disorders" 9020274.53601 TRUE
+"106" "daly" "North Africa and Middle East" "Neglected tropical diseases excluding malaria" 784504.39094425 TRUE
+"107" "daly" "North Africa and Middle East" "Neonatal disorders" 10285578.519 TRUE
+"108" "daly" "North Africa and Middle East" "Neoplasms" 6210413.1201 TRUE
+"109" "daly" "North Africa and Middle East" "Neurological disorders" 2994475.5963 TRUE
+"110" "daly" "North Africa and Middle East" "Nutritional deficiencies" 4214868.4023614 TRUE
+"111" "daly" "North Africa and Middle East" "Oral disorders" 817136.73 TRUE
+"112" "daly" "North Africa and Middle East" "Sense organ diseases" 1802577.68 TRUE
+"113" "daly" "North Africa and Middle East" "Sexually transmitted diseases excluding HIV" 316021.039 TRUE
+"114" "daly" "North Africa and Middle East" "Skin and subcutaneous diseases" 2066247.77 TRUE
+"115" "daly" "North Africa and Middle East" "Sudden infant death syndrome" 66582.5199 TRUE
+"116" "daly" "North Africa and Middle East" "Tuberculosis" 876410.832 TRUE
+"117" "daly" "South Asia" "Cardiovascular and circulatory diseases" 56395260.4558 TRUE
+"118" "daly" "South Asia" "Chronic respiratory diseases" 38910999.427 TRUE
+"119" "daly" "South Asia" "Cirrhosis of the liver" 7748644.61 TRUE
+"120" "daly" "South Asia" "Congenital anomalies" 12842241.56 TRUE
+"121" "daly" "South Asia" "Diabetes, urinary diseases and male infertility" 18349709.329 TRUE
+"122" "daly" "South Asia" "Diarrhea, lower respiratory infections, meningitis, and other common infectious diseases" 130854936.2907 TRUE
+"123" "daly" "South Asia" "Digestive diseases (except cirrhosis)" 10637073.7284 TRUE
+"124" "daly" "South Asia" "Excluded residual categories" 8736022.92 FALSE
+"125" "daly" "South Asia" "Gynecological diseases" 2660870.596 TRUE
+"126" "daly" "South Asia" "Hemoglobinopathies and hemolytic anemias" 3900744.15 TRUE
+"127" "daly" "South Asia" "Hepatitis" 7916611.08 TRUE
+"128" "daly" "South Asia" "HIV/AIDS" 9343741.524 TRUE
+"129" "daly" "South Asia" "Injuries" 78355068.014 FALSE
+"130" "daly" "South Asia" "Leprosy" 5635.277723 TRUE
+"131" "daly" "South Asia" "Malaria" 5765646.81 TRUE
+"132" "daly" "South Asia" "Maternal disorders" 6585487.053 TRUE
+"133" "daly" "South Asia" "Mental and behavioral disorders" 35886033.725 TRUE
+"134" "daly" "South Asia" "Musculoskeletal disorders" 27652034.9803 TRUE
+"135" "daly" "South Asia" "Neglected tropical diseases excluding malaria" 8833911.747837 TRUE
+"136" "daly" "South Asia" "Neonatal disorders" 100884520.59 TRUE
+"137" "daly" "South Asia" "Neoplasms" 22858405.613 TRUE
+"138" "daly" "South Asia" "Neurological disorders" 20592151.3721 TRUE
+"139" "daly" "South Asia" "Nutritional deficiencies" 33699622.79313 TRUE
+"140" "daly" "South Asia" "Oral disorders" 3229059.62 TRUE
+"141" "daly" "South Asia" "Sense organ diseases" 8925553.12 TRUE
+"142" "daly" "South Asia" "Sexually transmitted diseases excluding HIV" 3495050.32 TRUE
+"143" "daly" "South Asia" "Skin and subcutaneous diseases" 8460830.28 TRUE
+"144" "daly" "South Asia" "Sudden infant death syndrome" 614820.087 TRUE
+"145" "daly" "South Asia" "Tuberculosis" 23662351.34 TRUE
+"146" "daly" "Southeast Asia, East Asia and Oceania" "Cardiovascular and circulatory diseases" 81711419.5221 TRUE
+"147" "daly" "Southeast Asia, East Asia and Oceania" "Chronic respiratory diseases" 31793866.11224 TRUE
+"148" "daly" "Southeast Asia, East Asia and Oceania" "Cirrhosis of the liver" 7368063.0155 TRUE
+"149" "daly" "Southeast Asia, East Asia and Oceania" "Congenital anomalies" 10039357.304 TRUE
+"150" "daly" "Southeast Asia, East Asia and Oceania" "Diabetes, urinary diseases and male infertility" 21111320.30755 TRUE
+"151" "daly" "Southeast Asia, East Asia and Oceania" "Diarrhea, lower respiratory infections, meningitis, and other common infectious diseases" 37348849.438667 TRUE
+"152" "daly" "Southeast Asia, East Asia and Oceania" "Digestive diseases (except cirrhosis)" 6504332.20409 TRUE
+"153" "daly" "Southeast Asia, East Asia and Oceania" "Excluded residual categories" 4081423.1 FALSE
+"154" "daly" "Southeast Asia, East Asia and Oceania" "Gynecological diseases" 2764233.494 TRUE
+"155" "daly" "Southeast Asia, East Asia and Oceania" "Hemoglobinopathies and hemolytic anemias" 2852210.214 TRUE
+"156" "daly" "Southeast Asia, East Asia and Oceania" "Hepatitis" 1938601.337 TRUE
+"157" "daly" "Southeast Asia, East Asia and Oceania" "HIV/AIDS" 5529374.276 TRUE
+"158" "daly" "Southeast Asia, East Asia and Oceania" "Injuries" 64461819.33587 FALSE
+"159" "daly" "Southeast Asia, East Asia and Oceania" "Leprosy" 791.041623 TRUE
+"160" "daly" "Southeast Asia, East Asia and Oceania" "Malaria" 3550926.41774 TRUE
+"161" "daly" "Southeast Asia, East Asia and Oceania" "Maternal disorders" 2325652.32232 TRUE
+"162" "daly" "Southeast Asia, East Asia and Oceania" "Mental and behavioral disorders" 45003890.75685 TRUE
+"163" "daly" "Southeast Asia, East Asia and Oceania" "Musculoskeletal disorders" 42209775.433731 TRUE
+"164" "daly" "Southeast Asia, East Asia and Oceania" "Neglected tropical diseases excluding malaria" 7139081.1718283 TRUE
+"165" "daly" "Southeast Asia, East Asia and Oceania" "Neonatal disorders" 27954940.493 TRUE
+"166" "daly" "Southeast Asia, East Asia and Oceania" "Neoplasms" 65739057.51199 TRUE
+"167" "daly" "Southeast Asia, East Asia and Oceania" "Neurological disorders" 11679739.49907 TRUE
+"168" "daly" "Southeast Asia, East Asia and Oceania" "Nutritional deficiencies" 9359000.78434624 TRUE
+"169" "daly" "Southeast Asia, East Asia and Oceania" "Oral disorders" 4105884.8098 TRUE
+"170" "daly" "Southeast Asia, East Asia and Oceania" "Sense organ diseases" 9048243.671 TRUE
+"171" "daly" "Southeast Asia, East Asia and Oceania" "Sexually transmitted diseases excluding HIV" 1313316.9396 TRUE
+"172" "daly" "Southeast Asia, East Asia and Oceania" "Skin and subcutaneous diseases" 9219227.794 TRUE
+"173" "daly" "Southeast Asia, East Asia and Oceania" "Sudden infant death syndrome" 235197.2442 TRUE
+"174" "daly" "Southeast Asia, East Asia and Oceania" "Tuberculosis" 13100468.458 TRUE
+"175" "daly" "Sub-Saharian Africa" "Cardiovascular and circulatory diseases" 18363309.56983 TRUE
+"176" "daly" "Sub-Saharian Africa" "Chronic respiratory diseases" 12211131.58852 TRUE
+"177" "daly" "Sub-Saharian Africa" "Cirrhosis of the liver" 3411973.4956 TRUE
+"178" "daly" "Sub-Saharian Africa" "Congenital anomalies" 7288013.398 TRUE
+"179" "daly" "Sub-Saharian Africa" "Diabetes, urinary diseases and male infertility" 7434596.68814 TRUE
+"180" "daly" "Sub-Saharian Africa" "Diarrhea, lower respiratory infections, meningitis, and other common infectious diseases" 125531847.741516 TRUE
+"181" "daly" "Sub-Saharian Africa" "Digestive diseases (except cirrhosis)" 5930791.094096 TRUE
+"182" "daly" "Sub-Saharian Africa" "Excluded residual categories" 8580463.401 FALSE
+"183" "daly" "Sub-Saharian Africa" "Gynecological diseases" 1113370.0734 TRUE
+"184" "daly" "Sub-Saharian Africa" "Hemoglobinopathies and hemolytic anemias" 4274718.5 TRUE
+"185" "daly" "Sub-Saharian Africa" "Hepatitis" 1881523.653 TRUE
+"186" "daly" "Sub-Saharian Africa" "HIV/AIDS" 73546276.63041 TRUE
+"187" "daly" "Sub-Saharian Africa" "Injuries" 40447539.2146 FALSE
+"188" "daly" "Sub-Saharian Africa" "Leprosy" 970.3528647 TRUE
+"189" "daly" "Sub-Saharian Africa" "Malaria" 91415895.753867 TRUE
+"190" "daly" "Sub-Saharian Africa" "Maternal disorders" 8477785.69603 TRUE
+"191" "daly" "Sub-Saharian Africa" "Mental and behavioral disorders" 17363811.43312 TRUE
+"192" "daly" "Sub-Saharian Africa" "Musculoskeletal disorders" 13350778.793412 TRUE
+"193" "daly" "Sub-Saharian Africa" "Neglected tropical diseases excluding malaria" 8211482.75137655 TRUE
+"194" "daly" "Sub-Saharian Africa" "Neonatal disorders" 63398508.5998 TRUE
+"195" "daly" "Sub-Saharian Africa" "Neoplasms" 9557038.34615 TRUE
+"196" "daly" "Sub-Saharian Africa" "Neurological disorders" 8853468.54135 TRUE
+"197" "daly" "Sub-Saharian Africa" "Nutritional deficiencies" 34087918.0548396 TRUE
+"198" "daly" "Sub-Saharian Africa" "Oral disorders" 1223932.799 TRUE
+"199" "daly" "Sub-Saharian Africa" "Sense organ diseases" 3381445.424 TRUE
+"200" "daly" "Sub-Saharian Africa" "Sexually transmitted diseases excluding HIV" 6979984.6827 TRUE
+"201" "daly" "Sub-Saharian Africa" "Skin and subcutaneous diseases" 5289905.773 TRUE
+"202" "daly" "Sub-Saharian Africa" "Sudden infant death syndrome" 460110.98746 TRUE
+"203" "daly" "Sub-Saharian Africa" "Tuberculosis" 14514233.807 TRUE
+"204" "death" "Central Europe, Eastern Europe, and Central Asia" "Cardiovascular and circulatory diseases" 3011141.34424 TRUE
+"205" "death" "Central Europe, Eastern Europe, and Central Asia" "Chronic respiratory diseases" 162502.71664 TRUE
+"206" "death" "Central Europe, Eastern Europe, and Central Asia" "Cirrhosis of the liver" 129070.71451 TRUE
+"207" "death" "Central Europe, Eastern Europe, and Central Asia" "Congenital anomalies" 28114.7585 TRUE
+"208" "death" "Central Europe, Eastern Europe, and Central Asia" "Diabetes, urinary diseases and male infertility" 105287.40741 TRUE
+"209" "death" "Central Europe, Eastern Europe, and Central Asia" "Diarrhea, lower respiratory infections, meningitis, and other common infectious diseases" 143745.0812661 TRUE
+"210" "death" "Central Europe, Eastern Europe, and Central Asia" "Digestive diseases (except cirrhosis)" 89089.387041 TRUE
+"211" "death" "Central Europe, Eastern Europe, and Central Asia" "Excluded residual categories" 6785.02403 FALSE
+"212" "death" "Central Europe, Eastern Europe, and Central Asia" "Gynecological diseases" 570.876528 TRUE
+"213" "death" "Central Europe, Eastern Europe, and Central Asia" "Hemoglobinopathies and hemolytic anemias" 2428.39676 TRUE
+"214" "death" "Central Europe, Eastern Europe, and Central Asia" "Hepatitis" 2258.93429 TRUE
+"215" "death" "Central Europe, Eastern Europe, and Central Asia" "HIV/AIDS" 54485.10195 TRUE
+"216" "death" "Central Europe, Eastern Europe, and Central Asia" "Injuries" 515584.038439 FALSE
+"217" "death" "Central Europe, Eastern Europe, and Central Asia" "Leprosy" 0 TRUE
+"218" "death" "Central Europe, Eastern Europe, and Central Asia" "Malaria" 19.662997 TRUE
+"219" "death" "Central Europe, Eastern Europe, and Central Asia" "Maternal disorders" 1848.02748557 TRUE
+"220" "death" "Central Europe, Eastern Europe, and Central Asia" "Mental and behavioral disorders" 63870.520098 TRUE
+"221" "death" "Central Europe, Eastern Europe, and Central Asia" "Musculoskeletal disorders" 7053.66191 TRUE
+"222" "death" "Central Europe, Eastern Europe, and Central Asia" "Neglected tropical diseases excluding malaria" 1724.312643 TRUE
+"223" "death" "Central Europe, Eastern Europe, and Central Asia" "Neonatal disorders" 40462.66417 TRUE
+"224" "death" "Central Europe, Eastern Europe, and Central Asia" "Neoplasms" 818669.16051 TRUE
+"225" "death" "Central Europe, Eastern Europe, and Central Asia" "Neurological disorders" 41881.43437 TRUE
+"226" "death" "Central Europe, Eastern Europe, and Central Asia" "Nutritional deficiencies" 3740.892358 TRUE
+"227" "death" "Central Europe, Eastern Europe, and Central Asia" "Sexually transmitted diseases excluding HIV" 908.71218 TRUE
+"228" "death" "Central Europe, Eastern Europe, and Central Asia" "Skin and subcutaneous diseases" 1250.77517 TRUE
+"229" "death" "Central Europe, Eastern Europe, and Central Asia" "Sudden infant death syndrome" 1304.41846 TRUE
+"230" "death" "Central Europe, Eastern Europe, and Central Asia" "Tuberculosis" 59146.83513 TRUE
+"231" "death" "High-income" "Cardiovascular and circulatory diseases" 3138411.639961 TRUE
+"232" "death" "High-income" "Chronic respiratory diseases" 512602.713218 TRUE
+"233" "death" "High-income" "Cirrhosis of the liver" 170017.638495 TRUE
+"234" "death" "High-income" "Congenital anomalies" 37844.6296 TRUE
+"235" "death" "High-income" "Diabetes, urinary diseases and male infertility" 445679.3387659 TRUE
+"236" "death" "High-income" "Diarrhea, lower respiratory infections, meningitis, and other common infectious diseases" 425457.304731309 TRUE
+"237" "death" "High-income" "Digestive diseases (except cirrhosis)" 208847.603389 TRUE
+"238" "death" "High-income" "Excluded residual categories" 79453.45165 FALSE
+"239" "death" "High-income" "Gynecological diseases" 858.3302148 TRUE
+"240" "death" "High-income" "Hemoglobinopathies and hemolytic anemias" 10312.853271 TRUE
+"241" "death" "High-income" "Hepatitis" 7206.182097 TRUE
+"242" "death" "High-income" "HIV/AIDS" 24211.12494 TRUE
+"243" "death" "High-income" "Injuries" 551893.4640018 FALSE
+"244" "death" "High-income" "Leprosy" 0 TRUE
+"245" "death" "High-income" "Malaria" 3.86409 TRUE
+"246" "death" "High-income" "Maternal disorders" 1644.2712186817 TRUE
+"247" "death" "High-income" "Mental and behavioral disorders" 64708.7108296 TRUE
+"248" "death" "High-income" "Musculoskeletal disorders" 43001.672021 TRUE
+"249" "death" "High-income" "Neglected tropical diseases excluding malaria" 3498.99398526 TRUE
+"250" "death" "High-income" "Neonatal disorders" 36904.4768392 TRUE
+"251" "death" "High-income" "Neoplasms" 2308101.570625 TRUE
+"252" "death" "High-income" "Neurological disorders" 417898.62637 TRUE
+"253" "death" "High-income" "Nutritional deficiencies" 24377.8552052 TRUE
+"254" "death" "High-income" "Sexually transmitted diseases excluding HIV" 1068.2409626 TRUE
+"255" "death" "High-income" "Skin and subcutaneous diseases" 16757.945626 TRUE
+"256" "death" "High-income" "Sudden infant death syndrome" 3686.180476 TRUE
+"257" "death" "High-income" "Tuberculosis" 16452.640224 TRUE
+"258" "death" "Latin America and Caribbean" "Cardiovascular and circulatory diseases" 753643.933145 TRUE
+"259" "death" "Latin America and Caribbean" "Chronic respiratory diseases" 141001.552683 TRUE
+"260" "death" "Latin America and Caribbean" "Cirrhosis of the liver" 80618.16844 TRUE
+"261" "death" "Latin America and Caribbean" "Congenital anomalies" 43049.45495 TRUE
+"262" "death" "Latin America and Caribbean" "Diabetes, urinary diseases and male infertility" 228870.4280543 TRUE
+"263" "death" "Latin America and Caribbean" "Diarrhea, lower respiratory infections, meningitis, and other common infectious diseases" 212816.08115732 TRUE
+"264" "death" "Latin America and Caribbean" "Digestive diseases (except cirrhosis)" 71744.606453 TRUE
+"265" "death" "Latin America and Caribbean" "Excluded residual categories" 24052.74201 FALSE
+"266" "death" "Latin America and Caribbean" "Gynecological diseases" 747.122075 TRUE
+"267" "death" "Latin America and Caribbean" "Hemoglobinopathies and hemolytic anemias" 4177.81186 TRUE
+"268" "death" "Latin America and Caribbean" "Hepatitis" 3154.78784 TRUE
+"269" "death" "Latin America and Caribbean" "HIV/AIDS" 70272.83905 TRUE
+"270" "death" "Latin America and Caribbean" "Injuries" 349991.534121 FALSE
+"271" "death" "Latin America and Caribbean" "Leprosy" 0 TRUE
+"272" "death" "Latin America and Caribbean" "Malaria" 1779.556885 TRUE
+"273" "death" "Latin America and Caribbean" "Maternal disorders" 7899.885134196 TRUE
+"274" "death" "Latin America and Caribbean" "Mental and behavioral disorders" 19049.515486 TRUE
+"275" "death" "Latin America and Caribbean" "Musculoskeletal disorders" 11428.867966 TRUE
+"276" "death" "Latin America and Caribbean" "Neglected tropical diseases excluding malaria" 12584.1296452106 TRUE
+"277" "death" "Latin America and Caribbean" "Neonatal disorders" 109626.85361 TRUE
+"278" "death" "Latin America and Caribbean" "Neoplasms" 395572.7527309 TRUE
+"279" "death" "Latin America and Caribbean" "Neurological disorders" 34502.833602 TRUE
+"280" "death" "Latin America and Caribbean" "Nutritional deficiencies" 44972.9794039 TRUE
+"281" "death" "Latin America and Caribbean" "Sexually transmitted diseases excluding HIV" 4973.611853 TRUE
+"282" "death" "Latin America and Caribbean" "Skin and subcutaneous diseases" 5831.49574 TRUE
+"283" "death" "Latin America and Caribbean" "Sudden infant death syndrome" 842.194276 TRUE
+"284" "death" "Latin America and Caribbean" "Tuberculosis" 22552.287941 TRUE
+"285" "death" "North Africa and Middle East" "Cardiovascular and circulatory diseases" 797116.97582 TRUE
+"286" "death" "North Africa and Middle East" "Chronic respiratory diseases" 92489.20276 TRUE
+"287" "death" "North Africa and Middle East" "Cirrhosis of the liver" 51760.7493 TRUE
+"288" "death" "North Africa and Middle East" "Congenital anomalies" 59456.0839 TRUE
+"289" "death" "North Africa and Middle East" "Diabetes, urinary diseases and male infertility" 105057.976938 TRUE
+"290" "death" "North Africa and Middle East" "Diarrhea, lower respiratory infections, meningitis, and other common infectious diseases" 166931.1511838 TRUE
+"291" "death" "North Africa and Middle East" "Digestive diseases (except cirrhosis)" 32821.71470705 TRUE
+"292" "death" "North Africa and Middle East" "Excluded residual categories" 23433.57711 FALSE
+"293" "death" "North Africa and Middle East" "Gynecological diseases" 291.152674 TRUE
+"294" "death" "North Africa and Middle East" "Hemoglobinopathies and hemolytic anemias" 7822.32962 TRUE
+"295" "death" "North Africa and Middle East" "Hepatitis" 9616.22869 TRUE
+"296" "death" "North Africa and Middle East" "HIV/AIDS" 5528.718429 TRUE
+"297" "death" "North Africa and Middle East" "Injuries" 188584.88097 FALSE
+"298" "death" "North Africa and Middle East" "Leprosy" 0 TRUE
+"299" "death" "North Africa and Middle East" "Malaria" 7709.07319 TRUE
+"300" "death" "North Africa and Middle East" "Maternal disorders" 6290.5697338 TRUE
+"301" "death" "North Africa and Middle East" "Mental and behavioral disorders" 8079.960035 TRUE
+"302" "death" "North Africa and Middle East" "Musculoskeletal disorders" 2727.748006 TRUE
+"303" "death" "North Africa and Middle East" "Neglected tropical diseases excluding malaria" 6899.74696317 TRUE
+"304" "death" "North Africa and Middle East" "Neonatal disorders" 113654.66298 TRUE
+"305" "death" "North Africa and Middle East" "Neoplasms" 212893.90763 TRUE
+"306" "death" "North Africa and Middle East" "Neurological disorders" 24618.91756 TRUE
+"307" "death" "North Africa and Middle East" "Nutritional deficiencies" 13905.81708609 TRUE
+"308" "death" "North Africa and Middle East" "Sexually transmitted diseases excluding HIV" 3329.591319 TRUE
+"309" "death" "North Africa and Middle East" "Skin and subcutaneous diseases" 2824.33063 TRUE
+"310" "death" "North Africa and Middle East" "Sudden infant death syndrome" 774.887402 TRUE
+"311" "death" "North Africa and Middle East" "Tuberculosis" 12494.72723 TRUE
+"312" "death" "South Asia" "Cardiovascular and circulatory diseases" 2307219.982426 TRUE
+"313" "death" "South Asia" "Chronic respiratory diseases" 1143108.8337 TRUE
+"314" "death" "South Asia" "Cirrhosis of the liver" 230611.9754 TRUE
+"315" "death" "South Asia" "Congenital anomalies" 186612.1057 TRUE
+"316" "death" "South Asia" "Diabetes, urinary diseases and male infertility" 470072.7329 TRUE
+"317" "death" "South Asia" "Diarrhea, lower respiratory infections, meningitis, and other common infectious diseases" 2214807.468686 TRUE
+"318" "death" "South Asia" "Digestive diseases (except cirrhosis)" 307497.578848 TRUE
+"319" "death" "South Asia" "Excluded residual categories" 136716.9685 FALSE
+"320" "death" "South Asia" "Gynecological diseases" 771.875779 TRUE
+"321" "death" "South Asia" "Hemoglobinopathies and hemolytic anemias" 24319.90279 TRUE
+"322" "death" "South Asia" "Hepatitis" 171036.8431 TRUE
+"323" "death" "South Asia" "HIV/AIDS" 175491.97628 TRUE
+"324" "death" "South Asia" "Injuries" 1398956.17477 FALSE
+"325" "death" "South Asia" "Leprosy" 0 TRUE
+"326" "death" "South Asia" "Malaria" 108789.754 TRUE
+"327" "death" "South Asia" "Maternal disorders" 107733.41706 TRUE
+"328" "death" "South Asia" "Mental and behavioral disorders" 14569.847002 TRUE
+"329" "death" "South Asia" "Musculoskeletal disorders" 12128.39899 TRUE
+"330" "death" "South Asia" "Neglected tropical diseases excluding malaria" 67419.81333458 TRUE
+"331" "death" "South Asia" "Neonatal disorders" 1138075.2328 TRUE
+"332" "death" "South Asia" "Neoplasms" 764845.4504249 TRUE
+"333" "death" "South Asia" "Neurological disorders" 329935.369376 TRUE
+"334" "death" "South Asia" "Nutritional deficiencies" 222587.86699748 TRUE
+"335" "death" "South Asia" "Sexually transmitted diseases excluding HIV" 39744.1944 TRUE
+"336" "death" "South Asia" "Skin and subcutaneous diseases" 30919.18797 TRUE
+"337" "death" "South Asia" "Sudden infant death syndrome" 7158.63439 TRUE
+"338" "death" "South Asia" "Tuberculosis" 612472.3977 TRUE
+"339" "death" "Southeast Asia, East Asia and Oceania" "Cardiovascular and circulatory diseases" 4080195.975294 TRUE
+"340" "death" "Southeast Asia, East Asia and Oceania" "Chronic respiratory diseases" 1371632.447892 TRUE
+"341" "death" "Southeast Asia, East Asia and Oceania" "Cirrhosis of the liver" 238204.58551 TRUE
+"342" "death" "Southeast Asia, East Asia and Oceania" "Congenital anomalies" 115771.0058 TRUE
+"343" "death" "Southeast Asia, East Asia and Oceania" "Diabetes, urinary diseases and male infertility" 542929.808197 TRUE
+"344" "death" "Southeast Asia, East Asia and Oceania" "Diarrhea, lower respiratory infections, meningitis, and other common infectious diseases" 741049.81516729 TRUE
+"345" "death" "Southeast Asia, East Asia and Oceania" "Digestive diseases (except cirrhosis)" 209576.706264 TRUE
+"346" "death" "Southeast Asia, East Asia and Oceania" "Excluded residual categories" 67917.98302 FALSE
+"347" "death" "Southeast Asia, East Asia and Oceania" "Gynecological diseases" 2529.28985 TRUE
+"348" "death" "Southeast Asia, East Asia and Oceania" "Hemoglobinopathies and hemolytic anemias" 24233.463311 TRUE
+"349" "death" "Southeast Asia, East Asia and Oceania" "Hepatitis" 52210.33396 TRUE
+"350" "death" "Southeast Asia, East Asia and Oceania" "HIV/AIDS" 108917.5191 TRUE
+"351" "death" "Southeast Asia, East Asia and Oceania" "Injuries" 1203092.5291343 FALSE
+"352" "death" "Southeast Asia, East Asia and Oceania" "Leprosy" 0 TRUE
+"353" "death" "Southeast Asia, East Asia and Oceania" "Malaria" 68494.14518 TRUE
+"354" "death" "Southeast Asia, East Asia and Oceania" "Maternal disorders" 34645.6800474 TRUE
+"355" "death" "Southeast Asia, East Asia and Oceania" "Mental and behavioral disorders" 32150.473152 TRUE
+"356" "death" "Southeast Asia, East Asia and Oceania" "Musculoskeletal disorders" 32707.3135061 TRUE
+"357" "death" "Southeast Asia, East Asia and Oceania" "Neglected tropical diseases excluding malaria" 30034.051843426 TRUE
+"358" "death" "Southeast Asia, East Asia and Oceania" "Neonatal disorders" 295701.21046 TRUE
+"359" "death" "Southeast Asia, East Asia and Oceania" "Neoplasms" 2512314.0517489 TRUE
+"360" "death" "Southeast Asia, East Asia and Oceania" "Neurological disorders" 102868.0740404 TRUE
+"361" "death" "Southeast Asia, East Asia and Oceania" "Nutritional deficiencies" 37702.7006128 TRUE
+"362" "death" "Southeast Asia, East Asia and Oceania" "Sexually transmitted diseases excluding HIV" 11218.535216 TRUE
+"363" "death" "Southeast Asia, East Asia and Oceania" "Skin and subcutaneous diseases" 18186.76168 TRUE
+"364" "death" "Southeast Asia, East Asia and Oceania" "Sudden infant death syndrome" 2737.094699 TRUE
+"365" "death" "Southeast Asia, East Asia and Oceania" "Tuberculosis" 331502.54853 TRUE
+"366" "death" "Sub-Saharian Africa" "Cardiovascular and circulatory diseases" 638813.8690589 TRUE
+"367" "death" "Sub-Saharian Africa" "Chronic respiratory diseases" 149425.123725 TRUE
+"368" "death" "Sub-Saharian Africa" "Cirrhosis of the liver" 89875.61447 TRUE
+"369" "death" "Sub-Saharian Africa" "Congenital anomalies" 83038.35346 TRUE
+"370" "death" "Sub-Saharian Africa" "Diabetes, urinary diseases and male infertility" 184429.1566728 TRUE
+"371" "death" "Sub-Saharian Africa" "Diarrhea, lower respiratory infections, meningitis, and other common infectious diseases" 1826370.01815076 TRUE
+"372" "death" "Sub-Saharian Africa" "Digestive diseases (except cirrhosis)" 142396.5572755 TRUE
+"373" "death" "Sub-Saharian Africa" "Excluded residual categories" 113440.05603 FALSE
+"374" "death" "Sub-Saharian Africa" "Gynecological diseases" 601.3300614 TRUE
+"375" "death" "Sub-Saharian Africa" "Hemoglobinopathies and hemolytic anemias" 35522.53661 TRUE
+"376" "death" "Sub-Saharian Africa" "Hepatitis" 34623.19683 TRUE
+"377" "death" "Sub-Saharian Africa" "HIV/AIDS" 1287001.2786869 TRUE
+"378" "death" "Sub-Saharian Africa" "Injuries" 642812.225528 FALSE
+"379" "death" "Sub-Saharian Africa" "Leprosy" 0 TRUE
+"380" "death" "Sub-Saharian Africa" "Malaria" 1271954.575 TRUE
+"381" "death" "Sub-Saharian Africa" "Maternal disorders" 138830.10068288 TRUE
+"382" "death" "Sub-Saharian Africa" "Mental and behavioral disorders" 12139.0579534 TRUE
+"383" "death" "Sub-Saharian Africa" "Musculoskeletal disorders" 15612.3711315 TRUE
+"384" "death" "Sub-Saharian Africa" "Neglected tropical diseases excluding malaria" 40572.706460758 TRUE
+"385" "death" "Sub-Saharian Africa" "Neonatal disorders" 717463.975271 TRUE
+"386" "death" "Sub-Saharian Africa" "Neoplasms" 302335.2255288 TRUE
+"387" "death" "Sub-Saharian Africa" "Neurological disorders" 96209.1323722 TRUE
+"388" "death" "Sub-Saharian Africa" "Nutritional deficiencies" 358771.3897872 TRUE
+"389" "death" "Sub-Saharian Africa" "Sexually transmitted diseases excluding HIV" 80710.832965 TRUE
+"390" "death" "Sub-Saharian Africa" "Skin and subcutaneous diseases" 26098.85578 TRUE
+"391" "death" "Sub-Saharian Africa" "Sudden infant death syndrome" 5360.7584437 TRUE
+"392" "death" "Sub-Saharian Africa" "Tuberculosis" 309989.64156 TRUE
+"393" "yld" "Central Europe, Eastern Europe, and Central Asia" "Cardiovascular and circulatory diseases" 2176519.255 TRUE
+"394" "yld" "Central Europe, Eastern Europe, and Central Asia" "Chronic respiratory diseases" 2432869.7179 TRUE
+"395" "yld" "Central Europe, Eastern Europe, and Central Asia" "Cirrhosis of the liver" 65879.11761 TRUE
+"396" "yld" "Central Europe, Eastern Europe, and Central Asia" "Congenital anomalies" 155330.999 TRUE
+"397" "yld" "Central Europe, Eastern Europe, and Central Asia" "Diabetes, urinary diseases and male infertility" 2648969.082646 TRUE
+"398" "yld" "Central Europe, Eastern Europe, and Central Asia" "Diarrhea, lower respiratory infections, meningitis, and other common infectious diseases" 879947.423638492 TRUE
+"399" "yld" "Central Europe, Eastern Europe, and Central Asia" "Digestive diseases (except cirrhosis)" 348918.592829 TRUE
+"400" "yld" "Central Europe, Eastern Europe, and Central Asia" "Excluded residual categories" 299283.521 FALSE
+"401" "yld" "Central Europe, Eastern Europe, and Central Asia" "Gynecological diseases" 609125.822 TRUE
+"402" "yld" "Central Europe, Eastern Europe, and Central Asia" "Hemoglobinopathies and hemolytic anemias" 334805.099 TRUE
+"403" "yld" "Central Europe, Eastern Europe, and Central Asia" "Hepatitis" 22350.3905 TRUE
+"404" "yld" "Central Europe, Eastern Europe, and Central Asia" "HIV/AIDS" 196104.3311 TRUE
+"405" "yld" "Central Europe, Eastern Europe, and Central Asia" "Injuries" 3716546.8446 FALSE
+"406" "yld" "Central Europe, Eastern Europe, and Central Asia" "Leprosy" 23.8790711 TRUE
+"407" "yld" "Central Europe, Eastern Europe, and Central Asia" "Malaria" 2272.554683 TRUE
+"408" "yld" "Central Europe, Eastern Europe, and Central Asia" "Maternal disorders" 13328.300449 TRUE
+"409" "yld" "Central Europe, Eastern Europe, and Central Asia" "Mental and behavioral disorders" 12703025.313 TRUE
+"410" "yld" "Central Europe, Eastern Europe, and Central Asia" "Musculoskeletal disorders" 12854770.74477 TRUE
+"411" "yld" "Central Europe, Eastern Europe, and Central Asia" "Neglected tropical diseases excluding malaria" 135169.468659745 TRUE
+"412" "yld" "Central Europe, Eastern Europe, and Central Asia" "Neonatal disorders" 402915.828728 TRUE
+"413" "yld" "Central Europe, Eastern Europe, and Central Asia" "Neoplasms" 387147.417818 TRUE
+"414" "yld" "Central Europe, Eastern Europe, and Central Asia" "Neurological disorders" 3336976.6165 TRUE
+"415" "yld" "Central Europe, Eastern Europe, and Central Asia" "Nutritional deficiencies" 2012891.071956 TRUE
+"416" "yld" "Central Europe, Eastern Europe, and Central Asia" "Oral disorders" 1366150.01 TRUE
+"417" "yld" "Central Europe, Eastern Europe, and Central Asia" "Sense organ diseases" 2761841.29 TRUE
+"418" "yld" "Central Europe, Eastern Europe, and Central Asia" "Sexually transmitted diseases excluding HIV" 97594.952 TRUE
+"419" "yld" "Central Europe, Eastern Europe, and Central Asia" "Skin and subcutaneous diseases" 1857619.14 TRUE
+"420" "yld" "Central Europe, Eastern Europe, and Central Asia" "Sudden infant death syndrome" 0 TRUE
+"421" "yld" "Central Europe, Eastern Europe, and Central Asia" "Tuberculosis" 413514.878 TRUE
+"422" "yld" "High-income" "Cardiovascular and circulatory diseases" 5464325.119255 TRUE
+"423" "yld" "High-income" "Chronic respiratory diseases" 7391269.12244 TRUE
+"424" "yld" "High-income" "Cirrhosis of the liver" 72944.876865 TRUE
+"425" "yld" "High-income" "Congenital anomalies" 333042.4907 TRUE
+"426" "yld" "High-income" "Diabetes, urinary diseases and male infertility" 6462439.75880043 TRUE
+"427" "yld" "High-income" "Diarrhea, lower respiratory infections, meningitis, and other common infectious diseases" 1966742.97703972 TRUE
+"428" "yld" "High-income" "Digestive diseases (except cirrhosis)" 1278650.9171035 TRUE
+"429" "yld" "High-income" "Excluded residual categories" 457538.733242 FALSE
+"430" "yld" "High-income" "Gynecological diseases" 1203832.7186 TRUE
+"431" "yld" "High-income" "Hemoglobinopathies and hemolytic anemias" 1442334 TRUE
+"432" "yld" "High-income" "Hepatitis" 29569.49086 TRUE
+"433" "yld" "High-income" "HIV/AIDS" 194668.1692 TRUE
+"434" "yld" "High-income" "Injuries" 8655922.724393 FALSE
+"435" "yld" "High-income" "Leprosy" 23.88100136 TRUE
+"436" "yld" "High-income" "Malaria" 1311.873492 TRUE
+"437" "yld" "High-income" "Maternal disorders" 41860.3273428 TRUE
+"438" "yld" "High-income" "Mental and behavioral disorders" 29061896.39185 TRUE
+"439" "yld" "High-income" "Musculoskeletal disorders" 34901684.83688 TRUE
+"440" "yld" "High-income" "Neglected tropical diseases excluding malaria" 155061.948823866 TRUE
+"441" "yld" "High-income" "Neonatal disorders" 637624.791063 TRUE
+"442" "yld" "High-income" "Neoplasms" 1864189.2884704 TRUE
+"443" "yld" "High-income" "Neurological disorders" 7963363.6705 TRUE
+"444" "yld" "High-income" "Nutritional deficiencies" 924801.505821 TRUE
+"445" "yld" "High-income" "Oral disorders" 2345971.817 TRUE
+"446" "yld" "High-income" "Sense organ diseases" 4132123.676 TRUE
+"447" "yld" "High-income" "Sexually transmitted diseases excluding HIV" 141774.06307 TRUE
+"448" "yld" "High-income" "Skin and subcutaneous diseases" 5128400.68 TRUE
+"449" "yld" "High-income" "Sudden infant death syndrome" 0 TRUE
+"450" "yld" "High-income" "Tuberculosis" 163029.0168 TRUE
+"451" "yld" "Latin America and Caribbean" "Cardiovascular and circulatory diseases" 1134927.694629 TRUE
+"452" "yld" "Latin America and Caribbean" "Chronic respiratory diseases" 3071043.682119 TRUE
+"453" "yld" "Latin America and Caribbean" "Cirrhosis of the liver" 36167.713894 TRUE
+"454" "yld" "Latin America and Caribbean" "Congenital anomalies" 220732.754 TRUE
+"455" "yld" "Latin America and Caribbean" "Diabetes, urinary diseases and male infertility" 2063081.98871584 TRUE
+"456" "yld" "Latin America and Caribbean" "Diarrhea, lower respiratory infections, meningitis, and other common infectious diseases" 1583716.55478322 TRUE
+"457" "yld" "Latin America and Caribbean" "Digestive diseases (except cirrhosis)" 369651.022308 TRUE
+"458" "yld" "Latin America and Caribbean" "Excluded residual categories" 412076.2254 FALSE
+"459" "yld" "Latin America and Caribbean" "Gynecological diseases" 647287.302 TRUE
+"460" "yld" "Latin America and Caribbean" "Hemoglobinopathies and hemolytic anemias" 712544.523 TRUE
+"461" "yld" "Latin America and Caribbean" "Hepatitis" 23548.37833 TRUE
+"462" "yld" "Latin America and Caribbean" "HIV/AIDS" 193661.4212 TRUE
+"463" "yld" "Latin America and Caribbean" "Injuries" 1931424.17733 FALSE
+"464" "yld" "Latin America and Caribbean" "Leprosy" 1060.8730239 TRUE
+"465" "yld" "Latin America and Caribbean" "Malaria" 16937.1011865 TRUE
+"466" "yld" "Latin America and Caribbean" "Maternal disorders" 23790.6606143 TRUE
+"467" "yld" "Latin America and Caribbean" "Mental and behavioral disorders" 14131616.43771 TRUE
+"468" "yld" "Latin America and Caribbean" "Musculoskeletal disorders" 10370753.449474 TRUE
+"469" "yld" "Latin America and Caribbean" "Neglected tropical diseases excluding malaria" 1187643.67877077 TRUE
+"470" "yld" "Latin America and Caribbean" "Neonatal disorders" 638968.9856982 TRUE
+"471" "yld" "Latin America and Caribbean" "Neoplasms" 214480.9065379 TRUE
+"472" "yld" "Latin America and Caribbean" "Neurological disorders" 3529400.50589 TRUE
+"473" "yld" "Latin America and Caribbean" "Nutritional deficiencies" 2708382.15284243 TRUE
+"474" "yld" "Latin America and Caribbean" "Oral disorders" 1248381.99 TRUE
+"475" "yld" "Latin America and Caribbean" "Sense organ diseases" 2238808.436 TRUE
+"476" "yld" "Latin America and Caribbean" "Sexually transmitted diseases excluding HIV" 109669.134 TRUE
+"477" "yld" "Latin America and Caribbean" "Skin and subcutaneous diseases" 2687820.437 TRUE
+"478" "yld" "Latin America and Caribbean" "Sudden infant death syndrome" 0 TRUE
+"479" "yld" "Latin America and Caribbean" "Tuberculosis" 253607.02892 TRUE
+"480" "yld" "North Africa and Middle East" "Cardiovascular and circulatory diseases" 1013068.71069 TRUE
+"481" "yld" "North Africa and Middle East" "Chronic respiratory diseases" 2511210.35572 TRUE
+"482" "yld" "North Africa and Middle East" "Cirrhosis of the liver" 28952.22945 TRUE
+"483" "yld" "North Africa and Middle East" "Congenital anomalies" 249119.872 TRUE
+"484" "yld" "North Africa and Middle East" "Diabetes, urinary diseases and male infertility" 2120362.5063137 TRUE
+"485" "yld" "North Africa and Middle East" "Diarrhea, lower respiratory infections, meningitis, and other common infectious diseases" 1143107.35731154 TRUE
+"486" "yld" "North Africa and Middle East" "Digestive diseases (except cirrhosis)" 161111.24633 TRUE
+"487" "yld" "North Africa and Middle East" "Excluded residual categories" 403194.119 FALSE
+"488" "yld" "North Africa and Middle East" "Gynecological diseases" 646360.054 TRUE
+"489" "yld" "North Africa and Middle East" "Hemoglobinopathies and hemolytic anemias" 659208.3 TRUE
+"490" "yld" "North Africa and Middle East" "Hepatitis" 34620.5497 TRUE
+"491" "yld" "North Africa and Middle East" "HIV/AIDS" 18762.5228 TRUE
+"492" "yld" "North Africa and Middle East" "Injuries" 2752510.7854 FALSE
+"493" "yld" "North Africa and Middle East" "Leprosy" 34.2475894 TRUE
+"494" "yld" "North Africa and Middle East" "Malaria" 23018.820463 TRUE
+"495" "yld" "North Africa and Middle East" "Maternal disorders" 79145.948807 TRUE
+"496" "yld" "North Africa and Middle East" "Mental and behavioral disorders" 12104279.0889 TRUE
+"497" "yld" "North Africa and Middle East" "Musculoskeletal disorders" 8922897.26901 TRUE
+"498" "yld" "North Africa and Middle East" "Neglected tropical diseases excluding malaria" 416335.805023192 TRUE
+"499" "yld" "North Africa and Middle East" "Neonatal disorders" 511354.945174 TRUE
+"500" "yld" "North Africa and Middle East" "Neoplasms" 90985.550432 TRUE
+"501" "yld" "North Africa and Middle East" "Neurological disorders" 2069897.8794 TRUE
+"502" "yld" "North Africa and Middle East" "Nutritional deficiencies" 3482114.7308315 TRUE
+"503" "yld" "North Africa and Middle East" "Oral disorders" 817136.73 TRUE
+"504" "yld" "North Africa and Middle East" "Sense organ diseases" 1802577.68 TRUE
+"505" "yld" "North Africa and Middle East" "Sexually transmitted diseases excluding HIV" 68985.836 TRUE
+"506" "yld" "North Africa and Middle East" "Skin and subcutaneous diseases" 1974860.5 TRUE
+"507" "yld" "North Africa and Middle East" "Sudden infant death syndrome" 0 TRUE
+"508" "yld" "North Africa and Middle East" "Tuberculosis" 429243.479 TRUE
+"509" "yld" "South Asia" "Cardiovascular and circulatory diseases" 3247396.22154 TRUE
+"510" "yld" "South Asia" "Chronic respiratory diseases" 13497216.6021 TRUE
+"511" "yld" "South Asia" "Cirrhosis of the liver" 130787.24286 TRUE
+"512" "yld" "South Asia" "Congenital anomalies" 914433.328 TRUE
+"513" "yld" "South Asia" "Diabetes, urinary diseases and male infertility" 4665710.299404 TRUE
+"514" "yld" "South Asia" "Diarrhea, lower respiratory infections, meningitis, and other common infectious diseases" 5183724.61768754 TRUE
+"515" "yld" "South Asia" "Digestive diseases (except cirrhosis)" 876400.705728 TRUE
+"516" "yld" "South Asia" "Excluded residual categories" 2314975.275 FALSE
+"517" "yld" "South Asia" "Gynecological diseases" 2629728.705 TRUE
+"518" "yld" "South Asia" "Hemoglobinopathies and hemolytic anemias" 2614996.764 TRUE
+"519" "yld" "South Asia" "Hepatitis" 121467.8899 TRUE
+"520" "yld" "South Asia" "HIV/AIDS" 692371.455 TRUE
+"521" "yld" "South Asia" "Injuries" 8903250.3421 FALSE
+"522" "yld" "South Asia" "Leprosy" 5635.277723 TRUE
+"523" "yld" "South Asia" "Malaria" 549074.634 TRUE
+"524" "yld" "South Asia" "Maternal disorders" 442152.12892 TRUE
+"525" "yld" "South Asia" "Mental and behavioral disorders" 35355189.3674 TRUE
+"526" "yld" "South Asia" "Musculoskeletal disorders" 27304925.2693 TRUE
+"527" "yld" "South Asia" "Neglected tropical diseases excluding malaria" 4970371.7331932 TRUE
+"528" "yld" "South Asia" "Neonatal disorders" 2982144.25631 TRUE
+"529" "yld" "South Asia" "Neoplasms" 324817.4459485 TRUE
+"530" "yld" "South Asia" "Neurological disorders" 9746837.7615 TRUE
+"531" "yld" "South Asia" "Nutritional deficiencies" 22993160.382785 TRUE
+"532" "yld" "South Asia" "Oral disorders" 3229059.62 TRUE
+"533" "yld" "South Asia" "Sense organ diseases" 8925553.12 TRUE
+"534" "yld" "South Asia" "Sexually transmitted diseases excluding HIV" 171593.5161 TRUE
+"535" "yld" "South Asia" "Skin and subcutaneous diseases" 7375369.68 TRUE
+"536" "yld" "South Asia" "Sudden infant death syndrome" 0 TRUE
+"537" "yld" "South Asia" "Tuberculosis" 2656362.74 TRUE
+"538" "yld" "Southeast Asia, East Asia and Oceania" "Cardiovascular and circulatory diseases" 5108139.96324 TRUE
+"539" "yld" "Southeast Asia, East Asia and Oceania" "Chronic respiratory diseases" 9804920.634649 TRUE
+"540" "yld" "Southeast Asia, East Asia and Oceania" "Cirrhosis of the liver" 189816.814394 TRUE
+"541" "yld" "Southeast Asia, East Asia and Oceania" "Congenital anomalies" 818558.6708 TRUE
+"542" "yld" "Southeast Asia, East Asia and Oceania" "Diabetes, urinary diseases and male infertility" 8337121.09539188 TRUE
+"543" "yld" "Southeast Asia, East Asia and Oceania" "Diarrhea, lower respiratory infections, meningitis, and other common infectious diseases" 4677506.49788378 TRUE
+"544" "yld" "Southeast Asia, East Asia and Oceania" "Digestive diseases (except cirrhosis)" 1649823.495509 TRUE
+"545" "yld" "Southeast Asia, East Asia and Oceania" "Excluded residual categories" 1334201.2013 FALSE
+"546" "yld" "Southeast Asia, East Asia and Oceania" "Gynecological diseases" 2678894.66 TRUE
+"547" "yld" "Southeast Asia, East Asia and Oceania" "Hemoglobinopathies and hemolytic anemias" 1989456.0215 TRUE
+"548" "yld" "Southeast Asia, East Asia and Oceania" "Hepatitis" 177211.15787 TRUE
+"549" "yld" "Southeast Asia, East Asia and Oceania" "HIV/AIDS" 350698.50664 TRUE
+"550" "yld" "Southeast Asia, East Asia and Oceania" "Injuries" 11481886.44038 FALSE
+"551" "yld" "Southeast Asia, East Asia and Oceania" "Leprosy" 791.041623 TRUE
+"552" "yld" "Southeast Asia, East Asia and Oceania" "Malaria" 301486.73547 TRUE
+"553" "yld" "Southeast Asia, East Asia and Oceania" "Maternal disorders" 431159.0070276 TRUE
+"554" "yld" "Southeast Asia, East Asia and Oceania" "Mental and behavioral disorders" 43805534.04281 TRUE
+"555" "yld" "Southeast Asia, East Asia and Oceania" "Musculoskeletal disorders" 41317340.588131 TRUE
+"556" "yld" "Southeast Asia, East Asia and Oceania" "Neglected tropical diseases excluding malaria" 5745078.41110206 TRUE
+"557" "yld" "Southeast Asia, East Asia and Oceania" "Neonatal disorders" 2516995.982885 TRUE
+"558" "yld" "Southeast Asia, East Asia and Oceania" "Neoplasms" 935601.2977956 TRUE
+"559" "yld" "Southeast Asia, East Asia and Oceania" "Neurological disorders" 8769421.78259 TRUE
+"560" "yld" "Southeast Asia, East Asia and Oceania" "Nutritional deficiencies" 7891036.81541524 TRUE
+"561" "yld" "Southeast Asia, East Asia and Oceania" "Oral disorders" 4105884.8098 TRUE
+"562" "yld" "Southeast Asia, East Asia and Oceania" "Sense organ diseases" 9048243.671 TRUE
+"563" "yld" "Southeast Asia, East Asia and Oceania" "Sexually transmitted diseases excluding HIV" 480912.5852 TRUE
+"564" "yld" "Southeast Asia, East Asia and Oceania" "Skin and subcutaneous diseases" 8706916.567 TRUE
+"565" "yld" "Southeast Asia, East Asia and Oceania" "Sudden infant death syndrome" 0 TRUE
+"566" "yld" "Southeast Asia, East Asia and Oceania" "Tuberculosis" 1877394.5581 TRUE
+"567" "yld" "Sub-Saharian Africa" "Cardiovascular and circulatory diseases" 1452230.347955 TRUE
+"568" "yld" "Sub-Saharian Africa" "Chronic respiratory diseases" 6377156.903779 TRUE
+"569" "yld" "Sub-Saharian Africa" "Cirrhosis of the liver" 54983.735119 TRUE
+"570" "yld" "Sub-Saharian Africa" "Congenital anomalies" 412497.1187 TRUE
+"571" "yld" "Sub-Saharian Africa" "Diabetes, urinary diseases and male infertility" 1480901.41087054 TRUE
+"572" "yld" "Sub-Saharian Africa" "Diarrhea, lower respiratory infections, meningitis, and other common infectious diseases" 3702542.24422546 TRUE
+"573" "yld" "Sub-Saharian Africa" "Digestive diseases (except cirrhosis)" 553243.5392288 TRUE
+"574" "yld" "Sub-Saharian Africa" "Excluded residual categories" 1255265.4758 FALSE
+"575" "yld" "Sub-Saharian Africa" "Gynecological diseases" 1086116.2236 TRUE
+"576" "yld" "Sub-Saharian Africa" "Hemoglobinopathies and hemolytic anemias" 1981981.182 TRUE
+"577" "yld" "Sub-Saharian Africa" "Hepatitis" 108302.86312 TRUE
+"578" "yld" "Sub-Saharian Africa" "HIV/AIDS" 3053653.0394319 TRUE
+"579" "yld" "Sub-Saharian Africa" "Injuries" 2774077.80327 FALSE
+"580" "yld" "Sub-Saharian Africa" "Leprosy" 970.3528647 TRUE
+"581" "yld" "Sub-Saharian Africa" "Malaria" 2990778.685867 TRUE
+"582" "yld" "Sub-Saharian Africa" "Maternal disorders" 604819.0743672 TRUE
+"583" "yld" "Sub-Saharian Africa" "Mental and behavioral disorders" 16743522.47126 TRUE
+"584" "yld" "Sub-Saharian Africa" "Musculoskeletal disorders" 12827277.319812 TRUE
+"585" "yld" "Sub-Saharian Africa" "Neglected tropical diseases excluding malaria" 5654915.61962143 TRUE
+"586" "yld" "Sub-Saharian Africa" "Neonatal disorders" 1678365.9092282 TRUE
+"587" "yld" "Sub-Saharian Africa" "Neoplasms" 110703.2048183 TRUE
+"588" "yld" "Sub-Saharian Africa" "Neurological disorders" 3826188.48482 TRUE
+"589" "yld" "Sub-Saharian Africa" "Nutritional deficiencies" 11012719.4948906 TRUE
+"590" "yld" "Sub-Saharian Africa" "Oral disorders" 1223932.799 TRUE
+"591" "yld" "Sub-Saharian Africa" "Sense organ diseases" 3381445.424 TRUE
+"592" "yld" "Sub-Saharian Africa" "Sexually transmitted diseases excluding HIV" 173954.9511 TRUE
+"593" "yld" "Sub-Saharian Africa" "Skin and subcutaneous diseases" 4147509.288 TRUE
+"594" "yld" "Sub-Saharian Africa" "Sudden infant death syndrome" 0 TRUE
+"595" "yld" "Sub-Saharian Africa" "Tuberculosis" 987791.4456 TRUE
+"596" "yll" "Central Europe, Eastern Europe, and Central Asia" "Cardiovascular and circulatory diseases" 50984885.2644 TRUE
+"597" "yll" "Central Europe, Eastern Europe, and Central Asia" "Chronic respiratory diseases" 3211734.8773 TRUE
+"598" "yll" "Central Europe, Eastern Europe, and Central Asia" "Cirrhosis of the liver" 4024456.989 TRUE
+"599" "yll" "Central Europe, Eastern Europe, and Central Asia" "Congenital anomalies" 1924091.363 TRUE
+"600" "yll" "Central Europe, Eastern Europe, and Central Asia" "Diabetes, urinary diseases and male infertility" 2400854.124 TRUE
+"601" "yll" "Central Europe, Eastern Europe, and Central Asia" "Diarrhea, lower respiratory infections, meningitis, and other common infectious diseases" 6401673.87622 TRUE
+"602" "yll" "Central Europe, Eastern Europe, and Central Asia" "Digestive diseases (except cirrhosis)" 2192991.2369 TRUE
+"603" "yll" "Central Europe, Eastern Europe, and Central Asia" "Excluded residual categories" 270130.73 FALSE
+"604" "yll" "Central Europe, Eastern Europe, and Central Asia" "Gynecological diseases" 17522.1958 TRUE
+"605" "yll" "Central Europe, Eastern Europe, and Central Asia" "Hemoglobinopathies and hemolytic anemias" 89994.7198 TRUE
+"606" "yll" "Central Europe, Eastern Europe, and Central Asia" "Hepatitis" 105909.915 TRUE
+"607" "yll" "Central Europe, Eastern Europe, and Central Asia" "HIV/AIDS" 2455879.0231 TRUE
+"608" "yll" "Central Europe, Eastern Europe, and Central Asia" "Injuries" 21328232.4776 FALSE
+"609" "yll" "Central Europe, Eastern Europe, and Central Asia" "Leprosy" 0 TRUE
+"610" "yll" "Central Europe, Eastern Europe, and Central Asia" "Malaria" 1164.23962 TRUE
+"611" "yll" "Central Europe, Eastern Europe, and Central Asia" "Maternal disorders" 101259.635615 TRUE
+"612" "yll" "Central Europe, Eastern Europe, and Central Asia" "Mental and behavioral disorders" 2413166.5969 TRUE
+"613" "yll" "Central Europe, Eastern Europe, and Central Asia" "Musculoskeletal disorders" 213656.2258 TRUE
+"614" "yll" "Central Europe, Eastern Europe, and Central Asia" "Neglected tropical diseases excluding malaria" 74418.224188 TRUE
+"615" "yll" "Central Europe, Eastern Europe, and Central Asia" "Neonatal disorders" 3480992.401 TRUE
+"616" "yll" "Central Europe, Eastern Europe, and Central Asia" "Neoplasms" 19120835.9407 TRUE
+"617" "yll" "Central Europe, Eastern Europe, and Central Asia" "Neurological disorders" 1387363.8783 TRUE
+"618" "yll" "Central Europe, Eastern Europe, and Central Asia" "Nutritional deficiencies" 146567.05116 TRUE
+"619" "yll" "Central Europe, Eastern Europe, and Central Asia" "Sexually transmitted diseases excluding HIV" 46010.3347 TRUE
+"620" "yll" "Central Europe, Eastern Europe, and Central Asia" "Skin and subcutaneous diseases" 38608.6769 TRUE
+"621" "yll" "Central Europe, Eastern Europe, and Central Asia" "Sudden infant death syndrome" 112081.129 TRUE
+"622" "yll" "Central Europe, Eastern Europe, and Central Asia" "Tuberculosis" 2355700.011 TRUE
+"623" "yll" "High-income" "Cardiovascular and circulatory diseases" 38081445.23631 TRUE
+"624" "yll" "High-income" "Chronic respiratory diseases" 6250708.5057 TRUE
+"625" "yll" "High-income" "Cirrhosis of the liver" 3922691.4204 TRUE
+"626" "yll" "High-income" "Congenital anomalies" 1963851.683 TRUE
+"627" "yll" "High-income" "Diabetes, urinary diseases and male infertility" 5875988.606455 TRUE
+"628" "yll" "High-income" "Diarrhea, lower respiratory infections, meningitis, and other common infectious diseases" 4880946.9812506 TRUE
+"629" "yll" "High-income" "Digestive diseases (except cirrhosis)" 2639791.05093 TRUE
+"630" "yll" "High-income" "Excluded residual categories" 1585351.9948 FALSE
+"631" "yll" "High-income" "Gynecological diseases" 13693.993005 TRUE
+"632" "yll" "High-income" "Hemoglobinopathies and hemolytic anemias" 170269.4343 TRUE
+"633" "yll" "High-income" "Hepatitis" 174172.26877 TRUE
+"634" "yll" "High-income" "HIV/AIDS" 1018755.667 TRUE
+"635" "yll" "High-income" "Injuries" 17165652.278864 FALSE
+"636" "yll" "High-income" "Leprosy" 0 TRUE
+"637" "yll" "High-income" "Malaria" 99.3754 TRUE
+"638" "yll" "High-income" "Maternal disorders" 87666.46046252 TRUE
+"639" "yll" "High-income" "Mental and behavioral disorders" 2205638.07095 TRUE
+"640" "yll" "High-income" "Musculoskeletal disorders" 670006.28457 TRUE
+"641" "yll" "High-income" "Neglected tropical diseases excluding malaria" 100387.0913177 TRUE
+"642" "yll" "High-income" "Neonatal disorders" 3173923.26741 TRUE
+"643" "yll" "High-income" "Neoplasms" 41434085.43655 TRUE
+"644" "yll" "High-income" "Neurological disorders" 4505273.16805 TRUE
+"645" "yll" "High-income" "Nutritional deficiencies" 271224.131401 TRUE
+"646" "yll" "High-income" "Sexually transmitted diseases excluding HIV" 33970.468009 TRUE
+"647" "yll" "High-income" "Skin and subcutaneous diseases" 184051.4017 TRUE
+"648" "yll" "High-income" "Sudden infant death syndrome" 316814.359 TRUE
+"649" "yll" "High-income" "Tuberculosis" 272843.5714 TRUE
+"650" "yll" "Latin America and Caribbean" "Cardiovascular and circulatory diseases" 13877968.5931 TRUE
+"651" "yll" "Latin America and Caribbean" "Chronic respiratory diseases" 2429860.97846 TRUE
+"652" "yll" "Latin America and Caribbean" "Cirrhosis of the liver" 2340255.6045 TRUE
+"653" "yll" "Latin America and Caribbean" "Congenital anomalies" 3396777.362 TRUE
+"654" "yll" "Latin America and Caribbean" "Diabetes, urinary diseases and male infertility" 4803326.94516 TRUE
+"655" "yll" "Latin America and Caribbean" "Diarrhea, lower respiratory infections, meningitis, and other common infectious diseases" 9051400.587314 TRUE
+"656" "yll" "Latin America and Caribbean" "Digestive diseases (except cirrhosis)" 1589733.89352 TRUE
+"657" "yll" "Latin America and Caribbean" "Excluded residual categories" 847340.7992 FALSE
+"658" "yll" "Latin America and Caribbean" "Gynecological diseases" 22985.85452 TRUE
+"659" "yll" "Latin America and Caribbean" "Hemoglobinopathies and hemolytic anemias" 173109.149 TRUE
+"660" "yll" "Latin America and Caribbean" "Hepatitis" 120133.1836 TRUE
+"661" "yll" "Latin America and Caribbean" "HIV/AIDS" 3396144.166 TRUE
+"662" "yll" "Latin America and Caribbean" "Injuries" 17263116.91417 FALSE
+"663" "yll" "Latin America and Caribbean" "Leprosy" 0 TRUE
+"664" "yll" "Latin America and Caribbean" "Malaria" 92867.45967 TRUE
+"665" "yll" "Latin America and Caribbean" "Maternal disorders" 443855.5223904 TRUE
+"666" "yll" "Latin America and Caribbean" "Mental and behavioral disorders" 698302.21509 TRUE
+"667" "yll" "Latin America and Caribbean" "Musculoskeletal disorders" 311042.921 TRUE
+"668" "yll" "Latin America and Caribbean" "Neglected tropical diseases excluding malaria" 421363.95973011 TRUE
+"669" "yll" "Latin America and Caribbean" "Neonatal disorders" 9430098.5158 TRUE
+"670" "yll" "Latin America and Caribbean" "Neoplasms" 9482885.95828 TRUE
+"671" "yll" "Latin America and Caribbean" "Neurological disorders" 984454.9004 TRUE
+"672" "yll" "Latin America and Caribbean" "Nutritional deficiencies" 1639995.233033 TRUE
+"673" "yll" "Latin America and Caribbean" "Sexually transmitted diseases excluding HIV" 388799.8621 TRUE
+"674" "yll" "Latin America and Caribbean" "Skin and subcutaneous diseases" 129270.1439 TRUE
+"675" "yll" "Latin America and Caribbean" "Sudden infant death syndrome" 72350.122 TRUE
+"676" "yll" "Latin America and Caribbean" "Tuberculosis" 792719.2775 TRUE
+"677" "yll" "North Africa and Middle East" "Cardiovascular and circulatory diseases" 18200967.5883 TRUE
+"678" "yll" "North Africa and Middle East" "Chronic respiratory diseases" 2270654.6384 TRUE
+"679" "yll" "North Africa and Middle East" "Cirrhosis of the liver" 1442692.625 TRUE
+"680" "yll" "North Africa and Middle East" "Congenital anomalies" 4841947.05 TRUE
+"681" "yll" "North Africa and Middle East" "Diabetes, urinary diseases and male infertility" 2550838.0774 TRUE
+"682" "yll" "North Africa and Middle East" "Diarrhea, lower respiratory infections, meningitis, and other common infectious diseases" 9642370.695332 TRUE
+"683" "yll" "North Africa and Middle East" "Digestive diseases (except cirrhosis)" 923062.712257 TRUE
+"684" "yll" "North Africa and Middle East" "Excluded residual categories" 951915.346 FALSE
+"685" "yll" "North Africa and Middle East" "Gynecological diseases" 11004.73902 TRUE
+"686" "yll" "North Africa and Middle East" "Hemoglobinopathies and hemolytic anemias" 407635.943 TRUE
+"687" "yll" "North Africa and Middle East" "Hepatitis" 304005.981 TRUE
+"688" "yll" "North Africa and Middle East" "HIV/AIDS" 266502.3841 TRUE
+"689" "yll" "North Africa and Middle East" "Injuries" 9551451.7749 FALSE
+"690" "yll" "North Africa and Middle East" "Leprosy" 0 TRUE
+"691" "yll" "North Africa and Middle East" "Malaria" 474403.5671 TRUE
+"692" "yll" "North Africa and Middle East" "Maternal disorders" 347145.39416 TRUE
+"693" "yll" "North Africa and Middle East" "Mental and behavioral disorders" 342719.2778 TRUE
+"694" "yll" "North Africa and Middle East" "Musculoskeletal disorders" 97377.2977 TRUE
+"695" "yll" "North Africa and Middle East" "Neglected tropical diseases excluding malaria" 368168.469699 TRUE
+"696" "yll" "North Africa and Middle East" "Neonatal disorders" 9774220.667 TRUE
+"697" "yll" "North Africa and Middle East" "Neoplasms" 6119425.4502 TRUE
+"698" "yll" "North Africa and Middle East" "Neurological disorders" 924578.1374 TRUE
+"699" "yll" "North Africa and Middle East" "Nutritional deficiencies" 732754.1496159 TRUE
+"700" "yll" "North Africa and Middle East" "Sexually transmitted diseases excluding HIV" 247034.9305 TRUE
+"701" "yll" "North Africa and Middle East" "Skin and subcutaneous diseases" 91386.991 TRUE
+"702" "yll" "North Africa and Middle East" "Sudden infant death syndrome" 66582.5199 TRUE
+"703" "yll" "North Africa and Middle East" "Tuberculosis" 447167.378 TRUE
+"704" "yll" "South Asia" "Cardiovascular and circulatory diseases" 53147808.1524 TRUE
+"705" "yll" "South Asia" "Chronic respiratory diseases" 25413821.394 TRUE
+"706" "yll" "South Asia" "Cirrhosis of the liver" 7617848.528 TRUE
+"707" "yll" "South Asia" "Congenital anomalies" 11927805.43 TRUE
+"708" "yll" "South Asia" "Diabetes, urinary diseases and male infertility" 13683980.084 TRUE
+"709" "yll" "South Asia" "Diarrhea, lower respiratory infections, meningitis, and other common infectious diseases" 125671237.1465 TRUE
+"710" "yll" "South Asia" "Digestive diseases (except cirrhosis)" 9760675.1069 TRUE
+"711" "yll" "South Asia" "Excluded residual categories" 6421046.963 FALSE
+"712" "yll" "South Asia" "Gynecological diseases" 31138.69 TRUE
+"713" "yll" "South Asia" "Hemoglobinopathies and hemolytic anemias" 1285748.881 TRUE
+"714" "yll" "South Asia" "Hepatitis" 7795137.22 TRUE
+"715" "yll" "South Asia" "HIV/AIDS" 8651370.697 TRUE
+"716" "yll" "South Asia" "Injuries" 69451791.208 FALSE
+"717" "yll" "South Asia" "Leprosy" 0 TRUE
+"718" "yll" "South Asia" "Malaria" 5216573.83 TRUE
+"719" "yll" "South Asia" "Maternal disorders" 6143337.3416 TRUE
+"720" "yll" "South Asia" "Mental and behavioral disorders" 530842.29106 TRUE
+"721" "yll" "South Asia" "Musculoskeletal disorders" 347108.9859 TRUE
+"722" "yll" "South Asia" "Neglected tropical diseases excluding malaria" 3863545.826883 TRUE
+"723" "yll" "South Asia" "Neonatal disorders" 97902297.67 TRUE
+"724" "yll" "South Asia" "Neoplasms" 22533584.74712 TRUE
+"725" "yll" "South Asia" "Neurological disorders" 10845311.9746 TRUE
+"726" "yll" "South Asia" "Nutritional deficiencies" 10706457.54297 TRUE
+"727" "yll" "South Asia" "Sexually transmitted diseases excluding HIV" 3323457.67 TRUE
+"728" "yll" "South Asia" "Skin and subcutaneous diseases" 1085460.704 TRUE
+"729" "yll" "South Asia" "Sudden infant death syndrome" 614820.087 TRUE
+"730" "yll" "South Asia" "Tuberculosis" 21005995.5 TRUE
+"731" "yll" "Southeast Asia, East Asia and Oceania" "Cardiovascular and circulatory diseases" 76603246.69302 TRUE
+"732" "yll" "Southeast Asia, East Asia and Oceania" "Chronic respiratory diseases" 21988928.13766 TRUE
+"733" "yll" "Southeast Asia, East Asia and Oceania" "Cirrhosis of the liver" 7178240.6295 TRUE
+"734" "yll" "Southeast Asia, East Asia and Oceania" "Congenital anomalies" 9220801.544 TRUE
+"735" "yll" "Southeast Asia, East Asia and Oceania" "Diabetes, urinary diseases and male infertility" 12774188.31623 TRUE
+"736" "yll" "Southeast Asia, East Asia and Oceania" "Diarrhea, lower respiratory infections, meningitis, and other common infectious diseases" 32671347.901224 TRUE
+"737" "yll" "Southeast Asia, East Asia and Oceania" "Digestive diseases (except cirrhosis)" 4854511.129163 TRUE
+"738" "yll" "Southeast Asia, East Asia and Oceania" "Excluded residual categories" 2747225.556 FALSE
+"739" "yll" "Southeast Asia, East Asia and Oceania" "Gynecological diseases" 85338.0424 TRUE
+"740" "yll" "Southeast Asia, East Asia and Oceania" "Hemoglobinopathies and hemolytic anemias" 862763.3346 TRUE
+"741" "yll" "Southeast Asia, East Asia and Oceania" "Hepatitis" 1761392.088 TRUE
+"742" "yll" "Southeast Asia, East Asia and Oceania" "HIV/AIDS" 5178686.732 TRUE
+"743" "yll" "Southeast Asia, East Asia and Oceania" "Injuries" 52979874.88001 FALSE
+"744" "yll" "Southeast Asia, East Asia and Oceania" "Leprosy" 0 TRUE
+"745" "yll" "Southeast Asia, East Asia and Oceania" "Malaria" 3249435.1123 TRUE
+"746" "yll" "Southeast Asia, East Asia and Oceania" "Maternal disorders" 1894493.66243 TRUE
+"747" "yll" "Southeast Asia, East Asia and Oceania" "Mental and behavioral disorders" 1198345.71525 TRUE
+"748" "yll" "Southeast Asia, East Asia and Oceania" "Musculoskeletal disorders" 892427.42999 TRUE
+"749" "yll" "Southeast Asia, East Asia and Oceania" "Neglected tropical diseases excluding malaria" 1393996.1360762 TRUE
+"750" "yll" "Southeast Asia, East Asia and Oceania" "Neonatal disorders" 25437946.636 TRUE
+"751" "yll" "Southeast Asia, East Asia and Oceania" "Neoplasms" 64803462.051138 TRUE
+"752" "yll" "Southeast Asia, East Asia and Oceania" "Neurological disorders" 2910312.64192 TRUE
+"753" "yll" "Southeast Asia, East Asia and Oceania" "Nutritional deficiencies" 1467964.472026 TRUE
+"754" "yll" "Southeast Asia, East Asia and Oceania" "Sexually transmitted diseases excluding HIV" 832404.3326 TRUE
+"755" "yll" "Southeast Asia, East Asia and Oceania" "Skin and subcutaneous diseases" 512312.5905 TRUE
+"756" "yll" "Southeast Asia, East Asia and Oceania" "Sudden infant death syndrome" 235197.2442 TRUE
+"757" "yll" "Southeast Asia, East Asia and Oceania" "Tuberculosis" 11223078.153 TRUE
+"758" "yll" "Sub-Saharian Africa" "Cardiovascular and circulatory diseases" 16911066.262498 TRUE
+"759" "yll" "Sub-Saharian Africa" "Chronic respiratory diseases" 5833976.11981 TRUE
+"760" "yll" "Sub-Saharian Africa" "Cirrhosis of the liver" 3356990.2585 TRUE
+"761" "yll" "Sub-Saharian Africa" "Congenital anomalies" 6875511.014 TRUE
+"762" "yll" "Sub-Saharian Africa" "Diabetes, urinary diseases and male infertility" 5953693.61522 TRUE
+"763" "yll" "Sub-Saharian Africa" "Diarrhea, lower respiratory infections, meningitis, and other common infectious diseases" 121829287.796016 TRUE
+"764" "yll" "Sub-Saharian Africa" "Digestive diseases (except cirrhosis)" 5377546.790563 TRUE
+"765" "yll" "Sub-Saharian Africa" "Excluded residual categories" 7325196.826 FALSE
+"766" "yll" "Sub-Saharian Africa" "Gynecological diseases" 27254.11507 TRUE
+"767" "yll" "Sub-Saharian Africa" "Hemoglobinopathies and hemolytic anemias" 2292744.0364 TRUE
+"768" "yll" "Sub-Saharian Africa" "Hepatitis" 1773220.1267 TRUE
+"769" "yll" "Sub-Saharian Africa" "HIV/AIDS" 70492556.21708 TRUE
+"770" "yll" "Sub-Saharian Africa" "Injuries" 37673450.71821 FALSE
+"771" "yll" "Sub-Saharian Africa" "Leprosy" 0 TRUE
+"772" "yll" "Sub-Saharian Africa" "Malaria" 88425094.01 TRUE
+"773" "yll" "Sub-Saharian Africa" "Maternal disorders" 7872963.901903 TRUE
+"774" "yll" "Sub-Saharian Africa" "Mental and behavioral disorders" 620289.06043 TRUE
+"775" "yll" "Sub-Saharian Africa" "Musculoskeletal disorders" 523501.39997 TRUE
+"776" "yll" "Sub-Saharian Africa" "Neglected tropical diseases excluding malaria" 2556567.4222737 TRUE
+"777" "yll" "Sub-Saharian Africa" "Neonatal disorders" 61720147.805 TRUE
+"778" "yll" "Sub-Saharian Africa" "Neoplasms" 9446337.74641 TRUE
+"779" "yll" "Sub-Saharian Africa" "Neurological disorders" 5027280.46636 TRUE
+"780" "yll" "Sub-Saharian Africa" "Nutritional deficiencies" 23075192.280171 TRUE
+"781" "yll" "Sub-Saharian Africa" "Sexually transmitted diseases excluding HIV" 6806029.8495 TRUE
+"782" "yll" "Sub-Saharian Africa" "Skin and subcutaneous diseases" 1142393.3593 TRUE
+"783" "yll" "Sub-Saharian Africa" "Sudden infant death syndrome" 460110.98746 TRUE
+"784" "yll" "Sub-Saharian Africa" "Tuberculosis" 13526432.8546 TRUE
