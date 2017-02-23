@@ -1,0 +1,109 @@
+"UI" "Region" "metr" "RCTs" "Patients"
+"1" "low" "All" "daly" 76.1422397355322 50.1544414559907
+"2" "med" "All" "daly" 81.0661433516222 61.0016204455167
+"3" "up" "All" "daly" 87.3610814402566 97.7819336013179
+"4" "low" "All" "death" 90.8118422413859 58.9974158607202
+"5" "med" "All" "death" 95.2121607917547 70.7714437565089
+"6" "up" "All" "death" 99.960290608052 106.880859280968
+"7" "low" "All" "yld" 86.8880434806005 89.6053635564303
+"8" "med" "All" "yld" 91.5925800060108 100.157904503937
+"9" "up" "All" "yld" 97.86228979339 138.082802391089
+"10" "low" "All" "yll" 98.3527685580794 65.616101059454
+"11" "med" "All" "yll" 103.006879880503 75.3664262697759
+"12" "up" "All" "yll" 107.688157140887 111.379123790278
+"13" "low" "Central Europe, Eastern Europe, and Central Asia" "daly" 75.3251060932584 58.6860711291703
+"14" "med" "Central Europe, Eastern Europe, and Central Asia" "daly" 79.9496387728477 64.6599438444921
+"15" "up" "Central Europe, Eastern Europe, and Central Asia" "daly" 85.7784076977965 71.8045929615282
+"16" "low" "Central Europe, Eastern Europe, and Central Asia" "death" 110.941062618615 99.8528145217834
+"17" "med" "Central Europe, Eastern Europe, and Central Asia" "death" 115.006241486842 105.561765019348
+"18" "up" "Central Europe, Eastern Europe, and Central Asia" "death" 119.676260395687 111.75087352362
+"19" "low" "Central Europe, Eastern Europe, and Central Asia" "yld" 95.6071993626166 105.795011003843
+"20" "med" "Central Europe, Eastern Europe, and Central Asia" "yld" 99.9874617959855 111.682098396419
+"21" "up" "Central Europe, Eastern Europe, and Central Asia" "yld" 105.144892989553 118.198640680735
+"22" "low" "Central Europe, Eastern Europe, and Central Asia" "yll" 99.5278317038978 87.3251112438978
+"23" "med" "Central Europe, Eastern Europe, and Central Asia" "yll" 103.668796859363 93.0495330148344
+"24" "up" "Central Europe, Eastern Europe, and Central Asia" "yll" 108.167111473615 99.1957649581693
+"25" "low" "High-income" "daly" 51.942850468877 45.8990681298074
+"26" "med" "High-income" "daly" 56.6758441618083 58.3472553853412
+"27" "up" "High-income" "daly" 63.0978358555895 74.6762036366788
+"28" "low" "High-income" "death" 91.3154762533027 62.1924925261753
+"29" "med" "High-income" "death" 95.5716948830959 72.468750951069
+"30" "up" "High-income" "death" 100.416098971285 90.2208411085672
+"31" "low" "High-income" "yld" 85.4245967234144 94.1721849605458
+"32" "med" "High-income" "yld" 90.0762183832548 108.248568113727
+"33" "up" "High-income" "yld" 96.2940599291481 125.02997496135
+"34" "low" "High-income" "yll" 91.3124622147891 61.6129328233732
+"35" "med" "High-income" "yll" 95.4711760403515 71.9276240637869
+"36" "up" "High-income" "yll" 100.082189999332 90.045722002197
+"37" "low" "Latin America and Caribbean" "daly" 59.7371381134136 57.2941639104142
+"38" "med" "Latin America and Caribbean" "daly" 65.0738130325255 68.5641658911978
+"39" "up" "Latin America and Caribbean" "daly" 71.376262974331 80.9008603005546
+"40" "low" "Latin America and Caribbean" "death" 78.866606985821 78.5743389623712
+"41" "med" "Latin America and Caribbean" "death" 83.4902912573821 89.9439016483479
+"42" "up" "Latin America and Caribbean" "death" 88.2518660447278 101.329604902649
+"43" "low" "Latin America and Caribbean" "yld" 87.1616788305081 104.250125617501
+"44" "med" "Latin America and Caribbean" "yld" 91.9323592814983 115.68776162313
+"45" "up" "Latin America and Caribbean" "yld" 98.1757037185722 127.684628013756
+"46" "low" "Latin America and Caribbean" "yll" 85.6241613347174 77.0072146768046
+"47" "med" "Latin America and Caribbean" "yll" 90.3635634943265 88.3795295951515
+"48" "up" "Latin America and Caribbean" "yll" 95.175548563823 99.3661670459621
+"49" "low" "Non-HI" "daly" 78.2392136686994 55.1205513805954
+"50" "med" "Non-HI" "daly" 83.2571631863591 69.1947200028499
+"51" "up" "Non-HI" "daly" 89.4429114188877 128.828828361057
+"52" "low" "Non-HI" "death" 90.8140489038646 66.5817002999343
+"53" "med" "Non-HI" "death" 95.3272365971516 79.5973482709025
+"54" "up" "Non-HI" "death" 100.14043859995 137.571735073052
+"55" "low" "Non-HI" "yld" 91.4474287282323 85.705475210662
+"56" "med" "Non-HI" "yld" 96.2573695900016 98.71223769946
+"57" "up" "Non-HI" "yld" 102.589770150524 159.770220196016
+"58" "low" "Non-HI" "yll" 99.8859272320108 63.220406561676
+"59" "med" "Non-HI" "yll" 104.505322355816 77.0395063301608
+"60" "up" "Non-HI" "yll" 109.190845864149 135.378670659909
+"61" "low" "North Africa and Middle East" "daly" 72.0982117116284 69.7788155229993
+"62" "med" "North Africa and Middle East" "daly" 77.4913677250127 81.0637306351199
+"63" "up" "North Africa and Middle East" "daly" 84.1442192084055 92.8108981527068
+"64" "low" "North Africa and Middle East" "death" 112.946452748263 102.394895118481
+"65" "med" "North Africa and Middle East" "death" 117.905784169864 112.727480295559
+"66" "up" "North Africa and Middle East" "death" 122.973357510559 123.851458003881
+"67" "low" "North Africa and Middle East" "yld" 94.7079000959976 108.050954229618
+"68" "med" "North Africa and Middle East" "yld" 99.921657304926 121.103378797187
+"69" "up" "North Africa and Middle East" "yld" 106.590426776662 133.344554842438
+"70" "low" "North Africa and Middle East" "yll" 111.003144383206 99.6811612251356
+"71" "med" "North Africa and Middle East" "yll" 115.978054718756 110.633006364714
+"72" "up" "North Africa and Middle East" "yll" 121.039573853009 122.048251146401
+"73" "low" "South Asia" "daly" 85.6225298023135 55.4695631678848
+"74" "med" "South Asia" "daly" 91.2156653494082 73.9232772627007
+"75" "up" "South Asia" "daly" 97.9812886826923 96.9455714613023
+"76" "low" "South Asia" "death" 92.8513413994007 54.6119316663583
+"77" "med" "South Asia" "death" 97.7672442451725 70.5502561032878
+"78" "up" "South Asia" "death" 102.953088325837 91.4293023587595
+"79" "low" "South Asia" "yld" 95.9441689358736 106.954369314443
+"80" "med" "South Asia" "yld" 101.220520795477 128.097271400668
+"81" "up" "South Asia" "yld" 108.137970037566 152.129157432947
+"82" "low" "South Asia" "yll" 100.129321185166 50.5832036611929
+"83" "med" "South Asia" "yll" 105.020554201149 65.3837968114233
+"84" "up" "South Asia" "yll" 110.09757165515 86.5470175859573
+"85" "low" "Southeast Asia, East Asia and Oceania" "daly" 58.0845225367578 60.8122564851754
+"86" "med" "Southeast Asia, East Asia and Oceania" "daly" 63.1656045806919 79.6982870685436
+"87" "up" "Southeast Asia, East Asia and Oceania" "daly" 69.3516775037957 173.902284538087
+"88" "low" "Southeast Asia, East Asia and Oceania" "death" 81.5450098196806 69.6654132322004
+"89" "med" "Southeast Asia, East Asia and Oceania" "death" 85.816892254672 90.4960492399572
+"90" "up" "Southeast Asia, East Asia and Oceania" "death" 90.495866406587 182.833540008045
+"91" "low" "Southeast Asia, East Asia and Oceania" "yld" 101.358068206543 77.9390634558454
+"92" "med" "Southeast Asia, East Asia and Oceania" "yld" 105.849928762236 93.4836504243881
+"93" "up" "Southeast Asia, East Asia and Oceania" "yld" 111.872186949124 190.539332307373
+"94" "low" "Southeast Asia, East Asia and Oceania" "yll" 76.7795986157635 65.5643838203821
+"95" "med" "Southeast Asia, East Asia and Oceania" "yll" 81.2854827067179 86.1721993785633
+"96" "up" "Southeast Asia, East Asia and Oceania" "yll" 86.065302504848 178.496365379754
+"97" "low" "Sub-Saharian Africa" "daly" 81.683391374819 61.2947547010737
+"98" "med" "Sub-Saharian Africa" "daly" 87.9974256694527 91.7802019922555
+"99" "up" "Sub-Saharian Africa" "daly" 95.8320222758404 124.109522558912
+"100" "low" "Sub-Saharian Africa" "death" 74.9719467151036 63.6577554520194
+"101" "med" "Sub-Saharian Africa" "death" 80.836029237922 92.9061559080908
+"102" "up" "Sub-Saharian Africa" "death" 87.6893251393628 122.381194181896
+"103" "low" "Sub-Saharian Africa" "yld" 88.2674645997844 103.731606329419
+"104" "med" "Sub-Saharian Africa" "yld" 95.0947222172565 135.974574198412
+"105" "up" "Sub-Saharian Africa" "yld" 102.098092417071 167.059299684342
+"106" "low" "Sub-Saharian Africa" "yll" 91.5247053245074 62.7940901392681
+"107" "med" "Sub-Saharian Africa" "yll" 97.6645097076496 92.6932981150083
+"108" "up" "Sub-Saharian Africa" "yll" 104.624618774294 123.282210519269
