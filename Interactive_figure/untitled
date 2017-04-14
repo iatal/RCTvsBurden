@@ -1,0 +1,9 @@
+    ui <- fluidPage(
+       checkboxInput("somevalue", "Some value", FALSE),
+       plotOutput("value")
+     )
+     server <- function(input, output) {
+       output$value <- renderPlot({ if(input$somevalue) plot(1:10)
+                                    if(!input$somevalue) plot(1:20) })
+     }
+     shinyApp(ui, server)
