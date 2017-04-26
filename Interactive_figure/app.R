@@ -35,7 +35,10 @@ levels(dinit_dis$regs_lab) <- c("High-income",
 
 #For numbers in tooltip
 form_ratio <- function(x,pourc=TRUE){
-    if(is.na(x[1])) return(NA)
+    if(is.na(x[1])) {
+        paste0(format(round(x[2]),nsmall = 0,big.mark=","),
+               ifelse(pourc==TRUE,"% [estimate not available]"," [estimate not available]"))
+        }
         else {
         paste(format(round(x[2]),nsmall = 0,big.mark=","),
                ifelse(pourc==TRUE,"% ["," ["),format(round(x[1]),nsmall = 0,big.mark=","),
@@ -43,13 +46,44 @@ form_ratio <- function(x,pourc=TRUE){
             }
     }
 
+Choix_dis <-
+list(`All diseases` = "All diseases",
+     `Communicable diseases` = c("Tuberculosis",
+                                "HIV",
+                                "Common infectious diseases",
+                                "Malaria", 
+                                "Neglected tropical diseases", 
+                                "Sexually transmitted diseases excluding HIV", 
+                                "Hepatitis", 
+                                "Leprosy"),
+     `Maternal, neonatal & nutritional`= c("Maternal disorders", 
+                                           "Neonatal disorders", 
+                                           "Nutritional deficiencies"),
+     `Non-communicable diseases` = c("Neoplasms", 
+                                    "Cardiovascular and circulatory diseases", 
+                                    "Chronic respiratory diseases", 
+                                    "Cirrhosis of the liver", 
+                                    "Digestive diseases", 
+                                    "Neurological disorders", 
+                                    "Mental and behavioral disorders", 
+                                    "Diabetes, urinary diseases and male infertility", 
+                                    "Gynecological diseases", 
+                                    "Hemoglobinopathies and hemolytic anemias", 
+                                    "Musculoskeletal disorders", 
+                                    "Congenital anomalies", 
+                                    "Skin and subcutaneous diseases", 
+                                    "Sense organ diseases", 
+                                    "Oral disorders", 
+                                    "Sudden infant death syndrome") 
+)
 
 #User interface
 #############################################################################################################
 ui <- fluidPage(
     
-    tags$a(href="http://www.theclinic.cl","The Clinic"),
-
+#    tags$a(href="http://www.theclinic.cl","The Clinic"),
+    tags$h2("Does health research effort match health needs?"),
+    tags$h4("A large scale comparison between the global conduct of randomized controlled trials and the global burden of diseases"),
     tags$hr(),
     
     tags$head(tags$style(HTML(".shiny-split-layout > div {overflow: visible;}"))),
@@ -94,39 +128,38 @@ ui <- fluidPage(
                              div(style = "position:relative",     
                              plotOutput("plot_comp_dis1", height="200px",
                                         hover = hoverOpts("plot_hover_dis1", delay = 5, delayType = "debounce")),
-                             plotOutput("plot_comp_dis_labs", height="85px"),
+                             plotOutput("plot_comp_dis_labs", height="30px"),
                              plotOutput("plot_comp_dis2", height="200px",
                                         hover = hoverOpts("plot_hover_dis2", delay = 5, delayType = "debounce")),
                                  uiOutput("hover_info_dis1"),
                                  uiOutput("hover_info_dis2")
                                  )
                             )
-            
-            
-            ),
+        ),
         
         sidebarPanel(
             
             tabsetPanel(id="tabs",
                 tabPanel("Within regions",value="regions",
                     selectInput(inputId = "region",
-                                label= "Elige una region",
+                                label= "Region",
                                 choices = levels(DT$regs_lab),
                                 selected = "World"),
                     splitLayout(
                                 selectInput(inputId = "metr_burden",
-                                            label= "Elige una metric pal burden",
+                                            label= "Burden measured as:",
                                             choices = c("DALY","YLL","YLD","Death"),
                                             selected = "DALY"),
                                 selectInput(inputId = "metr_res",
-                                            label= "Elige una metric pa la research",
+                                            label= "Research measured as:",
                                             choices = c("RCTs","Patients"),
                                             selected = "RCTs")),
                     sliderInput(inputId = "Nb_dis", "Number of diseases", 5, 27, 10, step = 1),
                     checkboxInput(inputId = "hgp_reg",
-                                  label="Highlight gaps",
+                                  label="Highlight regional gaps",
                                   value=FALSE),
-                    downloadButton('downloadPlot_within_reg', 'Download Plot')
+                    downloadButton('downloadPlot_within_reg', 'Download Plot'),
+                    tags$div(img(src="legend_within_regions.png"))
                          ),
                 tabPanel("Within diseases",value="diseases",
 #                    splitLayout(
@@ -134,90 +167,115 @@ ui <- fluidPage(
 #                        actionButton(inputId = "nhionly",label= "Non-high-income only")
 #                        ),
                     selectInput(inputId = "disease",
-                                label= "Elige una maladie",
-                                choices = levels(DT$Dis_tooltip),
+                                label= "Group of diseases",
+                                choices = Choix_dis,
                                 selected = "All diseases"),
-                    selectInput(inputId = "all_nhi",
-                                label= "Across:",
-                                choices = c("All regions","Non-high-income only"),
-                                selected = "All regions"),
+#                    selectInput(inputId = "all_nhi",
+#                                label= "Across:",
+#                                choices = c("All regions","Non-high-income only"),
+#                                selected = "All regions"),
                     splitLayout(
                                 selectInput(inputId = "metr_burden2",
-                                            label= "Elige una metric pal burden",
+                                            label= "Burden measured as:",
                                             choices = c("DALY","YLL","YLD","Death"),
                                             selected = "DALY"),
                                 selectInput(inputId = "metr_res2",
-                                            label= "Elige una metric pa la research",
+                                            label= "Research measured as:",
                                             choices = c("RCTs","Patients"),
                                             selected = "RCTs")),
+                    checkboxInput(inputId = "all_nhi",
+                                label="Non-high-income regions only",
+                                value=TRUE),                         
                     checkboxInput(inputId = "hgp_dis",
-                                  label="Highlight gaps",
+                                  label="Highlight disease-specific gaps",
                                   value=FALSE),
                     downloadButton('downloadPlot_within_dis', 'Download Plot')
                          ),
                  tabPanel("Compare",value="compare",
-                    selectInput(inputId = "across",
-                                label= "Across:",
+                    radioButtons(inputId = "across",                          
+#                    selectInput(inputId = "across",
+#                                label= "Across:",
+                                 label = NULL,
                                 choices = c("Regions","Diseases"),
-                                selected = "Regions"),
+                                selected = "Regions",
+                                inline = TRUE),
                     conditionalPanel(condition = "input.tabs == 'compare' & input.across == 'Regions'",
                                      splitLayout(
                                          selectInput(inputId = "region1",
-                                                 label= "Elige una region",
+                                                 label= "Region 1:",
                                                  choices = levels(DT$regs_lab),
                                                  selected = "High-income countries"),
                                          selectInput(inputId = "region2",
-                                                 label= "Elige una region",
+                                                 label= "Region 2:",
                                                  choices = levels(DT$regs_lab),
                                                  selected = "Non-high-income countries")
                                          ),
                                      splitLayout(
                                          selectInput(inputId = "metr_burden_comp",
-                                                 label= "Elige una metric pal burden",
+                                                 label= "Burden measured as:",
                                                  choices = c("DALY","YLL","YLD","Death"),
                                                  selected = "DALY"),
                                          selectInput(inputId = "metr_res_comp",
-                                                 label= "Elige una metric pa la research",
+                                                 label= "Research measured as:",
                                                  choices = c("RCTs","Patients"),
                                                  selected = "RCTs")),
                                      sliderInput(inputId = "Nb_dis_comp", 
                                                  "Number of diseases", 5, 27, 10, step = 1),
-                                     checkboxInput(inputId = "hgp_comp_reg",
-                                                   label="Highlight gaps",
-                                                   value=FALSE),
+#                                     checkboxInput(inputId = "hgp_comp_reg",
+#                                                   label="Highlight gaps",
+#                                                   value=FALSE),
                                      downloadButton('downloadPlot_comp_reg', 'Download Plot')
                                      ),
                      conditionalPanel(condition = "input.tabs == 'compare' & input.across == 'Diseases'",
                                       splitLayout(
                                          selectInput(inputId = "disease1",
-                                                     label= "Elige una maladie",
-                                                     choices = levels(DT$Dis_tooltip),
-                                                     selected = "HIV"),
+                                                     label= "Group of diseases 1:",
+                                                     choices = Choix_dis,
+                                                     selected = "Neoplasms"),
                                          selectInput(inputId = "disease2",
-                                                     label= "Elige una maladie",
-                                                     choices = levels(DT$Dis_tooltip),
-                                                     selected = "Malaria")   
+                                                     label= "Group of diseases 2:",
+                                                     choices = Choix_dis,
+                                                     selected = "HIV")   
                                                  ),
+#                                      selectInput(inputId = "all_nhi_comp",
+#                                            label= "Across:",
+#                                            choices = c("All regions","Non-high-income only"),
+#                                            selected = "All regions"),
                                       splitLayout(
                                           selectInput(inputId = "metr_burden_comp_dis",
-                                                  label= "Elige una metric pal burden",
+                                                  label= "Burden measured as:",
                                                   choices = c("DALY","YLL","YLD","Death"),
                                                   selected = "DALY"),
                                       selectInput(inputId = "metr_res_comp_dis",
-                                                  label= "Elige una metric pa la research",
+                                                  label= "Research measured as:",
                                                   choices = c("RCTs","Patients"),
                                                   selected = "RCTs")),
-                                      checkboxInput(inputId = "hgp_comp_dis",
-                                                    label="Highlight gaps",
-                                                    value=FALSE),
+                                      checkboxInput(inputId = "all_nhi_comp",
+                                                    label="Non-high-income regions only",
+                                                    value=TRUE),                       
+#                                      checkboxInput(inputId = "hgp_comp_dis",
+#                                                    label="Highlight gaps",
+#                                                    value=FALSE),
                                       downloadButton('downloadPlot_comp_dis', 'Download Plot')
                                       
                                       )
 
-                          )
+                          ),
+                        tabPanel("About",value="about",
+				 tags$br(),
+				 "This visualization tool allows for comparison between health research effort and health needs  for seven epidemiological regions and 27 major groups of diseases.",
+                                 tags$h4("Research effort:"),
+				 "Was measured as the number of randomized controlles trials (RCTs) or patients planned to be enrolled in RCTs initiated in the 2006-2015 period. Data was extracted from the ",tags$a(href="http://apps.who.int/trialsearch/","WHO International Clinical Trials Registry Platform"),".",
+                                 tags$h4("Health needs:"),"Was measured as the burden of diseases in 2005, as disability-adjusted life years (DALY), years of life lost (YLL), years lived with disability (YLD) or number of deaths. Data was extracted from the ", tags$a(href="http://www.healthdata.org/gbd","Global Burden of Diseases 2010 study"),".",
+				 tags$h4("Data and code availability"),"All aggregated data and code is available in a ", tags$a(href="http://www.github.com/iatal/RCTvsBurden","github repository"),"."
+                                 )
                         )#end tabset panel
             )#end sidebar panel
-        )#end sidebar layout
+        ),#end sidebar layout
+    
+    tags$hr(),
+    tags$h1("Logos")
+    
     )#end fluid page
 
 #Server
@@ -382,8 +440,12 @@ server <- function(input,output){
             if(!input$hgp_reg) { p <- p + scale_fill_manual(values = c("burden"="orange","burden_gap"="orange",
                                                                        "research"="blue")) }
             p <- p + scale_x_discrete(label = dlbl$Dis_lab)
-            if(max_plot>20) {
+            if(max_plot>20 & max_plot<80) {
             p <- p + scale_y_continuous(limits = c(0,max_plot),breaks=c(0,5,seq(10,max_plot,10)),
+                                        name="%")
+                            }
+            if(max_plot>=80) {
+            p <- p + scale_y_continuous(limits = c(0,max_plot),breaks=unique(c(0,10,seq(20,max_plot,20),max_plot)),
                                         name="%")
                             }
             if(max_plot<=20) {
@@ -442,7 +504,7 @@ server <- function(input,output){
                 p <- P[[1]]
                 p <- p + ggtitle(paste0(ifelse(input$region=="World","Global","Local"),
                                         " share",ifelse(input$region=="World","",paste0(" in ",input$region)),
-                                        " across groups of diseases\nof",input$metr_burden,"s as of 2005 vs ",
+                                        " across groups of diseases\nof ",input$metr_burden,"s as of 2005 vs ",
                                         ifelse(input$metr_res=="RCTs",
                                                "Randomized controlled trials",
                                                "patients planned to be enrolled in RCTs"),
@@ -460,7 +522,7 @@ server <- function(input,output){
                ifelse(input$region=="World","Global","Local"),
                " share",
                ifelse(input$region=="World"," ",paste0(" in ",input$region)),
-               " across groups of diseases<br/>of",
+               " across groups of diseases<br/>of ",
                input$metr_burden,"s as of 2005 vs ",
                ifelse(input$metr_res=="RCTs",
                       "Randomized controlled trials",
@@ -475,14 +537,15 @@ server <- function(input,output){
     ###############################################################################################################
     
 #    all_nhi <- reactiveValues(ch="All regions")
-    
+
 #    observeEvent(input$allregs, {all_nhi$ch <- "All regions"})
 #    observeEvent(input$nhionly, {all_nhi$ch <- "Non-high-income only"})
         
     #subset according to Glob vs across NHI
     ddis_reg <- reactive({
 #        if(all_nhi$ch=="All regions") dinit_dis[,-grep("NHI",names(dinit_dis))]
-        if(input$all_nhi=="All regions") dinit_dis[,-grep("NHI",names(dinit_dis))]        
+#        if(input$all_nhi=="All regions") dinit_dis[,-grep("NHI",names(dinit_dis))]        
+          if(input$all_nhi==FALSE) dinit_dis[,-grep("NHI",names(dinit_dis))]        
             else dinit_dis[dinit_dis$Region!="High-income",-grep("glob",names(dinit_dis))]
     })
         
@@ -593,7 +656,9 @@ server <- function(input,output){
                      p(HTML(paste0("<b> Group of diseases: </b>", input$disease, "<br/>",
                                    "<b> Region: </b>", point$Region, "<br/>",
                                    "<b> Burden: </b>", format(round(point$Nb/1e6,1),nsmall = 1,big.mark=","),
-                                   " million ", input$metr_burden2,"s (",format(round(point$prop),nsmall = 0),"%)<br/>",
+                                   " million ", input$metr_burden2,"s (",format(round(point$prop),nsmall = 0),
+                                   "% of burden among ",ifelse(input$all_nhi==TRUE,"non-high-income","all"),
+                                   " regions)<br/>",
                                    "<b> Research: </b>", 
                                    ifelse(input$metr_res2=="RCTs",
                                           paste0(form_ratio(point[,c("Nb_low","Nb_med","Nb_up")],
@@ -601,7 +666,8 @@ server <- function(input,output){
                                           paste0(form_ratio(point[,c("Nb_low","Nb_med","Nb_up")]/1e3,
                                                             pourc=FALSE)," thousand patients")),                                  
                                    " (",form_ratio(point[,c("prop_low","prop_med","prop_up")],
-                                                   pourc=TRUE),")<br/>")))
+                                                   pourc=TRUE)," of research among ",
+                                   ifelse(input$all_nhi==TRUE,"non-high-income","all")," regions)<br/>")))
                     )
         }) 
 
@@ -636,8 +702,12 @@ server <- function(input,output){
         if(!input$hgp_dis) { p <- p + scale_fill_manual(values = c("burden"="orange","burden_gap"="orange",
                                                                    "research"="blue")) }        
         
-        if(max_plot>20) {
+        if(max_plot>20 & max_plot<80) {
             p <- p + scale_y_continuous(limits = c(0,max_plot),breaks=c(0,5,seq(10,max_plot,10)),
+                                        name="%")
+                            }
+        if(max_plot>=80) {
+            p <- p + scale_y_continuous(limits = c(0,max_plot),breaks=unique(c(0,10,seq(20,max_plot,20),max_plot)),
                                         name="%")
         }
         if(max_plot<=20) {
@@ -694,7 +764,8 @@ server <- function(input,output){
                 P <-  plotInput_within_dis()
                 p <- P[[1]]
                 p <- p + ggtitle(paste0("Share across ",
-                                        ifelse(input$all_nhi=="All regions","","non-high-income "),
+#                                        ifelse(input$all_nhi=="All regions","","non-high-income "),
+                                        ifelse(input$all_nhi==FALSE,"","non-high-income "),
                                         "regions of ",input$metr_burden2,"s as of 2005 vs\n",
                                         ifelse(input$metr_res2=="RCTs",
                                                "Randomized controlled trials",
@@ -710,7 +781,8 @@ server <- function(input,output){
        
         paste0( "<center><b>",
                "Share across ",
-               ifelse(input$all_nhi=="All regions","","non-high-income"),
+#               ifelse(input$all_nhi=="All regions","","non-high-income"),
+               ifelse(input$all_nhi==FALSE,"","non-high-income"),
                " regions of<br/>",
                input$metr_burden2,"s as of 2005 vs ",
                ifelse(input$metr_res2=="RCTs",
@@ -922,10 +994,14 @@ server <- function(input,output){
 #            p <- p + scale_fill_manual(values = c("burden"="orange","burden_gap"="red","research"="blue"))
             p <- p + scale_fill_manual(values = c("burden"="orange","research"="blue"))
 
-            if(max_plot>20) {
+            if(max_plot>20 & max_plot<80) {
                 p <- p + scale_y_continuous(limits = c(0,max_plot),breaks=c(0,5,seq(10,max_plot,10)),
-                                            name="%")
-            }
+                                        name="%")
+                            }
+            if(max_plot>=80) {
+                p <- p + scale_y_continuous(limits = c(0,max_plot),breaks=unique(c(0,10,seq(20,max_plot,20),max_plot)),
+                                        name="%")
+                            }
             if(max_plot<=20) {
                 p <- p + scale_y_continuous(limits = c(0,max_plot),breaks=c(0,1,seq(5,max_plot,5)),
                                             name="%")
@@ -973,10 +1049,18 @@ server <- function(input,output){
 #            p <- p + scale_fill_manual(values = c("burden"="orange","burden_gap"="red","research"="blue"))
             p <- p + scale_fill_manual(values = c("burden"="orange","research"="blue"))
         
-            if(max_plot>20) {
-                p <- p + scale_y_continuous(limits = -rev(c(0,max_plot)),breaks=-rev(c(0,5,seq(10,max_plot,10))),
-                                            labels = rev(c(0,5,seq(10,max_plot,10))),name="%")
-            }
+            if(max_plot>20 & max_plot<80) {
+            p <- p + scale_y_continuous(limits = -rev(c(0,max_plot)),breaks=-rev(c(0,5,seq(10,max_plot,10))),
+                                        labels = rev(c(0,5,seq(10,max_plot,10))),
+                                        name="%")
+                            }
+            if(max_plot>=80) {
+            p <- p + scale_y_continuous(limits = -rev(c(0,max_plot)),
+                                        breaks = -rev(unique(c(0,10,seq(20,max_plot,20),max_plot))),
+                                        labels = rev(unique(c(0,10,seq(20,max_plot,20),max_plot))),
+                                        name="%")
+                            }
+        
             if(max_plot<=20) {
                 p <- p + scale_y_continuous(limits = -rev(c(0,max_plot)),breaks=-rev(c(0,1,seq(5,max_plot,5))),
                                             labels = rev(c(0,1,seq(5,max_plot,5))),name="%")
@@ -1007,13 +1091,13 @@ server <- function(input,output){
     output$downloadPlot_comp_reg <- downloadHandler(
             filename = function() { paste0(input$tabs,'_',
                                            gsub('[[:punct:]| ]','_',input$region1),'_vs_',
-                                           gsub('[[:punct:]| ]','_',input$region2),'_vs_',
+                                           gsub('[[:punct:]| ]','_',input$region2),'_',
                                            input$metr_burden_comp,'_vs_',input$metr_res_comp,
                                            '.png', sep='') },
             content = function(file) { 
                 P <-  plotInput_comp_reg()
                 ggsave(file, plot = grid.arrange(P[[1]], P[[3]], P[[2]],
-                                                 layout_matrix = matrix(c(1,1,1,2,3,3,3),ncol=1),
+                                                 layout_matrix = matrix(c(1,1,1,1,2,3,3,3,3),ncol=1),
                                                  top = textGrob(paste0("Local shares across groups of diseases\nin ",
                                                                        input$region1,
                                                                        " (top) & ", input$region2,
@@ -1051,13 +1135,14 @@ server <- function(input,output){
 
     #subset according to Glob vs across NHI
     ddis_comp_reg <- reactive({
-        if(input$all_nhi_comp=="All regions") dinit_dis[,-grep("NHI",names(dinit_dis))]        
+#        if(input$all_nhi_comp=="All regions") dinit_dis[,-grep("NHI",names(dinit_dis))]        
+            if(input$all_nhi_comp==FALSE) dinit_dis[,-grep("NHI",names(dinit_dis))]        
             else dinit_dis[dinit_dis$Region!="High-income",-grep("glob",names(dinit_dis))]
     })
         
     #subset according to disease
     ddis_comp <- reactive({
-        ddis_comp_reg()[ddis_comp_reg()$Dis_tooltip%in%c(input$disease1,input$disease1),]
+        ddis_comp_reg()[ddis_comp_reg()$Dis_tooltip%in%c(input$disease1,input$disease2),]
     })
 
     #subset according to burden metric
@@ -1100,7 +1185,7 @@ server <- function(input,output){
     #data for error bars
     ddis_comp_err <- reactive({
     
-        d_err <- ddis_comp_res()[,c("Region","regs_lab","prop_low","prop_up")]
+        d_err <- ddis_comp_res()[,c("Region","regs_lab","Disease","Dis_lab","Dis_tooltip","prop_low","prop_up")]
         d_err$metr <- "research"        
         d_err$Region <- reorder(d_err$Region,new.order=regs_ord_comp())
         d_err
@@ -1110,8 +1195,8 @@ server <- function(input,output){
     #data for hover
     ddis_comp_points <- reactive({
     
-        dpts <- merge(ddis_burden(),ddis_res())
-        dpts$Region <- reorder(dpts$Region,new.order=regs_ord())
+        dpts <- merge(ddis_comp_burden(),ddis_comp_res())
+        dpts$Region <- reorder(dpts$Region,new.order=regs_ord_comp())
         dpts$Reg_pos <- as.numeric(dpts$Region)
         
         #burden points
@@ -1154,7 +1239,7 @@ server <- function(input,output){
         hover <- input$plot_hover_dis1
         
         point <- nearPoints(ddis_comp_points()[ddis_comp_points()$Dis_tooltip==input$disease1,],
-        hover, yvar="prop_pos", xvar="Dis_pos",
+        hover, yvar="prop_pos", xvar="Reg_pos",
                             threshold = (1005*0.2/(length(regs_ord_comp()) + 0.4)), maxpoints = 1, addDist = TRUE)
         if (nrow(point) == 0) return(NULL)
 
@@ -1170,7 +1255,8 @@ server <- function(input,output){
                                    "<b> Region: </b>", point$Region, "<br/>",
                                    "<b> Burden: </b>", format(round(point$Nb/1e6,1),nsmall = 1,big.mark=","),
                                    " million ", input$metr_burden_comp_dis,"s (",
-                                   format(round(point$prop),nsmall = 0),"%)<br/>",
+                                   format(round(point$prop),nsmall = 0),"% of burden among ",
+                                   ifelse(input$all_nhi_comp==TRUE,"non-high-income","all")," regions)<br/>",
                                    "<b> Research: </b>", 
                                    ifelse(input$metr_res_comp_dis=="RCTs",
                                           paste0(form_ratio(point[,c("Nb_low","Nb_med","Nb_up")],
@@ -1178,7 +1264,8 @@ server <- function(input,output){
                                           paste0(form_ratio(point[,c("Nb_low","Nb_med","Nb_up")]/1e3,
                                                             pourc=FALSE)," thousand patients")),                                  
                                    " (",form_ratio(point[,c("prop_low","prop_med","prop_up")],
-                                                   pourc=TRUE),")<br/>")))
+                                                   pourc=TRUE)," of research among ",
+                                   ifelse(input$all_nhi_comp==TRUE,"non-high-income","all")," regions)<br/>")))
                     )
         })
 
@@ -1188,7 +1275,7 @@ server <- function(input,output){
         hover <- input$plot_hover_dis2
         
         point <- nearPoints(ddis_comp_points()[ddis_comp_points()$Dis_tooltip==input$disease2,],
-        hover, yvar="prop_pos", xvar="Dis_pos",
+        hover, yvar="prop_pos", xvar="Reg_pos",
                             threshold = (1005*0.2/(length(regs_ord_comp()) + 0.4)), maxpoints = 1, addDist = TRUE)
         if (nrow(point) == 0) return(NULL)
 
@@ -1204,7 +1291,8 @@ server <- function(input,output){
                                    "<b> Region: </b>", point$Region, "<br/>",
                                    "<b> Burden: </b>", format(round(point$Nb/1e6,1),nsmall = 1,big.mark=","),
                                    " million ", input$metr_burden_comp_dis,"s (",
-                                   format(round(point$prop),nsmall = 0),"%)<br/>",
+                                   format(round(point$prop),nsmall = 0),"% of burden among ",
+                                   ifelse(input$all_nhi_comp==TRUE,"non-high-income","all")," regions)<br/>",
                                    "<b> Research: </b>", 
                                    ifelse(input$metr_res_comp_dis=="RCTs",
                                           paste0(form_ratio(point[,c("Nb_low","Nb_med","Nb_up")],
@@ -1212,7 +1300,8 @@ server <- function(input,output){
                                           paste0(form_ratio(point[,c("Nb_low","Nb_med","Nb_up")]/1e3,
                                                             pourc=FALSE)," thousand patients")),                                  
                                    " (",form_ratio(point[,c("prop_low","prop_med","prop_up")],
-                                                   pourc=TRUE),")<br/>")))
+                                                   pourc=TRUE)," of research among ",
+                                   ifelse(input$all_nhi_comp==TRUE,"non-high-income","all")," regions)<br/>")))
                     )
         })
 
@@ -1248,9 +1337,14 @@ server <- function(input,output){
 #                                                                   "research"="blue")) }
 #        if(!input$hgp_dis) { p <- p + scale_fill_manual(values = c("burden"="orange","burden_gap"="orange",
 #                                                                   "research"="blue")) }        
+        p <- p + scale_fill_manual(values = c("burden"="orange","research"="blue"))
         
-        if(max_plot>20) {
-            p <- p + scale_y_continuous(limits = c(0,max_plot),breaks=c(0,5,seq(10,max_plot,10)),
+        if(max_plot>20 & max_plot<80) {
+                p <- p + scale_y_continuous(limits = c(0,max_plot),breaks=c(0,5,seq(10,max_plot,10)),
+                                        name="%")
+                            }
+        if(max_plot>=80) {
+            p <- p + scale_y_continuous(limits = c(0,max_plot),breaks=unique(c(0,10,seq(20,max_plot,20),max_plot)),
                                         name="%")
         }
         if(max_plot<=20) {
@@ -1278,10 +1372,10 @@ server <- function(input,output){
         plb <- plb + theme(axis.text.y=element_text(size=12))
         plb <- plb + theme(axis.title.y=element_text(size=20)) 
 
-        if(input$hgp_dis)  { plb <- plb + theme(axis.text.x = element_text(face=dlbl$gap_text)) }
-        plb <- plb + theme(axis.text.x = element_text(angle=55,
-                                                      hjust=1,
-                                                      vjust=1.1,size=10))
+#        if(input$hgp_dis)  { plb <- plb + theme(axis.text.x = element_text(face=dlbl$gap_text)) }
+        plb <- plb + theme(axis.text.x = element_text(angle=0,
+                                                      hjust=0.5,
+                                                      vjust=0.5,size=10))
         plb <- plb + theme(panel.background = element_blank()) + 
                      theme(panel.grid.major.y = element_blank()) +
                      theme(panel.grid.major.x = element_blank()) + 
@@ -1289,26 +1383,34 @@ server <- function(input,output){
                      theme(legend.position = "none") + 
                      theme(axis.title.x=element_blank())
 
-        plb <- plb + scale_x_discrete(label = dlbl$regs_lab)
+        plb <- plb + scale_x_discrete(label = dlbl$regs_lab[dlbl$Dis_tooltip==input$disease1])
         plb <- plb + theme(axis.text.x=element_text(size=12))
 
         p <- ggplot(dt[dt$Dis_tooltip==input$disease2,],aes(Region))
 #        p <- p + geom_bar(aes(fill=gap_col,y=prop),position="dodge",stat="identity",width=0.8)
-        p <- p + geom_bar(aes(fill=metr,y=prop),position="dodge",stat="identity",width=0.8)
-        p <- p + geom_errorbar(aes(x=as.numeric(Region)+0.2,ymax=prop_up,ymin=prop_low),width=0.2,
+        p <- p + geom_bar(aes(fill=metr,y=-prop),position="dodge",stat="identity",width=0.8)
+        p <- p + geom_errorbar(aes(x=as.numeric(Region)+0.2,ymax=-prop_low,ymin=-prop_up),width=0.2,
                                data=ddis_comp_err()[ddis_comp_err()$Dis_tooltip==input$disease2,])
 #        if(input$hgp_dis)  { p <- p + scale_fill_manual(values = c("burden"="orange","burden_gap"="red",
 #                                                                   "research"="blue")) }
 #        if(!input$hgp_dis) { p <- p + scale_fill_manual(values = c("burden"="orange","burden_gap"="orange",
 #                                                                   "research"="blue")) }        
+        p <- p + scale_fill_manual(values = c("burden"="orange","research"="blue"))
         
-        if(max_plot>20) {
-            p <- p + scale_y_continuous(limits = c(0,max_plot),breaks=c(0,5,seq(10,max_plot,10)),
+        if(max_plot>20 & max_plot<80) {
+            p <- p + scale_y_continuous(limits = -rev(c(0,max_plot)),breaks=-rev(c(0,5,seq(10,max_plot,10))),
+                                        labels = rev(c(0,5,seq(10,max_plot,10))),
+                                        name="%")
+                            }
+        if(max_plot>=80) {
+            p <- p + scale_y_continuous(limits = -rev(c(0,max_plot)),
+                                        breaks = -rev(unique(c(0,10,seq(20,max_plot,20),max_plot))),
+                                        labels = rev(unique(c(0,10,seq(20,max_plot,20),max_plot))),
                                         name="%")
         }
         if(max_plot<=20) {
-            p <- p + scale_y_continuous(limits = c(0,max_plot),breaks=c(0,1,seq(5,max_plot,5)),
-                                        name="%")
+            p <- p + scale_y_continuous(limits = -rev(c(0,max_plot)),breaks=-rev(c(0,1,seq(5,max_plot,5))),
+                                        labels = rev(c(0,1,seq(5,max_plot,5))),name="%")
         }
         p <- p + theme(axis.text.y=element_text(size=12))
         p <- p + theme(axis.title.y=element_text(size=20)) 
@@ -1343,9 +1445,12 @@ server <- function(input,output){
             content = function(file) { 
                 P <-  plotInput_comp_dis()
                 ggsave(file, plot = grid.arrange(P[[1]], P[[3]], P[[2]],
-                                                 layout_matrix = matrix(c(1,1,1,2,3,3,3),ncol=1),
-                                                 top = textGrob(paste0("Shares across regions of ",
-                                                                      input$metr_burden_comp_dis,"s as of 2005 vs\n",
+                                                 layout_matrix = matrix(c(rep(1,8),2,rep(3,8)),ncol=1),
+                                                 top = textGrob(paste0("Shares across ",
+                                                                       ifelse(input$all_nhi_comp==FALSE,"",
+                                                                              "non-high-income "),
+                                                                       "regions of ",
+                                                                       input$metr_burden_comp_dis,"s as of 2005 vs\n",
                                                                       ifelse(input$metr_res_comp_dis=="RCTs",
                                                                              "Randomized controlled trials",
                                                                              "patients planned to be enrolled in RCTs"),
@@ -1360,7 +1465,8 @@ server <- function(input,output){
     output$title_comp_dis <- renderText({
        
         paste0( "<center><b>",
-               "Shares across regions of ",
+               "Shares across ", ifelse(input$all_nhi_comp==FALSE,"","non-high-income "),
+               "regions of ",
                input$metr_burden_comp_dis,"s as of 2005 vs<br/>",
                ifelse(input$metr_res_comp_dis=="RCTs",
                       "Randomized controlled trials",
