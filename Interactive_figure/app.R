@@ -119,10 +119,9 @@ ui <- fluidPage(
                              plotOutput("plot_comp_reg_labs", height="85px"),
                              plotOutput("plot_comp_reg2", height="200px",
                                         hover = hoverOpts("plot_hover_reg2", delay = 5, delayType = "debounce")),
-                                 uiOutput("hover_info_reg1"),
-                                 uiOutput("hover_info_reg2")
+                                 uiOutput("hover_info_reg1")
                                  )
-                            ),
+                             ),
             conditionalPanel(condition = "input.tabs == 'compare' & input.across== 'Diseases'",
                              htmlOutput("title_comp_dis"),
                              div(style = "position:relative",     
@@ -131,10 +130,29 @@ ui <- fluidPage(
                              plotOutput("plot_comp_dis_labs", height="30px"),
                              plotOutput("plot_comp_dis2", height="200px",
                                         hover = hoverOpts("plot_hover_dis2", delay = 5, delayType = "debounce")),
-                                 uiOutput("hover_info_dis1"),
-                                 uiOutput("hover_info_dis2")
+                                 uiOutput("hover_info_dis1")
                                  )
-                            )
+                             ),
+            conditionalPanel(condition = "input.tabs == 'about'",             
+                             # this is an extra div used ONLY to create positioned ancestor for tooltip
+                             # we don't change its position
+                             HTML(paste0( "<center><b>",
+                                   "Local",
+                                   " share",
+                                   paste0(" in ","Sub-Saharian Africa"),
+                                   " across groups of diseases<br/>of ",
+                                   "DALY","s as of 2005 vs ",
+                                          "Randomized controlled trials",
+                                   " conducted in 2006-2015",
+                                  "</b></center>")),
+                             div(style = "position:relative",     
+                                 plotOutput("plot_within_reg_ex",
+                                            hover = hoverOpts("plot_hover_reg_ex", delay = 5, delayType = "debounce")),
+                                 plotOutput("plot_within_reg_labs_ex", height="95px"),
+                                 uiOutput("hover_info_regs_ex")
+                                 )
+                             )
+            #Adding conditional panel = "About"
         ),
         
         sidebarPanel(
@@ -156,24 +174,34 @@ ui <- fluidPage(
                                             selected = "RCTs")),
                     sliderInput(inputId = "Nb_dis", "Number of diseases", 5, 27, 10, step = 1),
                     checkboxInput(inputId = "hgp_reg",
-                                  label="Highlight regional gaps",
+                                  label="Highlight local gaps",
                                   value=FALSE),
                     downloadButton('downloadPlot_within_reg', 'Download Plot'),
-                    tags$div(img(src="legend_within_regions.png"))
+                    tags$br(),
+                    tags$br(),
+                    HTML(
+#                        <table style="Font-Family: 'Arial', Serif;">
+                        "<table>
+                            <tr>
+                                <td><img src='carre1.png' alt='orange square'></td>
+                                <td><b>Local health needs:</b><br/>Proportion of burden caused by the group of diseases in the region</td>
+                            </tr>
+                            <tr>
+                                <td><img src='carre2.png' alt='blue square'></td>
+                                <td><b>Local research effort:</b><br/>Proportion of RCTs concerning the group of diseases in the region (estimate [95% UI])</td>
+                            </tr>
+                            <tr>
+                                <td><img src='carre3.png' alt='red square'></td>
+                                <td><b>Local gap of research:</b><br/>Groups of diseases for which the local research effort was less than half the local health needs</td>
+                            </tr>
+                        </table>"
+                        )
                          ),
                 tabPanel("Within diseases",value="diseases",
-#                    splitLayout(
-#                        actionButton(inputId = "allregs",label= "All regions"),
-#                        actionButton(inputId = "nhionly",label= "Non-high-income only")
-#                        ),
                     selectInput(inputId = "disease",
                                 label= "Group of diseases",
                                 choices = Choix_dis,
                                 selected = "All diseases"),
-#                    selectInput(inputId = "all_nhi",
-#                                label= "Across:",
-#                                choices = c("All regions","Non-high-income only"),
-#                                selected = "All regions"),
                     splitLayout(
                                 selectInput(inputId = "metr_burden2",
                                             label= "Burden measured as:",
@@ -189,17 +217,53 @@ ui <- fluidPage(
                     checkboxInput(inputId = "hgp_dis",
                                   label="Highlight disease-specific gaps",
                                   value=FALSE),
-                    downloadButton('downloadPlot_within_dis', 'Download Plot')
+                    downloadButton('downloadPlot_within_dis', 'Download Plot'),
+                    tags$br(),
+                    tags$br(),
+                    conditionalPanel(condition = "input.tabs == 'diseases' & input.all_nhi",
+                    HTML(
+                        "<table>
+                            <tr>
+                                <td><img src='carre1.png' alt='orange square'></td>
+                                <td><b>Regional health needs:</b><br/>Proportion of burden caused by the group of diseases in the region among the burden caused in all non-high-income regions</td>
+                            </tr>
+                            <tr>
+                                <td><img src='carre2.png' alt='blue square'></td>
+                                <td><b>Regional research effort:</b><br/>Proportion of RCTs conducted in the region among RCTs conducted in non-high-income regions concerning the group of diseases (estimate [95% UI])</td>
+                            </tr>
+                            <tr>
+                                <td><img src='carre3.png' alt='red square'></td>
+                                <td><b>Regional gap of research:</b><br/>Regions for which the regional research effort was less than half the regional health needs</td>
+                            </tr>
+                        </table>"
+                          )
+                    ),
+                    conditionalPanel(condition = "input.tabs == 'diseases' & !input.all_nhi",
+                    HTML(
+                        "<table>
+                            <tr>
+                                <td><img src='carre1.png' alt='orange square'></td>
+                                <td><b>Regional health needs:</b><br/>Proportion of burden in the region among worlwide burden caused by the group of diseases</td>
+                            </tr>
+                            <tr>
+                                <td><img src='carre2.png' alt='blue square'></td>
+                                <td><b>Regional research effort:</b><br/>Proportion of RCTs conducted in the region among all RCTs concerning the group of diseases (estimate [95% UI])</td>
+                            </tr>
+                            <tr>
+                                <td><img src='carre3.png' alt='red square'></td>
+                                <td><b>Regional gap of research:</b><br/>Regions for which the regional research effort was less than half the regional health needs</td>
+                            </tr>
+                        </table>"
+                        )
+                    )
                          ),
-                 tabPanel("Compare",value="compare",
-                    radioButtons(inputId = "across",                          
-#                    selectInput(inputId = "across",
-#                                label= "Across:",
-                                 label = NULL,
-                                choices = c("Regions","Diseases"),
-                                selected = "Regions",
-                                inline = TRUE),
-                    conditionalPanel(condition = "input.tabs == 'compare' & input.across == 'Regions'",
+                tabPanel("Compare",value="compare",
+                         radioButtons(inputId = "across",                          
+                                      label = NULL,
+                                      choices = c("Regions","Diseases"),
+                                      selected = "Regions",
+                                      inline = TRUE),
+                         conditionalPanel(condition = "input.tabs == 'compare' & input.across == 'Regions'",
                                      splitLayout(
                                          selectInput(inputId = "region1",
                                                  label= "Region 1:",
@@ -256,27 +320,135 @@ ui <- fluidPage(
 #                                      checkboxInput(inputId = "hgp_comp_dis",
 #                                                    label="Highlight gaps",
 #                                                    value=FALSE),
-                                      downloadButton('downloadPlot_comp_dis', 'Download Plot')
-                                      
-                                      )
+                                      downloadButton('downloadPlot_comp_dis', 'Download Plot'),
+                                      tags$br(),
+                                    tags$br(),
+                                    HTML(
+                                        "<table>
+                                            <tr>
+                                                <td><img src='carre1.png' alt='orange square'></td>
+                                                <td><b>Regional health needs:</b><br/>Proportion of burden caused by the group of diseases in the region among the burden caused in all non-high-income regions</td>
+                                            </tr>
+                                            <tr>
+                                                <td><img src='carre2.png' alt='blue square'></td>
+                                                <td><b>Regional research effort:</b><br/>Proportion of RCTs conducted in the region among RCTs conducted in non-high-income regions concerning the group of diseases (estimate [95% UI])</td>
+                                            </tr>
+                                            <tr>
+                                                <td><img src='carre3.png' alt='red square'></td>
+                                                <td><b>Regional gap of research:</b><br/>Regions for which the regional research effort was less than half the regional health needs</td>
+                                            </tr>
+                                        </table>"
+                                                      
+                                                      )
+                            )
 
                           ),
                         tabPanel("About",value="about",
 				 tags$br(),
-				 "This visualization tool allows for comparison between health research effort and health needs  for seven epidemiological regions and 27 major groups of diseases.",
+				 "This visualization tool allows for comparison between health research effort and health needs for seven epidemiological regions and 27 major groups of diseases.",
                                  tags$h4("Research effort:"),
-				 "Was measured as the number of randomized controlles trials (RCTs) or patients planned to be enrolled in RCTs initiated in the 2006-2015 period. Data was extracted from the ",tags$a(href="http://apps.who.int/trialsearch/","WHO International Clinical Trials Registry Platform"),".",
-                                 tags$h4("Health needs:"),"Was measured as the burden of diseases in 2005, as disability-adjusted life years (DALY), years of life lost (YLL), years lived with disability (YLD) or number of deaths. Data was extracted from the ", tags$a(href="http://www.healthdata.org/gbd","Global Burden of Diseases 2010 study"),".",
-				 tags$h4("Data and code availability"),"All aggregated data and code is available in a ", tags$a(href="http://www.github.com/iatal/RCTvsBurden","github repository"),"."
+				 "Research effort was measured as the number of randomized controlles trials (RCTs) or patients planned to be enrolled in RCTs initiated in the 2006-2015 period. Data represents the mapping of 117,180 RCTs planning to enroll 44.0 million patients. Data was extracted from the ",tags$a(href="http://apps.who.int/trialsearch/","WHO International Clinical Trials Registry Platform."),
+                                 tags$h4("Health needs:"),"Health needs were measured as the burden of diseases in 2005, as disability-adjusted life years (DALY), years of life lost (YLL), years lived with disability (YLD) or number of deaths. Data represents the mapping of 2,200 million DALY, 1,549 million YLL, 671 million YLD and 46.3 million deaths. Data was extracted from the ", tags$a(href="http://www.healthdata.org/gbd","Global Burden of Diseases 2010 study."),
+				 tags$h4("Data and code availability"),"All aggregated data and code is available in a ", tags$a(href="http://www.github.com/iatal/RCTvsBurden","github repository."),
+                        tags$br(),
+                    tags$br(),
+                    HTML(
+#                        <table style="Font-Family: 'Arial', Serif;">
+                        "<table>
+                            <tr>
+                                <td><img src='carre1.png' alt='orange square'></td>
+                                <td><b>Local health needs:</b><br/>Proportion of burden caused by the group of diseases in the region</td>
+                            </tr>
+                            <tr>
+                                <td><img src='carre2.png' alt='blue square'></td>
+                                <td><b>Local research effort:</b><br/>Proportion of RCTs concerning the group of diseases in the region (estimate [95% UI])</td>
+                            </tr>
+                        </table>"
+                        )
                                  )
                         )#end tabset panel
             )#end sidebar panel
         ),#end sidebar layout
     
     tags$hr(),
-    tags$h1("Logos")
+    HTML("<footer>
+	<a href='http://cress-umr1153.fr/en/' title='cress website' target='_blank'><img src='cress.png' alt='CRESS' title='logo CRESS' width='200px'/></a> 
+	<a href='http://www.inserm.fr/' title='inserm website' target='_blank'><img src='inserm.jpg' alt='INSERM' title='logo inserm' width='250px'/></a> 
+	<a href='https://www.univ-paris5.fr/' title='paris descartes website' target='_blank'><img src='parisdescartes.png' alt='logo Paris Descartes' title='Paris Descartes University' width='200px'/></a> 
+</footer>
+")
     
     )#end fluid page
+
+
+######################################################################################################
+#About example
+#subset according to region
+    dreg_ex <- dinit_reg[dinit_reg$regs_lab=="Sub-Saharian Africa",-which(names(dinit_reg)%in%c("regs_lab","Region"))]
+
+    #subset according to burden metric
+    dburden_ex <- dreg_ex[,c(which(names(dreg_ex)%in%c("Disease","Dis_lab","Dis_tooltip")),
+                                                                grep("daly",names(dreg_ex)))]
+    names(dburden_ex) <- c("Disease","Dis_lab","Dis_tooltip","Nb","prop")
+    dburden_ex$metr <- "burden"
+
+    #subset according to research metric
+
+    dres_ex <- dreg_ex[,c(which(names(dreg_ex)%in%c("Disease","Dis_lab","Dis_tooltip")),
+                         grep("RCT",names(dreg_ex)))]
+    names(dres_ex) <- c("Disease","Dis_lab","Dis_tooltip","Nb_low","Nb_med","Nb_up","prop_low","prop_med","prop_up")
+
+    #Choose the Nb_dis highest diseases
+    diss_ex <- dburden_ex$Disease[order(dburden_ex$prop,decreasing=TRUE)][1:10]
+    
+    #data for plot
+    dfr_med_ex <- dres_ex[,c("Disease","Dis_lab","Nb_med","prop_med")]
+    names(dfr_med_ex) <- c("Disease","Dis_lab","Nb","prop")
+    dfr_med_ex$metr <- "research"        
+    data_plot_ex <- rbind(dburden_ex[,c("Disease","Dis_lab","Nb","prop","metr")],dfr_med_ex)
+    data_plot_ex <- droplevels(data_plot_ex[data_plot_ex$Disease%in%diss_ex,])
+    data_plot_ex$Disease <- reorder(data_plot_ex$Disease,new.order=as.character(diss_ex))
+    
+    #data for bar errors
+        dfr_err_ex <- dres_ex[,c("Disease","Dis_lab","prop_low","prop_up")]
+        dfr_err_ex$metr <- "research"        
+        dfr_err_ex <- droplevels(dfr_err_ex[dfr_err_ex$Disease%in%diss_ex,])
+        dfr_err_ex$Disease <- reorder(dfr_err_ex$Disease,new.order=as.character(diss_ex))
+        
+    
+    #data for hover
+    
+        dpts_ex <- merge(dburden_ex,dres_ex)
+        dpts_ex <- droplevels(dpts_ex[dpts_ex$Disease%in%diss_ex,])
+        dpts_ex$Disease <- reorder(dpts_ex$Disease,new.order=as.character(diss_ex))
+        dpts_ex$Dis_pos <- as.numeric(dpts_ex$Disease)
+        
+        #burden points
+        dpts_bur_ex <- dpts_ex
+        dpts_bur_ex$prop_pos <- dpts_bur_ex$prop
+        dpts_bur_ex$Dis_pos <- dpts_bur_ex$Dis_pos-0.2
+        D_bur_ex <- do.call('rbind',
+        lapply(1:nrow(dpts_bur_ex),function(x){
+            tt <- trunc(dpts_bur_ex$prop_pos[x])
+            dtp <- dpts_bur_ex[rep(x,tt+2),]
+            dtp$prop_pos <- c(0:tt,dpts_bur_ex$prop_pos[x])
+            dtp
+        }))
+        
+        #research points
+        dpts_res_ex <- dpts_ex[!is.na(dpts_ex$prop_med),]
+        dpts_res_ex$prop_pos <- dpts_res_ex$prop_med
+        dpts_res_ex$Dis_pos <- dpts_res_ex$Dis_pos+0.2
+        D_res_ex <- do.call('rbind',
+        lapply(1:nrow(dpts_res_ex),function(x){
+            tt <- trunc(dpts_res_ex$prop_pos[x])
+            dtp <- dpts_res_ex[rep(x,tt+2),]
+            dtp$prop_pos <- c(0:tt,dpts_res_ex$prop_pos[x])
+            dtp
+        }))
+        
+        data_points_ex <- rbind(D_bur_ex,D_res_ex)
+
 
 #Server
 ##################################################################################################################
@@ -379,7 +551,19 @@ server <- function(input,output){
         
         point <- nearPoints(data_points(), hover, yvar="prop_pos", xvar="Dis_pos",
                             threshold = (1005*0.2/(input$Nb_dis + 0.4)), maxpoints = 1, addDist = TRUE)
-        if (nrow(point) == 0) return(NULL)
+        if (nrow(point) == 0) {
+            style <- paste0("position:relative; z-index:100; background-color: rgba(245, 245, 245, 0.95); ",
+                            "left:", 0, "px; top:", 0, "px;")
+
+            # actual tooltip created as wellPanel
+            tags$div(class = "well well-sm",
+                     style = style,
+                     p(HTML(paste0("<br/>",
+                                   "<br/>",
+                                   "<br/>",
+                                   "<br/>")))
+                    )}
+        else{
 
             # create style property fot tooltip
             # background color is set so tooltip is a bit transparent
@@ -404,6 +588,7 @@ server <- function(input,output){
                                    " (",form_ratio(point[,c("prop_low","prop_med","prop_up")],pourc=TRUE), " of ",
                                    ifelse(input$region=="World","global","local")," research)<br/>")))
                     )
+            }
         })
 
     #Plot
@@ -642,7 +827,19 @@ server <- function(input,output){
         
         point <- nearPoints(ddis_points(), hover, yvar="prop_pos", xvar="Reg_pos",
                             threshold = (1005*0.2/(length(regs_ord()) + 0.4)), maxpoints = 1, addDist = TRUE)
-        if (nrow(point) == 0) return(NULL)
+        if (nrow(point) == 0) {
+            style <- paste0("position:relative; z-index:100; background-color: rgba(245, 245, 245, 0.95); ",
+                            "left:", 0, "px; top:", 0, "px;")
+
+            # actual tooltip created as wellPanel
+            tags$div(class = "well well-sm",
+                     style = style,
+                     p(HTML(paste0("<br/>",
+                                   "<br/>",
+                                   "<br/>",
+                                   "<br/>")))
+                    )}
+        else{
 
             # create style property fot tooltip
             # background color is set so tooltip is a bit transparent
@@ -669,6 +866,7 @@ server <- function(input,output){
                                                    pourc=TRUE)," of research among ",
                                    ifelse(input$all_nhi==TRUE,"non-high-income","all")," regions)<br/>")))
                     )
+            }
         }) 
 
     #Plot
@@ -895,7 +1093,7 @@ server <- function(input,output){
     })
     
     #Hover info
-    output$hover_info_reg1 <- renderUI({
+    hover_info_reg1_r <- reactive({
         
         hover <- input$plot_hover_reg1
         
@@ -929,7 +1127,7 @@ server <- function(input,output){
                     )
         })
 
-    output$hover_info_reg2 <- renderUI({
+    hover_info_reg2_r <- reactive({
         
         hover <- input$plot_hover_reg2
         
@@ -963,6 +1161,26 @@ server <- function(input,output){
                     )
         })
 
+    output$hover_info_reg1 <- renderUI({
+
+        if(length(hover_info_reg1_r())==0 & length(hover_info_reg2_r())==0){
+     style <- paste0("position:relative; z-index:100; background-color: rgba(245, 245, 245, 0.95); ",
+                            "left:", 0, "px; top:", 0, "px;")
+
+            # actual tooltip created as wellPanel
+            tags$div(class = "well well-sm",
+                     style = style,
+                     p(HTML(paste0("<br/>",
+                                   "<br/>",
+                                   "<br/>",
+                                   "<br/>")))
+                    )
+     }
+     else { if(length(hover_info_reg1_r())!=0) return(hover_info_reg1_r())
+            if(length(hover_info_reg2_r())!=0) return(hover_info_reg2_r())
+                         }
+        })
+        
     #Plot
     plotInput_comp_reg <- reactive({
 
@@ -1234,7 +1452,8 @@ server <- function(input,output){
         
     
     #Hover info
-    output$hover_info_dis1 <- renderUI({
+#    output$hover_info_dis1 <- renderUI({
+    hover_info_dis1_r <- reactive({
         
         hover <- input$plot_hover_dis1
         
@@ -1267,11 +1486,12 @@ server <- function(input,output){
                                                    pourc=TRUE)," of research among ",
                                    ifelse(input$all_nhi_comp==TRUE,"non-high-income","all")," regions)<br/>")))
                     )
+            
         })
 
     #Hover info
-    output$hover_info_dis2 <- renderUI({
-        
+#    output$hover_info_dis2 <- renderUI({
+    hover_info_dis2_r <- reactive({        
         hover <- input$plot_hover_dis2
         
         point <- nearPoints(ddis_comp_points()[ddis_comp_points()$Dis_tooltip==input$disease2,],
@@ -1305,6 +1525,24 @@ server <- function(input,output){
                     )
         })
 
+ output$hover_info_dis1 <- renderUI({
+ if(length(hover_info_dis1_r())==0 & length(hover_info_dis2_r())==0){
+     style <- paste0("position:relative; z-index:100; background-color: rgba(245, 245, 245, 0.95); ",
+                            "left:", 0, "px; top:", 0, "px;")
+
+            # actual tooltip created as wellPanel
+            tags$div(class = "well well-sm",
+                     style = style,
+                     p(HTML(paste0("<br/>",
+                                   "<br/>",
+                                   "<br/>",
+                                   "<br/>")))
+                    )
+     }
+     else { if(length(hover_info_dis1_r())!=0) return(hover_info_dis1_r())
+            if(length(hover_info_dis2_r())!=0) return(hover_info_dis2_r())
+                         }
+ })
         
     #Plot
     plotInput_comp_dis <- reactive({
@@ -1477,9 +1715,148 @@ server <- function(input,output){
                " (bottom)",
                "</b></center>"
               )
-        })    
+        })
+
+        #About Plot
+        ######################################################################################################
+        ######################################################################################################
+        
+        #Hover info
+    output$hover_info_regs_ex <- renderUI({
+        
+        hover <- input$plot_hover_reg_ex
+        
+        point <- nearPoints(data_points_ex, hover, yvar="prop_pos", xvar="Dis_pos",
+                            threshold = (1005*0.2/(10 + 0.4)), maxpoints = 1, addDist = TRUE)
+        if (nrow(point) == 0) {
+            style <- paste0("position:relative; z-index:100; background-color: rgba(245, 245, 245, 0.95); ",
+                            "left:", 0, "px; top:", 0, "px;")
+
+            # actual tooltip created as wellPanel
+            tags$div(class = "well well-sm",
+                     style = style,
+                     p(HTML(paste0("<br/>",
+                                   "<br/>",
+                                   "<br/>",
+                                   "<br/>")))
+                    )}
+        else{
+
+            # create style property fot tooltip
+            # background color is set so tooltip is a bit transparent
+            # z-index is set so we are sure are tooltip will be on top
+            style <- paste0("position:relative; z-index:100; background-color: rgba(245, 245, 245, 0.95); ",
+                            "left:", 0, "px; top:", 0, "px;")
+
+            # actual tooltip created as wellPanel
+            tags$div(class = "well well-sm",
+                     style = style,
+                     p(HTML(paste0("<b> Region: </b>", "Sub-Saharian Africa", "<br/>",
+                                   "<b> Group of diseases: </b>", point$Dis_tooltip, "<br/>",
+                                   "<b> Burden: </b>", format(round(point$Nb/1e6,1),nsmall = 1,big.mark=","),
+                                   " million ", "DALY","s (",format(round(point$prop),nsmall = 0),
+                                   "% of ","local"," burden)<br/>",
+                                   "<b> Research: </b>",
+                                   form_ratio(point[,c("Nb_low","Nb_med","Nb_up")],pourc=FALSE)," ","RCTs",
+                                   " (",form_ratio(point[,c("prop_low","prop_med","prop_up")],pourc=TRUE), " of ",
+                                   "local"," research)<br/>")))
+                    )
+            }
+        })
+
+    #Plot
+    plotInput_within_reg_ex <- reactive({
+
+            dt <- data_plot_ex
+            max_plot <- 10*ceiling(max(c(dt$prop,dfr_err_ex$prop_up)/10,na.rm=TRUE))
+
+            #Highlighting gaps
+            dt$gap <- dt$Disease
+            levels(dt$gap) <- unlist(lapply(levels(dt$Disease),
+                                            function(x){
+                                            ifelse(sum(dfr_err_ex$Disease==x)==0,NA,
+                                            dt$prop[dt$metr=="burden" & dt$Disease==x]/
+                                            dfr_err_ex$prop_up[dfr_err_ex$Disease==x])}))
+            dt$gap_col <- dt$metr
+            dt$gap_col[as.numeric(as.character(dt$gap))>=2 & dt$gap_col=="burden"] <- "burden_gap"
+
+            #disease labels
+            dlbl <- dt[order(dt$Disease),]
+            dlbl <- dlbl[dlbl$metr=="burden",]
+            dlbl$gap_text <- "plain"
+            dlbl$gap_text[dlbl$gap_col=="burden_gap"] <- "bold"
+
+
+            p <- ggplot(dt,aes(Disease))
+            p <- p + geom_bar(aes(fill=gap_col,y=prop),position="dodge",stat="identity",width=0.8)
+            #p <- p + geom_segment(aes(x=as.numeric(Disease)-0.4,xend=as.numeric(Disease)+0.4,
+            #                          y=prop/2,yend=prop/2,size=5),
+            #                      linetype="dashed",data=dt[dt$metr=="burden",],lwd=0.1)
+            p <- p + geom_errorbar(aes(x=as.numeric(Disease)+0.2,ymax=prop_up,ymin=prop_low),width=0.2,data=dfr_err_ex)
+            if(input$hgp_reg)  { p <- p + scale_fill_manual(values = c("burden"="orange","burden_gap"="red",
+                                                                       "research"="blue")) }
+            if(!input$hgp_reg) { p <- p + scale_fill_manual(values = c("burden"="orange","burden_gap"="orange",
+                                                                       "research"="blue")) }
+            p <- p + scale_x_discrete(label = dlbl$Dis_lab)
+            if(max_plot>20 & max_plot<80) {
+            p <- p + scale_y_continuous(limits = c(0,max_plot),breaks=c(0,5,seq(10,max_plot,10)),
+                                        name="%")
+                            }
+            if(max_plot>=80) {
+            p <- p + scale_y_continuous(limits = c(0,max_plot),breaks=unique(c(0,10,seq(20,max_plot,20),max_plot)),
+                                        name="%")
+                            }
+            if(max_plot<=20) {
+            p <- p + scale_y_continuous(limits = c(0,max_plot),breaks=c(0,1,seq(5,max_plot,5)),
+                                        name="%")
+                            }
+            p <- p + theme(axis.text.y=element_text(size=12))
+            p <- p + theme(axis.title.y=element_text(size=20))    
+
+            p <- p + theme(axis.text.x = element_blank()) + 
+                     theme(panel.background = element_blank()) + 
+                     theme(panel.grid.major.y = element_line(colour = "grey",size=0.1)) +
+                     theme(panel.grid.major.x = element_blank()) + 
+                     theme(axis.ticks.x=element_blank()) + 
+                     theme(legend.position = "none") + 
+                     theme(axis.title.x=element_blank()) +
+                     labs(x=NULL)
+
+            plb <- ggplot(dt,aes(Disease)) 
+            plb <- plb + scale_y_continuous(limits = c(0,0),breaks=c(0),label="   ",
+                                        name=" ")
+            plb <- plb + theme(axis.ticks.y = element_blank())
+            plb <- plb + theme(axis.text.y=element_text(size=12))
+            plb <- plb + theme(axis.title.y=element_text(size=20)) 
+            if(input$hgp_reg)  { plb <- plb + theme(axis.text.x = element_text(face=dlbl$gap_text)) }
+
+            plb <- plb + theme(axis.text.x = element_text(angle=55,
+                                                          hjust=1,
+                                                          vjust=1.1,size=10))
+        
+            plb <- plb + theme(panel.background = element_blank()) + 
+                         theme(panel.grid.major.y = element_blank()) +
+                         theme(panel.grid.major.x = element_blank()) + 
+                         theme(axis.ticks.x=element_blank()) + 
+                         theme(legend.position = "none") + 
+                         theme(axis.title.x=element_blank())
+
+            plb <- plb + scale_x_discrete(label = dlbl$Dis_lab)
+            plb <- plb + theme(axis.text.x=element_text(size=12))
+
+            list(p,plb)
+            
+            })
+    
+    #Render Plot
+    output$plot_within_reg_ex <- renderPlot({ plotInput_within_reg_ex()[[1]] })
+    output$plot_within_reg_labs_ex <- renderPlot({ plotInput_within_reg_ex()[[2]] })
+        
+        
         
 }
 
+        
+            
         
 shinyApp(ui = ui, server = server)
